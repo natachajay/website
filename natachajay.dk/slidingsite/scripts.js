@@ -39,11 +39,11 @@ $("document").ready(function() {
 
 
 function initiate() {
-    document.getElementById("div1").style.backgroundColor = "yellow";
-    document.getElementById("div2").style.backgroundColor = "green";
-	document.getElementById("div3").style.backgroundColor = "red";
-    document.getElementById("div4").style.backgroundColor = "blue";
-    document.getElementById("div5").style.backgroundColor = "hotpink";
+    document.getElementById("div1").style.backgroundColor = "#49199A";
+    document.getElementById("div2").style.backgroundColor = "#5C21A1";
+	document.getElementById("div3").style.backgroundColor = "#6C229B";
+    document.getElementById("div4").style.backgroundColor = "#912D9E";
+    document.getElementById("div5").style.backgroundColor = "#E36795";
 			
     $("#filler").css("height", $(window).height()+1);
 	
