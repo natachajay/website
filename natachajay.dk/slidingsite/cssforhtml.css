@@ -6,23 +6,69 @@ body {
 	margin: 0;
 }
 
+/* The sliding cards */
 .thisisadiv {
-    background-color: antiquewhite;
+    background-color: white;
     width: 100%;
     height: 1000px;
     box-shadow: 0px 5px 25px 2px rgba(0,0,0,0.2);
-    text-align: center;
-    font-size: 2em;
 	top: 0;
 	box-sizing: border-box;
 }
 
+/* Menu */
+#menu {
+	text-align: right;
+	font-family: Avenir, 'sans serif';
+	font-size: 1.5em;
+	padding-top: 25px;
+	padding-right: 30px;
+}
+
+		.menuitems {
+			color: white;
+			padding: 0 20px 0 20px;
+		}
+
+		.menuitems:link {
+			text-decoration: none;
+		}
+
+		.menuitems:visited {
+			text-decoration: none;
+		}
+
+		.menuitems:hover {
+			text-decoration: underline;
+		}
+
+		.menuitems:active {
+			text-decoration: none;
+		}
+
+/* Individual page content */
 #content1 {
 	text-align: left;
 	padding-left: 50px;
 }
 
+		#content1_1 {
+			text-align: left;
+			padding-left: 50px;
+			font-size: 1em;
+		}
+
+#content2 {
+	text-align: right;
+	padding-right: 50px;
+}
+
 #content3 {
+	text-align: left;
+	padding-left: 50px;
+}
+
+#content4 {
 	text-align: right;
 	padding-right: 50px;
 }
@@ -35,4 +81,9 @@ body {
 .content {
 	padding-top: 150px;
 	color: white;
+	font-size: 2em;
+}
+.content_low {
+	color: white;
+	font-size: 1em;
 }
