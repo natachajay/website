@@ -52,10 +52,10 @@ $("document").ready(function() {
 function initiate() {
 	"use strict";
     //document.getElementById("div1").style.backgroundColor = "#49199A";
-    document.getElementById("div2").style.backgroundColor = "#5C21A1";
-	document.getElementById("div3").style.backgroundColor = "#6C229B";
-    document.getElementById("div4").style.backgroundColor = "#912D9E";
-    document.getElementById("div5").style.backgroundColor = "#E36795";
+    document.getElementById("portfolio").style.backgroundColor = "#5C21A1";
+	document.getElementById("about").style.backgroundColor = "#6C229B";
+    document.getElementById("booking").style.backgroundColor = "#912D9E";
+    document.getElementById("spare").style.backgroundColor = "#E36795";
 			
     $("#filler").css("height", $(window).height()*2);
 	
