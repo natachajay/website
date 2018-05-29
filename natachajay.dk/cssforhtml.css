@@ -19,7 +19,6 @@ body {
 #menu {
 	position: fixed;
 	z-index: 9999;
-	text-align: right;
 	font-family: 'Montserrat', 'sans serif';
 	font-size: 1em;
 	padding-top: 25px;
@@ -27,8 +26,9 @@ body {
 }
 
 		.menuitems {
-			color: black;
-			padding: 0 25px 0 20px;
+			color: white;
+			padding: 0 25px 0 25px;
+			text-align: right;
 		}
 
 		.menuitems:link {
@@ -48,7 +48,7 @@ body {
 		}
 
 /* Individual page content */
-#content1 {
+/*#content1 {
 	text-align: left;
 	padding-left: 50px;
 }
@@ -58,7 +58,7 @@ body {
 			padding-left: 50px;
 			font-size: 1em;
 		}
-
+*/
 #content2 {
 	text-align: right;
 	padding-right: 50px;
