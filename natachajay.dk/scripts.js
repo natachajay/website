@@ -116,7 +116,7 @@ function updateHTML(elem, file) {
 function scrollToElem(elemId) {
 	"use strict";
 	var currentScrollTop = $(window).scrollTop();
-	var child = $("#wrapper #" + elemId);
+	var child = $("#wrapper " + elemId);
 	var childNo = Array.from(child[0].parentNode.children).indexOf(child[0]);
 	
 	if (childNo > childInView) {
