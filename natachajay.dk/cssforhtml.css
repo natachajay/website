@@ -72,13 +72,13 @@ body {
 		}
 		
 .albums {
+	display: flex;
+	justify-content: space-evenly;
+	width: 200px;
+	height: 200px;
 	background-color: aqua;
 	border: thick;
 	border-color: white;
-	width: 100px;
-	height: 100px;
-	display: flex;
-	justify-content: space-evenly;
 }
 
 #content3 {
