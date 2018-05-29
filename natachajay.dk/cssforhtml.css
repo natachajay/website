@@ -19,6 +19,8 @@ body {
 #menu {
 	position: fixed;
 	z-index: 9999;
+	width: 100%;
+	text-align: right;
 	font-family: 'Montserrat', 'sans serif';
 	font-size: 1em;
 	padding-top: 25px;
@@ -28,7 +30,6 @@ body {
 		.menuitems {
 			color: white;
 			padding: 0 25px 0 25px;
-			text-align: right;
 		}
 
 		.menuitems:link {
@@ -88,4 +89,6 @@ body {
 	color: white;
 	font-size: 1em;
 	font-family: 'Open Sans', 'Calibri';
+	text-align: right;
+	padding-right: 50px;
 }
