@@ -57,7 +57,7 @@ function initiate() {
     document.getElementById("div4").style.backgroundColor = "#912D9E";
     document.getElementById("div5").style.backgroundColor = "#E36795";
 			
-    $("#filler").css("height", $(window).height()+1);
+    $("#filler").css("height", $(window).height()*2);
 	
 	updateHTML($("#div1"), "html_01.html");
 	updateHTML($("#div2"), "html_02.html");
