@@ -2,7 +2,7 @@
 /* CSS Document */
 
 body {
-	font-family: Montserrat, Calibri, 'sans serif';
+	font-family: 'Montserrat', 'Open Sans', 'sans serif';
 	margin: 0;
 }
 
@@ -20,7 +20,7 @@ body {
 	position: fixed;
 	z-index: 9999;
 	text-align: right;
-	font-family: Montserrat, 'sans serif';
+	font-family: 'Montserrat', 'sans serif';
 	font-size: 1em;
 	padding-top: 25px;
 	padding-right: 25px;
@@ -87,4 +87,5 @@ body {
 .content_low {
 	color: white;
 	font-size: 1em;
+	font-family: 'Open Sans', 'Calibri';
 }
