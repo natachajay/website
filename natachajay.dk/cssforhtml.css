@@ -2,7 +2,7 @@
 /* CSS Document */
 
 body {
-	font-family: Avenir, Calibri, 'sans serif';
+	font-family: Montserrat, Calibri, 'sans serif';
 	margin: 0;
 }
 
@@ -20,7 +20,7 @@ body {
 	position: fixed;
 	z-index: 9999;
 	text-align: right;
-	font-family: Avenir, 'sans serif';
+	font-family: Montserrat, 'sans serif';
 	font-size: 1em;
 	padding-top: 25px;
 	padding-right: 25px;
