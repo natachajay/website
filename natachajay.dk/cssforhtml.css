@@ -18,6 +18,7 @@ body {
 /* Menu */
 #menu {
 	position: fixed;
+	z-index: 9999;
 	text-align: right;
 	font-family: Avenir, 'sans serif';
 	font-size: 1em;
@@ -26,7 +27,7 @@ body {
 }
 
 		.menuitems {
-			color: white;
+			color: black;
 			padding: 0 25px 0 20px;
 		}
 
