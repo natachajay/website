@@ -72,10 +72,11 @@ body {
 		}
 		
 .albums {
+	background-color: aqua;
 	border: thick;
 	border-color: white;
-	width: 250px;
-	height: 250px;
+	width: 100px;
+	height: auto;
 }
 
 #content3 {
