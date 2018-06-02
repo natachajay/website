@@ -70,16 +70,18 @@ body {
 			text-align: right;
 			padding-right: 50px;
 		}
-		
-.albums {
+
+#wrapper_portfolio {
 	display: flex;
-	justify-content: space-between;
-	width: 100px;
-	height: 100px;
-	background-color: aqua;
-	border: thick;
-	border-color: white;
+	justify-content: space-evenly;
+	padding: 50px 0 0 0;
 }
+
+		.albums {
+			width: 250px;
+			height: 250px;
+			background-color: aqua;
+		}
 
 #content3 {
 	text-align: left;
@@ -101,6 +103,7 @@ body {
 	color: white;
 	font-size: 2em;
 }
+
 .content_low {
 	color: white;
 	font-size: 1em;
