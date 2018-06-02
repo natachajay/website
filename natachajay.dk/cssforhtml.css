@@ -6,7 +6,7 @@ body {
 	margin: 0;
 }
 
-/* The sliding cards */
+/* Sliding cards */
 .thisisadiv {
     background-color: white;
     width: 100%;
@@ -49,7 +49,10 @@ body {
 		}
 
 /* Individual page content */
-/*#content1 {
+
+/* Landing page */
+/*
+#content1 {
 	text-align: left;
 	padding-left: 50px;
 }
@@ -61,6 +64,7 @@ body {
 		}
 */
 
+/* Portfolio page */
 #content2 {
 	text-align: right;
 	padding-right: 50px;
@@ -74,30 +78,35 @@ body {
 #wrapper_portfolio {
 	display: flex;
 	justify-content: space-evenly;
-	padding: 50px 0 0 0;
+	padding: 100px 0 0 0;
 }
 
 		.albums {
-			width: 250px;
-			height: 250px;
-			background-color: aqua;
+			width: 300px;
+			height: 175px;
+			border: solid medium;
+			background-color: white;
 		}
 
+/* About page */
 #content3 {
 	text-align: left;
 	padding-left: 50px;
 }
 
+/* Booking page */
 #content4 {
 	text-align: right;
 	padding-right: 50px;
 }
 
+/* Spare page */
 #content5 {
 	text-align: left;
 	padding-left: 50px;
 }
 
+/* General page content (sorted by position on page) */
 .content {
 	padding-top: 150px;
 	color: white;
