@@ -107,7 +107,6 @@ body {
 				opacity: 0;
 				transition: .5s ease;
 				background-color: #8D5A57;
-				user-select: none;
 			}
 
 			.album_text {
@@ -119,6 +118,7 @@ body {
 				-ms-transform: translate(-50%, -50%);
 				transform: translate(-50%, -50%);
 				text-align: center;
+				user-select: none;
 			}
 
 /* About page */
