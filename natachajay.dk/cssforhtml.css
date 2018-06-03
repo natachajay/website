@@ -13,6 +13,7 @@ body {
     box-shadow: 0px 5px 25px 2px rgba(0,0,0,0.2);
 	top: 0;
 	box-sizing: border-box;
+	padding: 0 75px;
 }
 
 /* Menu */
@@ -23,13 +24,16 @@ body {
 	text-align: right;
 	font-family: 'Montserrat', 'sans serif';
 	font-size: 1em;
-	padding-top: 25px;
-	padding-right: 25px;
+	margin-top: 25px;
 }
 
 		.menuitems {
 			color: white;
-			padding: 0 25px 0 25px;
+			padding: 0 50px 0 0;
+		}
+
+		.menuitems:last-child {
+			padding: 0 75px 0 0;
 		}
 
 		.menuitems:link {
@@ -50,34 +54,16 @@ body {
 
 /* Individual page content */
 
-/* Landing page */
-/*
-#content1 {
-	text-align: left;
-	padding-left: 50px;
-}
 
-		#content1_1 {
-			text-align: left;
-			padding-left: 50px;
-			font-size: 1em;
-		}
-*/
 
 /* Portfolio page */
-#content2 {
+.content_right {
 	text-align: right;
-	padding-right: 50px;
 }
-
-		#content2_1 {
-			text-align: right;
-			padding-right: 50px;
-		}
 
 #wrapper_portfolio {
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	padding: 100px 0 0 0;
 }
 	.wrapper_albums {
@@ -124,24 +110,6 @@ body {
 				-ms-user-select: none;
 				user-select: none;
 			}
-
-/* About page */
-#content3 {
-	text-align: left;
-	padding-left: 50px;
-}
-
-/* Booking page */
-#content4 {
-	text-align: right;
-	padding-right: 50px;
-}
-
-/* Spare page */
-#content5 {
-	text-align: left;
-	padding-left: 50px;
-}
 
 /* General page content (sorted by position on page) */
 .content {

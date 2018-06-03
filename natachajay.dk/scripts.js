@@ -51,7 +51,6 @@ $("document").ready(function() {
 
 function initiate() {
 	"use strict";
-    //document.getElementById("div1").style.backgroundColor = "#49199A";
     document.getElementById("portfolio").style.backgroundColor = "#5C21A1";
 	document.getElementById("about").style.backgroundColor = "#6C229B";
     document.getElementById("booking").style.backgroundColor = "#912D9E";
@@ -59,11 +58,11 @@ function initiate() {
 			
     $("#filler").css("height", $(window).height()*2);
 	
-	//updateHTML($("#div1"), "html_01.html");
-	updateHTML($("#portfolio"), "html_02.html");
-	updateHTML($("#about"), "html_03.html");
-	updateHTML($("#booking"), "html_04.html");
-	updateHTML($("#spare"), "html_05.html");
+	
+	updateHTML($("#portfolio"), "/src/portfolio.html");
+	updateHTML($("#about"), "/src/about.html");
+	updateHTML($("#booking"), "/src/booking.html");
+	updateHTML($("#spare"), "/src/spare.html");
 }
 
 function isScrolledIntoView(elem) {
