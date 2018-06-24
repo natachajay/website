@@ -73,9 +73,9 @@ body {
 		height: 197px;
 	}
 	
-	.wrapper_albums:hover .overlay {
-			opacity: 0.5;
-	}
+		.wrapper_albums:hover .overlay {
+				opacity: 0.5;
+		}
 
 		.albums {
 			width: 100%;
@@ -161,7 +161,7 @@ body {
 				  background: inherit;
 				}
 			
-			.overlay {
+			/*.overlay {
 				position: absolute;
 				top: 0;
 				bottom: 0;
@@ -169,6 +169,22 @@ body {
 				right: 0;
 				height: 100%;
 				width: 100%;
+				opacity: 0;
+				transition: .5s ease;
+				background-color: #8D5A57;
+			}*/
+
+			.overlay {
+				position: absolute;
+				z-index: 1;
+				width: 212.13px;
+				height: 212.13px;
+				overflow: hidden;
+				-webkit-transform: scaleY(0.5774) rotate(-45deg);
+				-ms-transform: scaleY(0.5774) rotate(-45deg);
+				transform: scaleY(0.5774) rotate(-45deg);
+				background: inherit;
+				left: 43.93px;
 				opacity: 0;
 				transition: .5s ease;
 				background-color: #8D5A57;
