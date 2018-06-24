@@ -82,7 +82,19 @@ body {
 			height: 100%;
 			background-color: white;
 		}
+
 			.hexagon {
+				overflow: hidden;
+				visibility: hidden;
+				-webkit-transform: rotate(120deg);
+				   -moz-transform: rotate(120deg);
+					-ms-transform: rotate(120deg);
+					 -o-transform: rotate(120deg);
+						transform: rotate(120deg);
+				cursor: pointer;
+				}
+
+			/*.hexagon {
 			  position: relative;
 			  width: 300px; 
 			  height: 173.21px;
@@ -118,7 +130,7 @@ body {
 			}
 
 			/*counter transform the bg image on the caps*/
-			.hexTop:after,
+			/*.hexTop:after,
 			.hexBottom:after {
 			  content: "";
 			  position: absolute;
@@ -158,9 +170,9 @@ body {
 			  height: 173.2051px;
 			  z-index: 2;
 			  background: inherit;
-			}
+			}*/ */
 
-			/*
+			
 			.overlay {
 				position: absolute;
 				top: 0;
@@ -172,9 +184,9 @@ body {
 				opacity: 0;
 				transition: .5s ease;
 				background-color: #8D5A57;
-			}*/
+			}
 
-			.overlay {
+			/*.overlay {
 				position: relative;
 				width: 300px; 
 				height: 173.21px;
@@ -184,7 +196,7 @@ body {
 				background-color: #8D5A57;
 				background-size: auto 346.4102px;
 				background-position: center;
-			}
+			}*/
 
 			.album_text {
 				color: white;
