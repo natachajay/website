@@ -48,13 +48,14 @@ $("document").ready(function() {
 	});
 });
 
+/* Here comes the background colours! */
 
 function initiate() {
 	"use strict";
-    document.getElementById("portfolio").style.backgroundColor = "#5C21A1";
-	document.getElementById("about").style.backgroundColor = "#6C229B";
-    document.getElementById("booking").style.backgroundColor = "#912D9E";
-    document.getElementById("spare").style.backgroundColor = "#E36795";
+    document.getElementById("portfolio").style.backgroundColor = "#FFFFFF";
+	document.getElementById("about").style.backgroundColor = "#FFFFFF";
+    document.getElementById("booking").style.backgroundColor = "#FFFFFF";
+    document.getElementById("spare").style.backgroundColor = "#FFFFFF";
 			
     $("#filler").css("height", $(window).height()*2);
 	
@@ -134,25 +135,3 @@ function scrollToElem(elemId) {
 	}
 	prevScrollTop = currentScrollTop;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
