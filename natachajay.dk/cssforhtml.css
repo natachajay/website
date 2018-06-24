@@ -55,7 +55,6 @@ body {
 /* Individual page content */
 
 
-
 /* Portfolio page */
 .content_right {
 	text-align: right;
@@ -160,8 +159,8 @@ body {
 				  z-index: 2;
 				  background: inherit;
 				}
-			
-			/*.overlay {
+			/*
+			.overlay {
 				position: absolute;
 				top: 0;
 				bottom: 0;
@@ -173,22 +172,6 @@ body {
 				transition: .5s ease;
 				background-color: #8D5A57;
 			}*/
-
-			.overlay {
-				position: absolute;
-				z-index: 1;
-				width: 212.13px;
-				height: 212.13px;
-				overflow: hidden;
-				-webkit-transform: scaleY(0.5774) rotate(-45deg);
-				-ms-transform: scaleY(0.5774) rotate(-45deg);
-				transform: scaleY(0.5774) rotate(-45deg);
-				background: inherit;
-				left: 43.93px;
-				opacity: 0;
-				transition: .5s ease;
-				background-color: #8D5A57;
-			}
 
 			.album_text {
 				color: white;
