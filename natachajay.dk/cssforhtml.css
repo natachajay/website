@@ -160,6 +160,7 @@ body {
 			  background: inherit;
 			}
 
+			/*
 			.overlay {
 				position: absolute;
 				top: 0;
@@ -171,6 +172,18 @@ body {
 				opacity: 0;
 				transition: .5s ease;
 				background-color: #8D5A57;
+			}*/
+
+			.overlay {
+				position: relative;
+				width: 300px; 
+				height: 173.21px;
+				margin: 86.60px 0;
+				opacity: 0;
+				transition: .5s ease;
+				background-color: #8D5A57;
+				background-size: auto 346.4102px;
+				background-position: center;
 			}
 
 			.album_text {
