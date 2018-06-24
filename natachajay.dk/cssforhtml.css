@@ -159,7 +159,7 @@ body {
 				  z-index: 2;
 				  background: inherit;
 				}
-			/*
+			
 			.overlay {
 				position: absolute;
 				top: 0;
@@ -171,7 +171,7 @@ body {
 				opacity: 0;
 				transition: .5s ease;
 				background-color: #8D5A57;
-			}*/
+			}
 
 			.album_text {
 				color: white;
