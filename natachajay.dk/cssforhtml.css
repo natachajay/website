@@ -28,7 +28,7 @@ body {
 }
 
 		.menuitems {
-			color: white;
+			color: black;
 			padding: 0 50px 0 0;
 		}
 
@@ -113,12 +113,12 @@ body {
 /* General page content (sorted by position on page) */
 .content {
 	padding-top: 150px;
-	color: white;
+	color: black;
 	font-size: 2em;
 }
 
 .content_low {
-	color: white;
+	color: black;
 	font-size: 1em;
 	font-family: 'Open Sans', 'Calibri';
 }
