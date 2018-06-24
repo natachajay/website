@@ -76,13 +76,13 @@ body {
 	.wrapper_albums:hover .overlay {
 			opacity: 0.5;
 	}
-/*
+
 		.albums {
 			width: 100%;
 			height: 100%;
 			background-color: white;
 		}
-*/
+
 
 		.hexagon {
 			position: relative;
