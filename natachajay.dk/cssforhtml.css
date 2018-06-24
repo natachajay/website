@@ -84,24 +84,13 @@ body {
 		}
 
 			.hexagon {
-				overflow: hidden;
-				visibility: hidden;
-				-webkit-transform: rotate(120deg);
-				   -moz-transform: rotate(120deg);
-					-ms-transform: rotate(120deg);
-					 -o-transform: rotate(120deg);
-						transform: rotate(120deg);
-				cursor: pointer;
-				}
-
-			/*.hexagon {
 			  position: relative;
 			  width: 300px; 
 			  height: 173.21px;
 			  margin: 86.60px 0;
 			  background-size: auto 346.4102px;
 			  background-position: center;
-			}*/
+			}
 
 				.hexagon_left {
 					background-image: url(https://scontent-ams3-1.cdninstagram.com/vp/74854557de5e45e891c6f05457c9be97/5BA45D1E/t51.2885-15/e35/21434219_833895463446814_2423833968517316608_n.jpg);
@@ -114,7 +103,7 @@ body {
 				.hexagon_right {
 					background-image: url(https://scontent-ams3-1.cdninstagram.com/vp/0e55841a6c73c8287e85e34352a5323b/5BC0AC2D/t51.2885-15/e35/21041027_1476395095810128_554707782331269120_n.jpg);
 				}
-/*
+
 			.hexTop,
 			.hexBottom {
 			  position: absolute;
@@ -129,49 +118,48 @@ body {
 			  left: 43.93px;
 			}
 
-			/*counter transform the bg image on the caps*/
-			/*.hexTop:after,
-			.hexBottom:after {
-			  content: "";
-			  position: absolute;
-			  width: 300.0000px;
-			  height: 173.20508075688775px;
-			  -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-86.6025px);
-			  -ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-86.6025px);
-			  transform:          rotate(45deg) scaleY(1.7321) translateY(-86.6025px);
-			  -webkit-transform-origin: 0 0;
-			  -ms-transform-origin: 0 0;
-			  transform-origin: 0 0;
-			  background: inherit;
-			}
+				/*counter transform the bg image on the caps*/
+				.hexTop:after,
+				.hexBottom:after {
+				  content: "";
+				  position: absolute;
+				  width: 300.0000px;
+				  height: 173.20508075688775px;
+				  -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-86.6025px);
+				  -ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-86.6025px);
+				  transform:          rotate(45deg) scaleY(1.7321) translateY(-86.6025px);
+				  -webkit-transform-origin: 0 0;
+				  -ms-transform-origin: 0 0;
+				  transform-origin: 0 0;
+				  background: inherit;
+				}
 
-			.hexTop {
-			  top: -106.0660px;
-			}
+				.hexTop {
+				  top: -106.0660px;
+				}
 
-			.hexTop:after {
-			  background-position: center top;
-			}
+				.hexTop:after {
+				  background-position: center top;
+				}
 
-			.hexBottom {
-			  bottom: -106.0660px;
-			}
+				.hexBottom {
+				  bottom: -106.0660px;
+				}
 
-			.hexBottom:after {
-			  background-position: center bottom;
-			}
+				.hexBottom:after {
+				  background-position: center bottom;
+				}
 
-			.hexagon:after {
-			  content: "";
-			  position: absolute;
-			  top: 0.0000px;
-			  left: 0;
-			  width: 300.0000px;
-			  height: 173.2051px;
-			  z-index: 2;
-			  background: inherit;
-			}*/ */
-
+				.hexagon:after {
+				  content: "";
+				  position: absolute;
+				  top: 0.0000px;
+				  left: 0;
+				  width: 300.0000px;
+				  height: 173.2051px;
+				  z-index: 2;
+				  background: inherit;
+				}
 			
 			.overlay {
 				position: absolute;
@@ -185,18 +173,6 @@ body {
 				transition: .5s ease;
 				background-color: #8D5A57;
 			}
-
-			/*.overlay {
-				position: relative;
-				width: 300px; 
-				height: 173.21px;
-				margin: 86.60px 0;
-				opacity: 0;
-				transition: .5s ease;
-				background-color: #8D5A57;
-				background-size: auto 346.4102px;
-				background-position: center;
-			}*/
 
 			.album_text {
 				color: white;
