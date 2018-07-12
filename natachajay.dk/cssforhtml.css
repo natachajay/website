@@ -112,7 +112,7 @@ body {
 /* General page content (sorted by position on page) */
 .content_high {
 	padding-top: 150px;
-	color: black;
+	color: #485A5A;
 	font-size: 2em;
 	font-weight: bold;
 }
