@@ -52,7 +52,8 @@ $("document").ready(function() {
 
 function resizeSlidingCards() {
 	"use strict";
-	alert("resize");
+    $(".thisisadiv").css("height", $(window).height());
+    $("#filler").css("height", $(window).height()*2);
 }
 
 
@@ -60,6 +61,7 @@ function initiate() {
 	"use strict";
 	window.addEventListener('orientationchange', resizeSlidingCards);
 	window.addEventListener('resize', resizeSlidingCards);
+	
     document.getElementById("portfolio").style.backgroundColor = "#FFFFFF";
 	document.getElementById("about").style.backgroundColor = "#FFFFFF";
     document.getElementById("booking").style.backgroundColor = "#FFFFFF";
