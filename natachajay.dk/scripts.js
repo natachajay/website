@@ -48,8 +48,6 @@ $("document").ready(function() {
 	});
 });
 
-/* Here comes the background colours! */
-
 function resizeSlidingCards() {
 	"use strict";
     $(".thisisadiv").css("min-height", $(window).height());
@@ -62,12 +60,14 @@ function initiate() {
 	window.addEventListener('orientationchange', resizeSlidingCards);
 	window.addEventListener('resize', resizeSlidingCards);
 	
+	/* Here comes the background colours! */
+	
     document.getElementById("portfolio").style.backgroundColor = "#FFFFFF";
 	document.getElementById("about").style.backgroundColor = "#FFFFFF";
     document.getElementById("booking").style.backgroundColor = "#FFFFFF";
     document.getElementById("spare").style.backgroundColor = "#FFFFFF";
 			
-    $("#filler").css("height", $(window).height()*2);
+    resizeSlidingCards();
 	
 	
 	updateHTML($("#portfolio"), "/src/portfolio.html");
