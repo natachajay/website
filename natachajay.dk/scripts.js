@@ -52,6 +52,7 @@ function resizeSlidingCards() {
 	"use strict";
     $(".thisisadiv").css("min-height", $(window).height());
     $("#filler").css("height", $(window).height()*2);
+	alert($(window).height());
 }
 
 
