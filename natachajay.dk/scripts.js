@@ -56,21 +56,7 @@ function initiate() {
 	"use strict";
 	window.addEventListener('orientationchange', resizeSlidingCards);
 	window.addEventListener('resize', resizeSlidingCards);
-	
-	/* Here comes the background colours! */
-	
-    document.getElementById("portfolio").style.backgroundColor = "#FFFFFF";
-	document.getElementById("about").style.backgroundColor = "#FFFFFF";
-    document.getElementById("booking").style.backgroundColor = "#FFFFFF";
-    document.getElementById("spare").style.backgroundColor = "#FFFFFF";
-			
     resizeSlidingCards();
-	
-	
-	updateHTML($("#portfolio"), "/src/portfolio.html");
-	updateHTML($("#about"), "/src/about.html");
-	updateHTML($("#booking"), "/src/booking.html");
-	updateHTML($("#spare"), "/src/spare.html");
 }
 
 function isScrolledIntoView(elem) {
