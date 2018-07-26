@@ -49,6 +49,8 @@ function resizeSlidingCards() {
 	"use strict";
     $(".thisisadiv").css("min-height", $(window).height()*1.1);
     $("#filler").css("height", $(window).height()*2);
+	window.scrollBy(0, 1);
+	window.scrollBy(0, -1);
 }
 
 
