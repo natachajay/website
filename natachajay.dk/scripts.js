@@ -50,8 +50,16 @@ $("document").ready(function() {
 
 /* Here comes the background colours! */
 
+function resizeSlidingCards() {
+	"use strict";
+	alert("resize");
+}
+
+
 function initiate() {
 	"use strict";
+	window.addEventListener('orientationchange', resizeSlidingCards);
+	window.addEventListener('resize', resizeSlidingCards);
     document.getElementById("portfolio").style.backgroundColor = "#FFFFFF";
 	document.getElementById("about").style.backgroundColor = "#FFFFFF";
     document.getElementById("booking").style.backgroundColor = "#FFFFFF";
