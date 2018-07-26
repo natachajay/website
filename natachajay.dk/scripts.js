@@ -14,7 +14,6 @@ $("document").ready(function() {
 	
 	
     $(".menuitems").click(function() {
-		console.log('test');
 		scrollToElem($(this).attr('href'));
 		return false;
     });
@@ -32,7 +31,6 @@ $("document").ready(function() {
 			
 			if (!inView) {
 				scrolldowntrigger();
-				console.log(childInView);
 			}
 		}
 		else if (currentScrollTop < prevScrollTop && childInView > 0) {
@@ -41,7 +39,6 @@ $("document").ready(function() {
 			
 			if (inView) {
 				scrolluptrigger();
-				console.log(childInView);	
 			}
 		}
 		prevScrollTop = currentScrollTop;
@@ -50,9 +47,8 @@ $("document").ready(function() {
 
 function resizeSlidingCards() {
 	"use strict";
-    $(".thisisadiv").css("min-height", $(window).height());
+    $(".thisisadiv").css("min-height", $(window).height()*1.5);
     $("#filler").css("height", $(window).height()*2);
-	alert($(window).height());
 }
 
 
