@@ -65,14 +65,13 @@ body {
 	display: flex;
 	justify-content: space-between;
 	flex-flow: wrap;
-	padding: 100px 0 0 0;
+	padding: 50px 0 0 0;
 }
 
 	.wrapper_albums {
 		position: relative;
 		width: 350px;
 		height: 197px;
-		padding-bottom: 50px;
 	}
 	
 		.wrapper_albums:hover .overlay {
@@ -83,6 +82,7 @@ body {
 			width: 100%;
 			height: 100%;
 			background-color: white;
+			padding-bottom: 25px;
 		}			
 			.overlay {
 				position: absolute;
