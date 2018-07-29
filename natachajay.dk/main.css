@@ -64,6 +64,7 @@ body {
 #wrapper_portfolio {
 	display: flex;
 	justify-content: space-between;
+	flex-flow: wrap;
 	padding: 100px 0 0 0;
 }
 
@@ -71,6 +72,7 @@ body {
 		position: relative;
 		width: 350px;
 		height: 197px;
+		padding-bottom: 50px;
 	}
 	
 		.wrapper_albums:hover .overlay {
@@ -119,6 +121,7 @@ body {
 }
 
 .content_low {
+	padding-top: 25px;
 	color: black;
 	font-size: 1em;
 	font-family: 'Open Sans', 'Calibri';
