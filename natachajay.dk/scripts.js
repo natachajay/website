@@ -47,8 +47,10 @@ $("document").ready(function() {
 
 function resizeSlidingCards() {
 	"use strict";
+	/* window-height * 1.1 to ensure it fills the whole screen when addressbar is gone */
     $(".thisisadiv").css("min-height", $(window).height()*1.1);
     $("#filler").css("height", $(window).height()*2);
+	/* Scroll to readjust filler etc. */
 	window.scrollBy(0, 1);
 	window.scrollBy(0, -1);
 }
@@ -97,15 +99,6 @@ function scrolluptrigger() {
     
     $(newElem).css("position", "fixed");
     childInView--;
-}
-
-function updateHTML(elem, file) {
-	"use strict";
-	fetch(file).then(function(res){
-		res.text().then(function(text) {
-			$(elem)[0].innerHTML = text;
-		});
-	});
 }
 
 function scrollToElem(elemId) {
