@@ -57,9 +57,6 @@ body {
 
 
 /* Portfolio page */
-.content_right {
-	text-align: right;
-}
 
 #wrapper_portfolio {
 	display: flex;
@@ -82,6 +79,11 @@ body {
 		.albums {
 			background-color: white;
 			max-width: 100%;
+		}
+		
+		#album_03, #album_05 {
+			width: 350px;
+			max-height: 197px;
 		}
 
 			.overlay {
@@ -125,6 +127,11 @@ body {
 	color: black;
 	font-size: 1em;
 	font-family: 'Open Sans', 'Calibri';
+}
+
+
+.content_right {
+	text-align: right;
 }
 
 footer {
