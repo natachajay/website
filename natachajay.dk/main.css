@@ -55,6 +55,13 @@ body {
 
 /* Individual page content */
 
+/* Landing page */
+
+#landing_page {
+	background-image: url(media/BGIMAGE.jpg);
+	background-size: cover;
+}
+
 /* Portfolio page */
 
 #wrapper_portfolio {
