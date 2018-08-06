@@ -70,7 +70,6 @@ function initiate() {
 	window.addEventListener('orientationchange', resizeSlidingCards);
 	window.addEventListener('resize', resizeSlidingCards);
     resizeSlidingCards();
-	repaintMenu();
 }
 
 function isScrolledIntoView(elem) {
@@ -92,7 +91,6 @@ function scrolldowntrigger() {
     childInView++;
     var newElem = $("#wrapper").children() [childInView];
     $(newElem).css("position", "relative");
-	repaintMenu();
 	if (childInView === $("#wrapper").children().length - 1) {
 		$("#filler").css("display", "none");
 	}
@@ -110,7 +108,6 @@ function scrolluptrigger() {
     
     $(oldElem).css("position", "fixed");
     childInView--;
-	repaintMenu();
 }
 
 function scrollToElem(elemId) {
@@ -134,17 +131,4 @@ function scrollToElem(elemId) {
 		}, 500);	
 	}
 	prevScrollTop = currentScrollTop;
-}
-
-function repaintMenu() {
-	"use strict";
-    var current_card = $("#wrapper").children() [childInView];
-	if (current_card.classList.contains("dark")) {
-		$(".menuitems").css('color', 'white');
-		$(".menuitems").css('text-shadow', '1px 1px 2px #49454D');
-	}
-	else {
-		$(".menuitems").css('color', '#49454D');
-		$(".menuitems").css('text-shadow', '1px 1px 2px white');
-	}
 }
