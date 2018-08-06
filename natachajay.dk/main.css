@@ -143,7 +143,7 @@ body {
 	padding-top: 150px;
 	line-height: 3.5vw;
 	color: #49454D;
-	font-size: 3vw;
+	font-size: calc(70px - 2vw);
 	font-family: 'Amiri', serif;
 	font-weight: normal;
 }
@@ -151,7 +151,7 @@ body {
 .content_low {
 	padding-top: 25px;
 	color: black;
-	font-size: 1.25vw;
+	font-size: calc(30px - 1vw);
 	font-family: 'Open Sans', serif;
 }
 

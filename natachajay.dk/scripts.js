@@ -82,6 +82,7 @@ function scrolldowntrigger() {
     childInView++;
     var newElem = $("#wrapper").children() [childInView];
     $(newElem).css("position", "relative");
+	determineTextColour(newElem);
 	if (childInView === $("#wrapper").children().length - 1) {
 		$("#filler").css("display", "none");
 	}
@@ -93,12 +94,14 @@ function scrolluptrigger() {
 	if (childInView === 0) {
 		return;
 	}
-    var newElem = $("#wrapper").children() [childInView];
-    var divHeight = $("#filler").css("height") - $(newElem).css("height");
+    var oldElem = $("#wrapper").children() [childInView];
+    var divHeight = $("#filler").css("height") - $(oldElem).css("height");
     $("#filler").css("height", divHeight);
     
-    $(newElem).css("position", "fixed");
+    $(oldElem).css("position", "fixed");
     childInView--;
+    var newElem = $("#wrapper").children() [childInView];
+	determineTextColour(newElem);
 }
 
 function scrollToElem(elemId) {
@@ -122,4 +125,14 @@ function scrollToElem(elemId) {
 		}, 500);	
 	}
 	prevScrollTop = currentScrollTop;
+}
+
+function determineTextColour(current_card) {
+	"use strict";
+	if ($(current_card).classList.contains("dark")) {
+		$(".menuitems").css('color', 'white');
+	}
+	else {
+		$(".menuitems").css('color', '#49454D');
+	}
 }
