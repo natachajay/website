@@ -129,7 +129,7 @@ function scrollToElem(elemId) {
 
 function determineTextColour(current_card) {
 	"use strict";
-	if ($(current_card).classList.contains("dark")) {
+	if (current_card.classList.contains("dark")) {
 		$(".menuitems").css('color', 'white');
 	}
 	else {
