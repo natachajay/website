@@ -48,11 +48,20 @@ $("document").ready(function() {
 function resizeSlidingCards() {
 	"use strict";
 	/* window-height * 1.1 to ensure it fills the whole screen when addressbar is gone */
-    $(".thisisadiv").css("min-height", $(window).height()*1.1);
     $("#filler").css("height", $(window).height()*2);
 	/* Scroll to readjust filler etc. */
 	window.scrollBy(0, 1);
 	window.scrollBy(0, -1);
+	
+	/* Ensure the content fits */
+	$(".thisisadiv").each(function() {
+		var totalHeight = 0;
+		$(this).children().each(function(){
+			totalHeight = totalHeight + $(this).outerHeight(true);
+		});
+		var min_height = Math.max($(window).height()*1.1, totalHeight);
+		$(this).css("min-height", min_height);
+	});
 }
 
 
