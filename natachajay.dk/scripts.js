@@ -61,6 +61,7 @@ function initiate() {
 	window.addEventListener('orientationchange', resizeSlidingCards);
 	window.addEventListener('resize', resizeSlidingCards);
     resizeSlidingCards();
+	determineTextColour();
 }
 
 function isScrolledIntoView(elem) {
@@ -82,7 +83,7 @@ function scrolldowntrigger() {
     childInView++;
     var newElem = $("#wrapper").children() [childInView];
     $(newElem).css("position", "relative");
-	determineTextColour(newElem);
+	determineTextColour();
 	if (childInView === $("#wrapper").children().length - 1) {
 		$("#filler").css("display", "none");
 	}
@@ -101,7 +102,7 @@ function scrolluptrigger() {
     $(oldElem).css("position", "fixed");
     childInView--;
     var newElem = $("#wrapper").children() [childInView];
-	determineTextColour(newElem);
+	determineTextColour();
 }
 
 function scrollToElem(elemId) {
@@ -127,8 +128,9 @@ function scrollToElem(elemId) {
 	prevScrollTop = currentScrollTop;
 }
 
-function determineTextColour(current_card) {
+function determineTextColour() {
 	"use strict";
+    var current_card = $("#wrapper").children() [childInView];
 	if (current_card.classList.contains("dark")) {
 		$(".menuitems").css('color', 'white');
 	}
