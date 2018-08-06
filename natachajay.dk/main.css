@@ -25,7 +25,7 @@ body {
 	text-align: right;
 	font-family: 'Open Sans', serif;
 	font-weight: bold;
-	font-size: 1em;
+	font-size: 1.25vw;
 	margin-top: 25px;
 }
 
@@ -124,7 +124,7 @@ body {
 
 			.album_text {
 				color: white;
-				font-size: 20px;
+				font-size: 1.5vw;
 				position: absolute;
 				top: 50%;
 				left: 50%;
@@ -141,9 +141,9 @@ body {
 
 .content_high {
 	padding-top: 150px;
-	line-height: 50px;
+	line-height: 3.5vw;
 	color: #49454D;
-	font-size: 2em;
+	font-size: 3vw;
 	font-family: 'Amiri', serif;
 	font-weight: normal;
 }
@@ -151,7 +151,7 @@ body {
 .content_low {
 	padding-top: 25px;
 	color: black;
-	font-size: 1em;
+	font-size: 1.25vw;
 	font-family: 'Open Sans', serif;
 }
 
@@ -172,5 +172,5 @@ footer {
 }
 
 	#footer_tiny {
-		font-size: 0.8em;
+		font-size: 1vw;
 	}
