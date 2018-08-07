@@ -32,8 +32,14 @@ body {
 		padding: 0 5vw 0 0;
 		font-family: 'Open Sans', serif;
 		font-weight: bold;
-		font-size: 1.6vw;
+		font-size: 2vw;
 	}
+
+		@media screen and (orientation: portrait) {
+			.menuitems {
+				font-size: 4vw;
+			}
+		}
 
 		.menuitems:last-child {
 			padding: 0 5vw 0 0;
@@ -64,21 +70,34 @@ body {
 	background-size: cover;
 }
 
-#introduction_high {
-	font-family: 'Amiri', serif;
-	font-weight: 200;
-	font-size: 8.5vw;
-	text-align: center;
-	color: white;
-	line-height: 75px;
-	padding-top: 50%;
-}
+	#introduction_high {
+		font-family: 'Amiri', serif;
+		font-weight: 200;
+		font-size: 8.5vw;
+		text-align: center;
+		color: white;
+		line-height: 75px;
+		padding-top: 50%;
+	}
 
-#introduction_low {
-	font-family: 'Open Sans', serif;
-	font-weight: 500;
-	color: white;
-}
+		@media screen and (orientation: portrait) {
+			#introduction_high {
+				font-size: 15vw;
+			}
+		}	
+
+	#introduction_low {
+		font-family: 'Open Sans', serif;
+		font-weight: 500;
+		font-size: 2vw;
+		color: white;
+	}
+
+		@media screen and (orientation: portrait) {
+			#introduction_low {
+				font-size: 4vw;
+			}
+		}
 
 /* Portfolio page */
 
@@ -107,7 +126,7 @@ body {
 		
 		#album_03, #album_05 {
 			width: 350px;
-			height: 197px;
+			max-height: 197px;
 		}
 
 			.overlay {
@@ -149,11 +168,11 @@ body {
 	font-weight: normal;
 }
 
-@media screen and (orientation: portrait) {
-	.content_high {
-		font-size: 10vw;
+	@media screen and (orientation: portrait) {
+		.content_high {
+			font-size: 10vw;
+		}
 	}
-}
 
 .content_low {
 	padding-top: 25px;
@@ -162,11 +181,11 @@ body {
 	font-family: 'Open Sans', serif;
 }
 
-@media screen and (orientation: portrait) {
-	.content_low {
-		font-size: 4vw;
+	@media screen and (orientation: portrait) {
+		.content_low {
+			font-size: 4vw;
+		}
 	}
-}
 
 .content_right {
 	text-align: right;
