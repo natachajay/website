@@ -62,6 +62,7 @@ function resizeSlidingCards() {
 		var min_height = Math.max($(window).height()*1.1, totalHeight);
 		$(this).css("min-height", min_height);
 	});
+	resizeOverlayToCover();
 }
 
 
@@ -131,4 +132,15 @@ function scrollToElem(elemId) {
 		}, 500);	
 	}
 	prevScrollTop = currentScrollTop;
+}
+
+
+function resizeOverlayToCover() {
+	"use strict";
+	$(".wrapper_albums").each(function() {
+		var overlay = $(this, ".overlay");
+		var album = $(this, ".albums");
+		overlay.css("width", album.css("width"));
+		overlay.css("height", album.css("height"));
+	});
 }
