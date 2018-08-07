@@ -140,6 +140,14 @@ body {
 
 /* GENERAL PAGE CONTENT (sorted by position on page) */
 
+.content_high {
+		padding-top: 150px;
+		line-height: 50px;
+		color: #49454D;
+		font-family: 'Amiri', serif;
+		font-weight: normal;
+	}
+
 @media screen and (min-width: 601px) {
 	.content_high {
 		padding-top: 150px;
@@ -153,7 +161,7 @@ body {
 
 @media screen and (max-width: 600px) {
 	.content_high {
-		font-size: 50px;
+		font-size: calc(60px - 1vw);
 	}
 }
 .content_low {
