@@ -30,12 +30,6 @@
 		font-weight: bold;
 	}
 
-		@media screen and (orientation: portrait) {
-			.menuitems {
-				font-size: 3vw;
-			}
-		}
-
 		.menuitems:last-child {
 			padding: 0 5vw 0 0;
 		}
