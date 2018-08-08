@@ -3,41 +3,69 @@
 <head>
 <meta charset="UTF-8">
 <title>Portfolio</title>
-<link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Amiri|Open+Sans" rel="stylesheet">
 <link type="text/css" rel="stylesheet" href="/natachajay.dk/albums.css">
 </head>
 	
 <body>
+	<!-- POP-UP -->
 	<div class="container">
-		<!-- POP-UP -->
+		<div class="exit">
+		</div>
+		
+		<!-- SLIDESHOW -->
 		<div class="slideshow_wrapper">
 				<div class="image_wrapper">
-					<img alt="img">
+					<img src="media/big.png" alt="orange">
 				</div>
-				<div class="album_slide">
-					<!-- 
-					Img popper up med en resten af albummet på et scrollable slide nedenfor pop-up billedet
-					-->
+				<div class="album_slide active" id="1">
+					<img src="media/orange.png" alt="orange thumbnail">
+				</div>
+				<div class="album_slide" id="2">
+					<img src="media/pink.png" alt="pink thumbnail">
+				</div>
+				<div class="album_slide" id="3">
+					<img src="media/purple.png" alt="purple thumbnail">
 				</div>
 		</div>
-		<!-- INFO BOXES (til venstre for pop-up image) -->
+		
+		<!-- INFO BOXES -->
 		<div class="info_wrapper">
-			<div class="content_high" id="image_description">
+			<div class="details_high" id="img_description">
 				<div id="Title">
+					<span class="info_key">Title:</span>
+					<span class="info_value">Default Title</span>
 				</div>
 				<div id="Description">
+					<span class="info_key">Description:</span>
+					<span class="info_value">This is supposed to say something</span>
 				</div>
 			</div>
-			<div class="content_low" id="camera_specs">
+			<div class="details_low" id="camera_specs">
 				<div id="ISO">
+					<span class="info_key">ISO:</span>
+					<span class="info_value">50</span>
 				</div>
 				<div id="Aperture">
+					<span class="info_key">Aperture:</span>
+					<span class="info_value">50</span>
 				</div>
 				<div id="FStop">
+					<span class="info_key">F-Stop:</span>
+					<span class="info_value">50</span>
 				</div>
 				<div id="Sundial">
+					<span class="info_key">Icon here</span>
+					<span class="info_value">10:00</span>
+				</div>
+				
+				<div id="IGLikes">
+					<span class="info_key">Heart here</span>
+					<span class="info_value"># of IG likes</span>
 				</div>
 				<div id="LUTS">
+					<span class="info_key">Link here</span>
+					<span class="info_value"># of downloads</span>
 				</div>
 			</div>
 		</div>
