@@ -2,6 +2,17 @@
 /* CSS Document */
 
 
+.small_text {
+	font-size: 2vw;
+}
+
+	@media screen and (orientation: portrait) {
+		.small_text {
+			font-size: 3vw;
+		}
+	}
+
+
 /* Sliding cards */
 .thisisadiv {
     background-color: white;
@@ -135,7 +146,6 @@
 
 			.album_text {
 				color: white;
-				font-size: 1.4vw;
 				position: absolute;
 				top: 50%;
 				left: 50%;
@@ -147,11 +157,6 @@
 				-ms-user-select: none;
 				user-select: none;
 			}
-				@media screen and (orientation: portrait) {
-					.album_text {
-						font-size: 3vw;
-					}
-				}
 
 /* ABOUT */
 
@@ -178,16 +183,6 @@ body {
 		.content_high {
 			font-size: 8.5vw;
 			line-height: 7vh;
-		}
-	}
-
-.small_text {
-	font-size: 2vw;
-}
-
-	@media screen and (orientation: portrait) {
-		.small_text {
-			font-size: 4vw;
 		}
 	}
 
