@@ -6,7 +6,7 @@
 #slideshow_wrapper {
 	display: flex;
 	flex-direction: row;
-	padding: 25vh 0 25vh 25vh;
+	padding: 10vh 0 1vh 10vh;
 }
 
 	#big_active {
