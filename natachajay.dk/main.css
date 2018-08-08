@@ -28,7 +28,6 @@
 		padding: 0 5vw 0 0;
 		font-family: 'Open Sans', serif;
 		font-weight: bold;
-		font-size: 1.4vw;
 	}
 
 		@media screen and (orientation: portrait) {
@@ -188,18 +187,21 @@ body {
 		}
 	}
 
-.content_low {
-	padding-top: 25px;
-	color: black;
-	font-size: 1.4vw;
-	font-family: 'Open Sans', serif;
+.small_text {
+	font-size: 2vw;
 }
 
 	@media screen and (orientation: portrait) {
-		.content_low {
-			font-size: 3vw;
+		.small_text {
+			font-size: 4vw;
 		}
 	}
+
+.content_low {
+	padding-top: 25px;
+	color: black;
+	font-family: 'Open Sans', serif;
+}
 
 .content_right {
 	text-align: right;
