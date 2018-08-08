@@ -1,10 +1,6 @@
 @charset "UTF-8";
 /* CSS Document */
 
-body {
-	font-family: 'Open Sans', serif;
-	margin: 0;
-}
 
 /* Sliding cards */
 .thisisadiv {
@@ -102,45 +98,45 @@ body {
 
 /* Portfolio page */
 
-#wrapper_portfolio {
+#portfolio_wrapper {
 	display: flex;
 	justify-content: space-evenly ;
 	flex-flow: wrap;
 	padding: 50px 0 0 0;
 }
 
-	.wrapper_albums {
+	.album_wrapper {
 		position: relative;
 		max-width: 350px;
-		min-height: 197px;
+		max-height: 197px;
 		margin: 10px;
 	}
 	
-		.wrapper_albums:hover .overlay {
+		.album_wrapper:hover .overlay {
 				opacity: 0.5;
 		}
 
-		.albums {
+		.album {
 			background-color: white;
 			max-width: 100%;
 		}
 		
-		#album_03, #album_05 {
-			width: 350px;
-			max-height: 197px;
-		}
-
-			.overlay {
-				position: absolute;
-				top: 0;
-				bottom: 0;
-				left: 0;
-				right: 0;
+			#album_03, #album_05 {
+				width: 350px;
 				max-height: 197px;
-				max-width: 100%;
-				opacity: 0;
-				transition: .5s ease;
-				background-color: #49454D;
+			}
+
+		.overlay {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			max-height: 197px;
+			max-width: 100%;
+			opacity: 0;
+			transition: .5s ease;
+			background-color: #49454D;
 			}
 
 			.album_text {
@@ -157,12 +153,23 @@ body {
 				-ms-user-select: none;
 				user-select: none;
 			}
+				@media screen and (orientation: portrait) {
+					.album_text {
+						font-size: 3vw;
+					}
+				}
+
 /* ABOUT */
 
 #about_text {
 }
 
 /* GENERAL PAGE CONTENT (sorted by position on page) */
+
+body {
+	font-family: 'Open Sans', serif;
+	margin: 0;
+}
 
 .content_high {
 	padding-top: 150px;
@@ -210,17 +217,17 @@ footer {
 	font-size: 1.5vw;
 }
 
-@media screen and (orientation: portrait) {
-	footer {
-		font-size: 3vw;
+	@media screen and (orientation: portrait) {
+		footer {
+			font-size: 3vw;
+		}
 	}
-}
 
-	#footer_tiny {
-		font-size: 1.25vw;
-	}
-@media screen and (orientation: portrait) {
-	#footer_tiny {
-		font-size: 2.5vw;
-	}
+#footer_tiny {
+	font-size: 1.25vw;
 }
+	@media screen and (orientation: portrait) {
+		#footer_tiny {
+			font-size: 2.5vw;
+		}
+	}

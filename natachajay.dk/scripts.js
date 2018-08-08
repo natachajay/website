@@ -140,7 +140,9 @@ function resizeOverlayToCover() {
 	$(".wrapper_albums").each(function() {
 		var overlay = $(this, ".overlay");
 		var album = $(this, ".albums");
-		overlay.css("width", album.css("width"));
-		overlay.css("height", album.css("height"));
+		console.log(overlay.css("width"));
+		console.log(album.css("width"));
+		console.log(overlay.css("height"));
+		console.log(album.css("height"));
 	});
 }
