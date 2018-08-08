@@ -184,7 +184,7 @@ body {
 	@media screen and (orientation: portrait) {
 		.content_high {
 			font-size: 8.5vw;
-			line-height: 25vh;
+			line-height: 10vw;
 		}
 	}
 
