@@ -14,10 +14,12 @@
 		</div>
 		
 		<!-- SLIDESHOW -->
-		<div class="slideshow_wrapper">
-				<div class="image_wrapper">
-					<img src="media/big.png" alt="orange">
+		<div id="slideshow_wrapper">
+		<div id="active_album_wrapper">
+				<div id="active_image_wrapper">
+					<img src="media/big.png" alt="orange" id="big_active">
 				</div>
+			<div id="album_slide_wrapper">
 				<div class="album_slide active" id="1">
 					<img src="media/orange.png" alt="orange thumbnail">
 				</div>
@@ -27,44 +29,45 @@
 				<div class="album_slide" id="3">
 					<img src="media/purple.png" alt="purple thumbnail">
 				</div>
+			</div>
 		</div>
 		
 		<!-- INFO BOXES -->
 		<div class="info_wrapper">
-			<div class="details_high" id="img_description">
+			<div class="details_high details" id="img_description">
 				<div id="Title">
-					<span class="info_key">Title:</span>
+					<span class="info_key">Title:</span><br>
 					<span class="info_value">Default Title</span>
 				</div>
 				<div id="Description">
-					<span class="info_key">Description:</span>
+					<span class="info_key">Description:</span><br>
 					<span class="info_value">This is supposed to say something</span>
 				</div>
 			</div>
-			<div class="details_low" id="camera_specs">
+			<div class="details_low details" id="camera_specs">
 				<div id="ISO">
-					<span class="info_key">ISO:</span>
+					<span class="info_key">ISO:</span><br>
 					<span class="info_value">50</span>
 				</div>
 				<div id="Aperture">
-					<span class="info_key">Aperture:</span>
+					<span class="info_key">Aperture:</span><br>
 					<span class="info_value">50</span>
 				</div>
 				<div id="FStop">
-					<span class="info_key">F-Stop:</span>
+					<span class="info_key">F-Stop:</span><br>
 					<span class="info_value">50</span>
 				</div>
 				<div id="Sundial">
-					<span class="info_key">Icon here</span>
+					<span class="info_key">Icon here</span><br>
 					<span class="info_value">10:00</span>
 				</div>
 				
 				<div id="IGLikes">
-					<span class="info_key">Heart here</span>
+					<span class="info_key">Heart here</span><br>
 					<span class="info_value"># of IG likes</span>
 				</div>
 				<div id="LUTS">
-					<span class="info_key">Link here</span>
+					<span class="info_key">Link here</span><br>
 					<span class="info_value"># of downloads</span>
 				</div>
 			</div>

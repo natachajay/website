@@ -2,3 +2,29 @@
 /* CSS Document */
 
 /* ALBUMS */
+
+#slideshow_wrapper {
+	display: flex;
+	flex-direction: row;
+	padding: 25vh 0 25vh 25vh;
+}
+
+	#big_active {
+		width: 50vw;
+		margin: 1vw;
+	}
+
+	#album_slide_wrapper {
+		display: flex;
+		flex-direction: row;
+	}
+
+		.album_slide {
+			margin: 1vw;
+		}
+
+/* INFO BOX */
+.info_wrapper {
+	margin: 1vw;
+	padding-left: 10vw;
+}
