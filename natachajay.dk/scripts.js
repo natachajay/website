@@ -137,12 +137,9 @@ function scrollToElem(elemId) {
 
 function resizeOverlayToCover() {
 	"use strict";
-	$(".wrapper_albums").each(function() {
-		var overlay = $(this, ".overlay");
-		var album = $(this, ".albums");
-		console.log(overlay.css("width"));
-		console.log(album.css("width"));
-		console.log(overlay.css("height"));
-		console.log(album.css("height"));
+	$(".album_wrapper").each(function() {
+		var overlay = $($(this).find(".overlay")[0]);
+		var album = $($(this).find(".album")[0]);
+		overlay.height(album.height());
 	});
 }
