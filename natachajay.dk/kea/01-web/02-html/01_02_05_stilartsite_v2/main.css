@@ -1,35 +1,37 @@
 .farver {
-
+        width: 250px;
+        height: 60px;
+        margin: 10px 0 10px 0;
 }
 
     #farve_01 {
-
+        background-color: #ed1c24;
     }
 
     #farve_02 {
-
+        background-color: #f04647;
     }
 
     #farve_03 {
-
+        background-color: #008a80;
     }
 
     #farve_04 {
-
+        background-color: #008c34;
     }
 
     #farve_05 {
-
+        background-color: #f3e403;
     }
 
     #farve_06 {
-
+        background-color: #f1efeb;
     }
 
     #farve_07 {
-
+        background-color: #0c0c0b;
     }
 
     #farve_08 {
-
+        background-color: #3e3e3b;
     }
