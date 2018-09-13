@@ -1,37 +1,62 @@
-.farver {
-        width: 250px;
-        height: 60px;
-        margin: 10px 0 10px 0;
+.sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex-basis: 500px;
+    flex-grow: 1;
+}
+
+.bottom {
+}
+
+.colors {
+    display: flex;
+    flex-direction: column;
+    height 500px;
 }
 
     .color1 {
+        height: 60px;
         background-color: #ed1c24;
     }
 
     .color2 {
+        height: 60px;
         background-color: #f04647;
     }
 
     .color3 {
+        height: 60px;
         background-color: #008a80;
     }
 
     .color4 {
+        height: 60px;
         background-color: #008c34;
     }
 
     .color5 {
+        height: 60px;
         background-color: #f3e403;
     }
 
     .color6 {
+        height: 60px;
         background-color: #f1efeb;
     }
 
     .color7 {
+        height: 60px;
         background-color: #0c0c0b;
     }
 
     .color8 {
+        height: 60px;
         background-color: #3e3e3b;
     }
+
+img {
+    width: 100%;
+}
