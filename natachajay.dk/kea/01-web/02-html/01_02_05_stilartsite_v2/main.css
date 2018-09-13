@@ -4,34 +4,34 @@
         margin: 10px 0 10px 0;
 }
 
-    #farve_01 {
+    .color1 {
         background-color: #ed1c24;
     }
 
-    #farve_02 {
+    .color2 {
         background-color: #f04647;
     }
 
-    #farve_03 {
+    .color3 {
         background-color: #008a80;
     }
 
-    #farve_04 {
+    .color4 {
         background-color: #008c34;
     }
 
-    #farve_05 {
+    .color5 {
         background-color: #f3e403;
     }
 
-    #farve_06 {
+    .color6 {
         background-color: #f1efeb;
     }
 
-    #farve_07 {
+    .color7 {
         background-color: #0c0c0b;
     }
 
-    #farve_08 {
+    .color8 {
         background-color: #3e3e3b;
     }
