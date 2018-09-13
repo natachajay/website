@@ -3,13 +3,18 @@
     flex-wrap: wrap;
 }
 
-.column {
-    flex-basis: 500px;
-    flex-grow: 1;
-}
+    .column {
+        display: flex;
+        flex-basis: 500px;
+        flex-grow: 1;
+        flex-flow: column;
+    }
 
-.bottom {
-}
+        .top {
+        }
+
+        .bottom {
+        }
 
 .colors {
     display: flex;
