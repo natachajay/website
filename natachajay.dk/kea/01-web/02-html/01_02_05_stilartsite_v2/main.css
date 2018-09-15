@@ -4,6 +4,10 @@ img {
     width: 100%;
 }
 
+h3 {
+    margin-top: 0;
+}
+
 .sectionwrapper {
     display: flex;
     flex-wrap: wrap;
@@ -14,6 +18,7 @@ img {
         flex-basis: 500px;
         flex-grow: 1;
         flex-direction: column;
+        margin: 5px;
     }
 
 /* Eksempler */
@@ -81,55 +86,48 @@ img {
 
         .colors {
             display: flex;
-            flex-direction: column;
+            flex-flow: row wrap;
             flex-basis: 500px;
-            padding-right: 5px;
+            margin: 0 5px 0 0;
 
         }
-            .color1 {
+
+            .colors > div[class*="color"]   {
                 height: 60px;
-                margin: 0 0 5px 0;
+                flex-basis: 21vw;
+                flex-grow: 1;
+                margin: 1px;
+            }
+
+            .color1 {
                 background-color: #ed1c24;
             }
 
             .color2 {
-                height: 60px;
-                margin: 0 0 5px 0;
                 background-color: #f04647;
             }
 
             .color3 {
-                height: 60px;
-                margin: 0 0 5px 0;
                 background-color: #008a80;
             }
 
             .color4 {
-                height: 60px;
-                margin: 0 0 5px 0;
                 background-color: #008c34;
             }
 
             .color5 {
-                height: 60px;
-                margin: 0 0 5px 0;
                 background-color: #f3e403;
             }
 
             .color6 {
-                height: 60px;
-                margin: 0 0 5px 0;
                 background-color: #f1efeb;
             }
 
             .color7 {
-                height: 60px;
-                margin: 0 0 5px 0;
                 background-color: #0c0c0b;
             }
 
             .color8 {
-                height: 60px;
                 background-color: #3e3e3b;
             }
 
@@ -138,4 +136,15 @@ img {
 section#links .content {
     display: flex;
     flex-direction: row;
+}
+
+/* Ekstra */
+
+#ekstra > div.sectionwrapper > div.column > p {
+    margin-top: 0;
+}
+
+#ekstra div.column {
+    align-self: flex-end;
+    flex-direction: column;
 }
