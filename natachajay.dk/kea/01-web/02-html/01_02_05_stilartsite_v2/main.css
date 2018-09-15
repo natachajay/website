@@ -1,16 +1,46 @@
 /* Overall */
 
+nav {
+    margin: 0 0 10px 10px;
+}
+
+    nav > a {
+        font-family: 'Noto Serif KR', sans-serif;
+        text-decoration: none;
+        color: black;
+        font-weight: 600;
+        margin-right: 2px;
+    }
+
 img {
     width: 100%;
 }
 
-h3 {
-    margin-top: 0;
+/* Text */
+
+h1, h2, h3 {
+    padding: 0;
+    font-family: 'Noto Serif KR', sans-serif;
 }
+
+h1 {
+    margin: 0 0 5px 10px;
+}
+
+h2, h3 {
+    margin: 5px 0 20px 0;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Divs */
 
 .sectionwrapper {
     display: flex;
     flex-wrap: wrap;
+    margin: 0 0 20px 0
 }
 
     .column {
@@ -18,8 +48,18 @@ h3 {
         flex-basis: 500px;
         flex-grow: 1;
         flex-direction: column;
-        margin: 5px;
+        margin: 0 10px 0 10px;
     }
+
+    .column_wide {
+        margin: 0 10px 0 10px;
+    }
+
+    .column_narrow {
+        margin: 0 10px 0 10px;
+    }
+
+/* Sections */
 
 /* Eksempler */
 
@@ -80,7 +120,7 @@ h3 {
         }
 
     section#komposition_farver .column_narrow {
-        flex-basis: 400px;
+        flex-basis: 300px;
         flex-grow: 1;
     }
 
@@ -134,17 +174,16 @@ h3 {
 /* Links */
 
 section#links .content {
-    display: flex;
-    flex-direction: row;
+    margin: 0 10px 0 10px;
 }
 
 /* Ekstra */
-
-#ekstra > div.sectionwrapper > div.column > p {
-    margin-top: 0;
-}
 
 #ekstra div.column {
     align-self: flex-end;
     flex-direction: column;
 }
+
+    #ekstra > div.sectionwrapper > div.column > p {
+        margin-top: 0;
+    }
