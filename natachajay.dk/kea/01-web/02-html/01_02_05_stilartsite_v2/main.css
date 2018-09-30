@@ -212,7 +212,9 @@ section#links .content {
     margin: 10px 0 10px 0;
 }
 
-#styletile a {
+#styletile .content {
+    display: flex;
+    flex-flow: row wrap;
 }
 
 /* Styletile links */
