@@ -61,6 +61,9 @@ p {
 
 /* Sections */
 
+/* Splash */
+
+
 /* Eksempler */
 
     section#eksempler .column {
@@ -256,4 +259,11 @@ section#links .content {
 
 #color_column {
     width: 850px;
+}
+
+/* Styletile Splash */
+
+.splash_content {
+    display: flex;
+    flex-flow: row nowrap;
 }
