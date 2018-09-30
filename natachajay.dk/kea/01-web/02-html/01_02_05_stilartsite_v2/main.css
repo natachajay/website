@@ -253,3 +253,7 @@ section#links .content {
 #styletile a:active {
 
 }
+
+#color_column {
+    width: 850px;
+}
