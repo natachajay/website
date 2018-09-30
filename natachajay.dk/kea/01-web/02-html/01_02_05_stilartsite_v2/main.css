@@ -5,7 +5,7 @@ nav {
 }
 
     nav > a {
-        font-family: 'Noto Serif KR', sans-serif;
+        font-family: 'Noto Serif KR', serif;
         text-decoration: none;
         color: black;
         font-weight: 600;
@@ -20,7 +20,7 @@ img {
 
 h1, h2, h3 {
     padding: 0;
-    font-family: 'Noto Serif KR', sans-serif;
+    font-family: 'Noto Serif KR', serif;
 }
 
 h1 {
@@ -187,3 +187,69 @@ section#links .content {
     #ekstra > div.sectionwrapper > div.column > p {
         margin-top: 0;
     }
+
+
+/* Style tile */
+
+#styletile .forklaring {
+    font-size: 0.7rem;
+    font-family: 'Open Sans', sans-serif;
+    margin: 10px 0 10px 0;
+
+}
+
+#styletile .forklaring strong {
+    font-weight: 700;
+}
+
+#styletile h1,
+#styletile h2,
+#styletile h3 {
+    font-family: 'Noto Serif KR', serif;
+    margin: 10px 0 10px 0;
+}
+
+#styletile a {
+}
+
+/* Styletile links */
+
+
+#styletile_menulinks {
+    margin: 0;
+}
+
+.menulinks_eks {
+        font-family: 'Noto Serif KR', serif;
+        text-decoration: none;
+        color: black;
+        font-weight: 600;
+        margin-right: 2px;
+}
+
+#menulinks_eks2 {
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    font-weight: 400;
+    color: black;
+}
+
+/* unvisited link */
+#styletile a:link {
+
+}
+
+/* visited link */
+#styletile a:visited {
+
+}
+
+/* mouse over link */
+#styletile a:hover {
+
+}
+
+/* selected link */
+#styletile a:active {
+
+}
