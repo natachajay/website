@@ -20,7 +20,9 @@ img {
 
 h1, h2, h3 {
     padding: 0;
+    color: #3D3D3A;
     font-family: 'Noto Serif KR', serif;
+    font-weight: 600;
 }
 
 h1 {
