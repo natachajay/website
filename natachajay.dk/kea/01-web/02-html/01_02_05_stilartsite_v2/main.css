@@ -250,7 +250,7 @@ section#links .content {
     flex-flow: row nowrap;
 }
 
-.icon_content {
+.icons {
     display: flex;
     flex-flow: row nowrap;
 }
