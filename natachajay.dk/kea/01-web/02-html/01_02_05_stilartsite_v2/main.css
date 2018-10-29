@@ -16,6 +16,10 @@ img {
     width: 100%;
 }
 
+body {
+    background-color: #008a80;
+}
+
 /* Text */
 
 h1, h2, h3 {
