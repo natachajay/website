@@ -1,0 +1,20 @@
+{
+    "name": "Dekonstrukt",
+    "short_name": "Dekonstrukt",
+    "icons": [
+        {
+            "src": "https://www.natachajay.dk/media/kea_media/icons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "https://www.natachajay.dk/media/kea_media/icons/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "start_url": "www.natachajay.dk/kea/01-web/04-responsive/01_04_02_responsive_v2/",
+    "display": "standalone"
+}

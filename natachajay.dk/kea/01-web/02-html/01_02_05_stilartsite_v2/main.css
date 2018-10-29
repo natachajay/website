@@ -239,26 +239,6 @@ section#links .content {
     color: black;
 }
 
-/* unvisited link */
-#styletile a:link {
-
-}
-
-/* visited link */
-#styletile a:visited {
-
-}
-
-/* mouse over link */
-#styletile a:hover {
-
-}
-
-/* selected link */
-#styletile a:active {
-
-}
-
 #color_column {
     width: 850px;
 }
