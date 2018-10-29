@@ -243,9 +243,14 @@ section#links .content {
     width: 850px;
 }
 
-/* Styletile Splash */
+/* Styletile Splash + Ikoner */
 
 .splash_content {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.icon_content {
     display: flex;
     flex-flow: row nowrap;
 }
