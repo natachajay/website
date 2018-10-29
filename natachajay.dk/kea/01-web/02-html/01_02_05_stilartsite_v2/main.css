@@ -151,6 +151,7 @@ p {
 
             .color3 {
                 background-color: #008a80;
+                border: 1px #f1efeb dotted;
             }
 
             .color4 {
