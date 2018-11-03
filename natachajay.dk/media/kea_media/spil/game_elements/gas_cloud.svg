@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: 0.75;
+      }
+
+      .cls-2 {
+        fill: #3e5459;
+      }
+
+      .cls-3 {
+        opacity: 0.5;
+      }
+
+      .cls-4 {
+        fill: #1a2424;
+      }
+
+      .cls-5 {
+        fill: #1a4b5b;
+      }
+
+      .cls-6 {
+        fill: #bfbfbf;
+      }
+    </style>
+  </defs>
+  <title>_</title>
+  <g id="gas_cloud">
+    <g id="mass" class="cls-1">
+      <circle class="cls-2" cx="540" cy="960" r="308.5"/>
+    </g>
+    <g id="mass-2" data-name="mass" class="cls-3">
+      <circle class="cls-4" cx="294" cy="1020" r="125"/>
+    </g>
+    <g id="mass-3" data-name="mass" class="cls-3">
+      <circle class="cls-5" cx="700" cy="1234" r="75"/>
+    </g>
+    <g id="mass-4" data-name="mass">
+      <circle class="cls-6" cx="780" cy="998" r="100"/>
+    </g>
+    <g id="mass-5" data-name="mass">
+      <circle class="cls-6" cx="381" cy="1298" r="50"/>
+    </g>
+    <g id="mass-6" data-name="mass" class="cls-3">
+      <circle class="cls-4" cx="780" cy="493" r="50"/>
+    </g>
+    <g id="mass-7" data-name="mass">
+      <circle class="cls-6" cx="497" cy="654" r="50"/>
+    </g>
+    <g id="mass-8" data-name="mass" class="cls-3">
+      <circle class="cls-5" cx="880" cy="729" r="75"/>
+    </g>
+    <g id="mass-9" data-name="mass" class="cls-3">
+      <circle class="cls-5" cx="231" cy="651" r="50"/>
+    </g>
+    <g id="mass-10" data-name="mass">
+      <circle class="cls-6" cx="540" cy="493" r="25"/>
+    </g>
+    <g id="mass-11" data-name="mass" class="cls-3">
+      <circle class="cls-4" cx="547" cy="1385" r="25"/>
+    </g>
+  </g>
+</svg>

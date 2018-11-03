@@ -1,0 +1,114 @@
+/* OVERALL */
+
+img {
+    width: 100%;
+}
+
+/* DIVS */
+
+.sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 20px 0
+}
+
+    .column {
+        display: flex;
+        flex-basis: 500px;
+        flex-grow: 1;
+        flex-direction: column;
+    }
+
+        .content {
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        .forklaring {
+            font-size: 0.7rem;
+            font-family: 'Open Sans', sans-serif;
+             margin: 10px 0 10px 0;
+        }
+
+        .forklaring strong {
+            font-weight: 700;
+        }
+
+    #color_column {
+        width: 850px;
+    }
+
+/* FONTS */
+
+    h1, h2, h3 {
+        margin: 0 0 20px 0;
+    }
+
+        h1 {
+            font-family: 'VT323', sans-serif;
+            font-size: 48pt;
+        }
+
+        h2 {
+            font-family: 'VT323', sans-serif;
+            color: #F3915C;
+        }
+
+        h3 {
+            font-family: 'VT323', sans-serif;
+        }
+
+        p {
+            font-family: 'PT Sans', sans-serif;
+        }
+
+/* COLORS */
+
+    #color_column {
+        width: 850px;
+    }
+
+        .colors {
+            display: flex;
+            flex-flow: row wrap;
+            margin: 0 5px 0 0;
+        }
+
+            .colors > div[class*="color"]   {
+                height: 60px;
+                flex-basis: 21vw;
+                flex-grow: 1;
+                margin: 1px;
+            }
+
+            .color1 {
+                background-color: #1A2424;
+            }
+
+            .color2 {
+                background-color: #042D3E;
+            }
+
+            .color3 {
+                background-color: #1A4B5B;
+            }
+
+            .color4 {
+                background-color: #3C6475;
+            }
+
+            .color5 {
+                background-color: #F3915C;
+            }
+
+            .color6 {
+                background-color: #FADBBF;
+            }
+
+            .color7 {
+                background-color: #F2F0F0;
+            }
+
+            .color8 {
+                background-color: #BFBFBF;
+            }

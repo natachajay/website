@@ -1,0 +1,18 @@
+<svg id="ui" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 283 147">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f2f0f0;
+      }
+
+      .cls-2 {
+        fill: #f3915c;
+      }
+    </style>
+  </defs>
+  <title>ui</title>
+  <g id="small_button">
+    <rect class="cls-1" x="32" y="33.5" width="219" height="80" rx="14.5"/>
+    <path class="cls-2" d="M236.5,36a12,12,0,0,1,12,12V99a12,12,0,0,1-12,12H46.5a12,12,0,0,1-12-12V48a12,12,0,0,1,12-12h190m0-5H46.5a17,17,0,0,0-17,17V99a17,17,0,0,0,17,17h190a17,17,0,0,0,17-17V48a17,17,0,0,0-17-17Z"/>
+  </g>
+</svg>

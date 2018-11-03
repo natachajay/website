@@ -1,0 +1,18 @@
+<svg id="ui" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1008 148">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f2f0f0;
+      }
+
+      .cls-2 {
+        fill: #f3915c;
+      }
+    </style>
+  </defs>
+  <title>ui</title>
+  <g id="status_bar">
+    <rect class="cls-1" x="51.5" y="34" width="905" height="80" rx="14.5"/>
+    <path class="cls-2" d="M942,36.5a12,12,0,0,1,12,12v51a12,12,0,0,1-12,12H66a12,12,0,0,1-12-12v-51a12,12,0,0,1,12-12H942m0-5H66a17,17,0,0,0-17,17v51a17,17,0,0,0,17,17H942a17,17,0,0,0,17-17v-51a17,17,0,0,0-17-17Z"/>
+  </g>
+</svg>

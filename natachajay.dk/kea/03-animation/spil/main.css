@@ -1,0 +1,25 @@
+img {
+    width: 90vw;
+}
+
+#game_elements {
+    width: 50vw;
+}
+
+    h1 {
+        font-family: 'VT323', sans-serif;
+        font-size: 48pt;
+    }
+
+    h2 {
+        font-family: 'VT323', sans-serif;
+        color: #F3915C;
+    }
+
+    h3 {
+        font-family: 'VT323', sans-serif;
+    }
+
+    p {
+        font-family: 'PT Sans', sans-serif;
+    }

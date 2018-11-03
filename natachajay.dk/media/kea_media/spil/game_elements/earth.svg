@@ -1,0 +1,15 @@
+<svg id="earth" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1920">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#Emerald);
+      }
+    </style>
+    <linearGradient id="Emerald" x1="524" y1="1251" x2="524" y2="636" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#003330"/>
+      <stop offset="1" stop-color="#002726"/>
+    </linearGradient>
+  </defs>
+  <title>_</title>
+  <circle class="cls-1" cx="524" cy="943.5" r="307.5"/>
+</svg>
