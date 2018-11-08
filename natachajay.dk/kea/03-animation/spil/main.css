@@ -72,38 +72,42 @@ body {
 
 /* Game elements */
 
-.earth_sprite {
-	background-image: url("https://www.natachajay.dk/media/kea_media/spil/game_elements/earth.svg");
-	background-repeat: no-repeat;
-	background-size: 100%;
+#earth {
 	position: absolute;
 	bottom: 5vh;
-	width: 50vw;
-	height: 50vh;
-	margin: auto;
+	width: 100%;
 }
 
-#meteor_small {
+	.earth_sprite {
+		background-image: url("https://www.natachajay.dk/media/kea_media/spil/game_elements/earth.svg");
+		background-repeat: no-repeat;
+		background-size: 100%;
+		width: 50vh;
+		height: 50vh;
+		margin: auto;
+	}
+
+.meteor_small_sprite {
 	background-image: url("https://www.natachajay.dk/media/kea_media/spil/game_elements/meteor.svg");
 }
 
-#meteor_large {
+.meteor_large_sprite {
 	background-image: url("https://www.natachajay.dk/media/kea_media/spil/game_elements/meteor.svg");
 }
 
-#meteor_giant {
+.meteor_giant_sprite {
 	background-image: url("https://www.natachajay.dk/media/kea_media/spil/game_elements/meteor.svg");
 }
 
-#gas_cloud_small {
+.gas_cloud_small_sprite {
 	background-image: url("https://www.natachajay.dk/media/kea_media/spil/game_elements/gas_cloud.svg");
 }
 
-#gas_cloud_large {
+.gas_cloud_large_sprite {
 	background-image: url("https://www.natachajay.dk/media/kea_media/spil/game_elements/gas_cloud.svg");
 }
 
-#sunburst {
+.sunburst_sprite {
 	background-image: url("https://www.natachajay.dk/media/kea_media/spil/game_elements/sunburst.svg");
 }
 
