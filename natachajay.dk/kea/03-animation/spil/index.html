@@ -6,88 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans|VT323" rel="stylesheet">
+    <script type="text/javascript" src="script.js"></script>
 
 <title>KOSMO KADET</title>
 </head>
 
 <body>
     <div id="screen">
-        <div id="menu_background">
-            <img src="/natachajay.dk/media/kea_media/spil/titlescreen.png" alt="Kosmo Kadet">
+        <div class="show" id="menu_background">
         </div>
         <div id="game">
-            <div id="game_background">
-                <img src="/natachajay.dk/media/kea_media/spil/scene.png" alt="Kosmo Kadet">
+            <div class="hide" id="game_background">
             </div>
 
             <div id="game_elements">
-                <div id="igorina_front">
-                    <img src="/natachajay.dk/media/kea_media/spil/figures/igorina_front.svg">
+                <div class="hide" id="igorina_front">
                 </div>
-                <div id="igorina_back">
-                    <img src="/natachajay.dk/media/kea_media/spil/figures/igorina_back.svg">
+                <div class="hide" id="igorina_back">
                 </div>
-                <div id="igorina_dead">
-                    <img src="/natachajay.dk/media/kea_media/spil/figures/igorina_dead.svg">
+                <div class="hide" id="igorina_dead">
                 </div>
-                <div id="meteor_small">
-                    <img src="/natachajay.dk/media/kea_media/spil/game_elements/meteor.svg">
+                <div class="hide" id="meteor_small">
                 </div>
-                <div id="meteor_large">
-                    <img src="/natachajay.dk/media/kea_media/spil/game_elements/meteor.svg">
+                <div class="hide" id="meteor_large">
                 </div>
-                <div id="meteor_giant">
-                    <img src="/natachajay.dk/media/kea_media/spil/game_elements/meteor.svg">
+                <div class="hide" id="meteor_giant">
                 </div>
-                <div id="sunburst">
-                    <img src="/natachajay.dk/media/kea_media/spil/game_elements/sunburst.svg">
+                <div class="hide" id="sunburst">
                 </div>
-                <div id="gas_cloud_small">
-                    <img src="/natachajay.dk/media/kea_media/spil/game_elements/gas_cloud.svg"></div>
-                <div id="gas_cloud_large">
-                    <img src="/natachajay.dk/media/kea_media/spil/game_elements/gas_cloud.svg"></div>
-                <div id="pinhead_front">
-                    <img src="/natachajay.dk/media/kea_media/spil/figures/pinhead_front.svg">
+                <div class="hide" id="gas_cloud_small">
                 </div>
-                <div id="pinhead_back">
-                    <img src="/natachajay.dk/media/kea_media/spil/figures/pinhead_back.svg">
+                <div class="hide" id="gas_cloud_large">
                 </div>
-                <div id="pinhead_dead">
-                    <img src="/natachajay.dk/media/kea_media/spil/figures/pinhead_dead.svg">
+                <div class="hide" id="pinhead_front">
                 </div>
-                <div id="earth">
-                    <img src="/natachajay.dk/media/kea_media/spil/game_elements/earth.svg">
+                <div class="hide" id="pinhead_back">
+                </div>
+                <div class="hide" id="pinhead_dead">
+                </div>
+                <div class="hide" id="earth">
                 </div>
             </div>
 
-            <div id="game_ui">
-                <div id="points">
-                    <img src="/natachajay.dk/media/kea_media/spil/ui/ui_small_button.svg" alt="Points">
+            <div class="hide" id="game_ui">
+                <div class="show" id="points">
                 </div>
-                <div id="energy">
-                    <img src="/natachajay.dk/media/kea_media/spil/ui/ui_status_bar.svg" alt="Status bar">
+                <div class="show" id="energy">
                 </div>
-                <div id="time">
-                    <img src="/natachajay.dk/media/kea_media/spil/ui/ui_round_button.svg" alt="Time remaining">
+                <div class="show" id="time">
                 </div>
             </div>
         </div>
 
-        <div id="start">
-            <img src="/natachajay.dk/media/kea_media/spil/ui/ui_big_button.svg" alt="Start!">
+        <div class="show" id="start">
         </div>
-        <div id="settings">
-            <img src="/natachajay.dk/media/kea_media/spil/ui/ui_small_button.svg" alt="Settings">
+        <div class="hide" id="settings">
         </div>
 
-        <div id="gameover">
-            <h1>Game Over</h1>
-            <img src="/natachajay.dk/media/kea_media/spil/ui/ui_play_again.svg" alt="Play again!">
-            <img src="/natachajay.dk/media/kea_media/spil/gameover.png" alt="Game over!">
+        <div class="hide" id="gameover">
         </div>
 
-        <div id="levelcomplete">
-            <img src="/natachajay.dk/media/kea_media/spil/gamecomplete.png" alt="Win!">
+        <div class="hide" id="levelcomplete">
         </div>
     </div>
 </body>

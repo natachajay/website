@@ -1,9 +1,7 @@
-img {
-    width: 90vw;
-}
+/* General */
 
-#game_elements {
-    width: 50vw;
+#menu_background {
+    background-image: url("https://www.natachajay.dk/media/kea_media/spil/titlescreen.png"); 
 }
 
     h1 {
@@ -22,4 +20,109 @@ img {
 
     p {
         font-family: 'PT Sans', sans-serif;
+    }
+
+picture {
+    width: 95vw;
+}
+
+/* Animation */
+
+
+#start {
+  position: absolute;
+  width: 100vw;
+  height: 56.25vw;
+  background-image: url(start.svg);
+  background-size: 100%;
+  background-color: rgba(240, 248, 255, 0.75);
+}
+
+#play {
+  position: absolute;
+  width: 20vw;
+  height: 10vw;
+  background-color: ;
+  left: 33vw;
+  top: 42vw;
+
+  cursor: pointer;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.show {
+    visibility: visible;
+}
+
+.blur {
+    filter:blur(5px) brightness(75%);
+}
+
+.fade_out {
+    animation-name: fade_out;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+    @keyframes fade_out {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+/* Gameplay animation */
+
+
+.shake {
+    animation-name: shake;
+    animation-duration: 3s;
+}
+
+    @keyframes shake {
+        0% {
+            transform: rotate(0)
+        }
+        25% {
+            transform: rotate(30)
+        }
+        50% {
+            transform: rotate(0)
+        }
+        75% {
+            transform: rotate(30)
+        }
+        100% {
+            transform: rotate(0)
+        }
+    }
+
+.attack_slow {
+    
+}
+
+    @keyframes attack_slow {
+
+    }
+
+.attack_fast {
+    
+}
+
+    @keyframes attack_fast {
+
+    }
+
+.fall {
+    
+}
+
+    @keyframes fall {
+
     }
