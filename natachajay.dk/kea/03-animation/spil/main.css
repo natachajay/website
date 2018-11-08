@@ -2,12 +2,12 @@
 
 body {
 	margin: 0;
+	overflow: hidden;
 }
 
 #screen {
 	width: 100vw;
 	height: 100vh;
-	overflow: hidden;
 }
 
 #menu_background {
@@ -47,21 +47,33 @@ body {
 /* Characters */
 
 #igorina_front {
-	background-image: url("https://www.natachajay.dk/media/kea_media/spil/figures/igorina_front.svg");
+	position: absolute;
+	bottom: 30vh;
+	width: 100%;
 }
+
+	.igorina_front_sprite {
+		background-image: url("https://www.natachajay.dk/media/kea_media/spil/figures/igorina_front.svg");
+		background-repeat: no-repeat;
+		background-size: 100%;
+		width: 10vh;
+		height: 20vh;
+		margin: auto;
+	}
 
 #igorina_back {
 	position: absolute;
 	bottom: 30vh;
 	width: 100%
 }
-.igorina_back_sprite {
-	background-image: url("https://www.natachajay.dk/media/kea_media/spil/figures/igorina_back.svg");
-	background-repeat: no-repeat;
-	background-size: 100%;
-	width: 10vh;
-	height: 20vh;
-	margin: auto;
+
+	.igorina_back_sprite {
+		background-image: url("https://www.natachajay.dk/media/kea_media/spil/figures/igorina_back.svg");
+		background-repeat: no-repeat;
+		background-size: 100%;
+		width: 10vh;
+		height: 20vh;
+		margin: auto;
 }
 
 #igorina_dead {
