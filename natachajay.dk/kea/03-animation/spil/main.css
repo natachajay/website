@@ -1,5 +1,9 @@
 /* General Game */
 
+body {
+	margin: 0;
+}
+
 #screen {
 	width: 100vw;
 	height: 100vh;
@@ -17,22 +21,25 @@
 
 #game_background {
 	background-image: url("https://www.natachajay.dk/media/kea_media/spil/scene.png");
-	background-size: contain;
+	background-size: cover;
 	width: 100vw;
 	height: 100vh;
 	position: fixed;
 	top: 0px;
 	left: 0px;
+	z-index: -1;
 }
 
 #gameover {
 	background-image: url("https://www.natachajay.dk/media/kea_media/spil/gameover.png");
+	background-size: cover;
 	width: 100vw;
 	height: 100vh;
 }
 
 #levelcomplete {
 	background-image: url("https://www.natachajay.dk/media/kea_media/spil/gamecomplete.png");
+	background-size: cover;
 	width: 100vw;
 	height: 100vh;
 }
@@ -65,14 +72,15 @@
 
 /* Game elements */
 
-#earth {
+#earth_sprite {
 	background-image: url("https://www.natachajay.dk/media/kea_media/spil/game_elements/earth.svg");
 	background-repeat: no-repeat;
+	background-size: 100%;
 	position: absolute;
-	bottom: 20vh;
-	left: 50%;
+	bottom: 5vh;
 	width: 50vw;
 	height: 50vh;
+	margin: auto;
 }
 
 #meteor_small {
