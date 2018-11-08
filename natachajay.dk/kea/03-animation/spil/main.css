@@ -52,7 +52,7 @@ body {
 
 #igorina_back {
 	position: absolute;
-	bottom: 45vh;
+	bottom: 30vh;
 	width: 100%
 }
 .igorina_back_sprite {
@@ -95,7 +95,7 @@ body {
 
 #earth {
 	position: absolute;
-	bottom: 5vh;
+	bottom: -10vh;
 	width: 100%;
 }
 
