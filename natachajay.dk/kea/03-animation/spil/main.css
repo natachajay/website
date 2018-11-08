@@ -72,7 +72,7 @@ body {
 
 /* Game elements */
 
-#earth_sprite {
+.earth_sprite {
 	background-image: url("https://www.natachajay.dk/media/kea_media/spil/game_elements/earth.svg");
 	background-repeat: no-repeat;
 	background-size: 100%;
