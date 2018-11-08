@@ -1,8 +1,86 @@
-/* General */
+/* General Game */
 
 #menu_background {
-    background-image: url("https://www.natachajay.dk/media/kea_media/spil/titlescreen.png"); 
+    background-image: url("https://www.natachajay.dk/media/kea_media/spil/titlescreen.png");
+	width: 100vw;
+	height: 100vh;
 }
+
+#game_background {
+	background-image: url("https://www.natachajay.dk/media/kea_media/spil/scene.png");
+	width: 100vw;
+	height: 100vh;
+}
+
+#gameover {
+	background-image: url("https://www.natachajay.dk/media/kea_media/spil/gameover.png");
+}
+
+#levelcomplete {
+	background-image: url("https://www.natachajay.dk/media/kea_media/spil/gamecomplete.png");
+}
+
+/* Characters */
+
+#igorina_front {
+	background-image: url("https://www.natachajay.dk/media/kea_media/spil/figures/igorina_front.svg");
+}
+
+#igorina_back {
+	background-image: url("https://www.natachajay.dk/media/kea_media/spil/figures/igorina_back.svg");
+}
+
+#igorina_dead {
+	background-image: url("https://www.natachajay.dk/media/kea_media/spil/figures/igorina_dead.svg");
+}
+
+#pinhead_front {
+	background-image: url("https://www.natachajay.dk/media/kea_media/spil/figures/pinhead_front.svg");
+}
+
+#pinhead_back {
+	background-image: url("https://www.natachajay.dk/media/kea_media/spil/figures/pinhead_back.svg");
+}
+
+#pinhead_dead {
+	background-image: url("https://www.natachajay.dk/media/kea_media/spil/figures/pinhead_dead.svg");
+}
+
+/* Game elements */
+
+#earth {
+	background-image: url("https://www.natachajay.dk/media/kea_media/spil/game_elements/earth.svg");
+}
+
+#meteor_small {
+	background-image: url("https://www.natachajay.dk/media/kea_media/spil/game_elements/meteor.svg");
+}
+
+#meteor_large {
+	background-image: url("https://www.natachajay.dk/media/kea_media/spil/game_elements/meteor.svg");
+}
+
+#meteor_giant {
+	background-image: url("https://www.natachajay.dk/media/kea_media/spil/game_elements/meteor.svg");
+}
+
+#gas_cloud_small {
+	background-image: url("https://www.natachajay.dk/media/kea_media/spil/game_elements/gas_cloud.svg");
+}
+
+#gas_cloud_large {
+	background-image: url("https://www.natachajay.dk/media/kea_media/spil/game_elements/gas_cloud.svg");
+}
+
+#sunburst {
+	background-image: url("https://www.natachajay.dk/media/kea_media/spil/game_elements/sunburst.svg");
+}
+
+/* UI */
+
+
+
+/* Fonts */
 
     h1 {
         font-family: 'VT323', sans-serif;
@@ -22,10 +100,6 @@
         font-family: 'PT Sans', sans-serif;
     }
 
-picture {
-    width: 95vw;
-}
-
 /* Animation */
 
 
@@ -42,7 +116,7 @@ picture {
   position: absolute;
   width: 20vw;
   height: 10vw;
-  background-color: ;
+  background-color: white;
   left: 33vw;
   top: 42vw;
 
