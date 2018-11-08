@@ -69,8 +69,19 @@ body {
 }
 
 #pinhead_front {
-	background-image: url("https://www.natachajay.dk/media/kea_media/spil/figures/pinhead_front.svg");
+	position: absolute;
+	top: 5vh;
+	width: 100%;
 }
+
+	.pinhead_front_sprite {
+		background-image: url("https://www.natachajay.dk/media/kea_media/spil/figures/pinhead_front.svg");
+		background-repeat: no-repeat;
+		background-size: 100%;
+		width: 12vh;
+		height: 24vh;
+		margin: auto;
+	}
 
 #pinhead_back {
 	background-image: url("https://www.natachajay.dk/media/kea_media/spil/figures/pinhead_back.svg");
