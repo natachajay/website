@@ -51,7 +51,17 @@ body {
 }
 
 #igorina_back {
+	position: absolute;
+	bottom: 20vh;
+	width: 100%
+}
+.igorina_back_sprite {
 	background-image: url("https://www.natachajay.dk/media/kea_media/spil/figures/igorina_back.svg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	width: 20vh;
+	height: 20vh;
+	margin: auto;
 }
 
 #igorina_dead {
