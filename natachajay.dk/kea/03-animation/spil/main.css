@@ -1,23 +1,40 @@
 /* General Game */
 
-#menu_background {
-    background-image: url("https://www.natachajay.dk/media/kea_media/spil/titlescreen.png");
+#screen {
 	width: 100vw;
 	height: 100vh;
+	overflow: hidden;
+}
+
+#menu_background {
+    background-image: url("https://www.natachajay.dk/media/kea_media/spil/titlescreen.png");
+	background-size: cover;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	display: none;
 }
 
 #game_background {
 	background-image: url("https://www.natachajay.dk/media/kea_media/spil/scene.png");
+	background-size: contain;
 	width: 100vw;
 	height: 100vh;
+	position: fixed;
+	top: 0px;
+	left: 0px;
 }
 
 #gameover {
 	background-image: url("https://www.natachajay.dk/media/kea_media/spil/gameover.png");
+	width: 100vw;
+	height: 100vh;
 }
 
 #levelcomplete {
 	background-image: url("https://www.natachajay.dk/media/kea_media/spil/gamecomplete.png");
+	width: 100vw;
+	height: 100vh;
 }
 
 /* Characters */
@@ -50,6 +67,12 @@
 
 #earth {
 	background-image: url("https://www.natachajay.dk/media/kea_media/spil/game_elements/earth.svg");
+	background-repeat: no-repeat;
+	position: absolute;
+	bottom: 20vh;
+	left: 50%;
+	width: 50vw;
+	height: 50vh;
 }
 
 #meteor_small {
@@ -78,50 +101,34 @@
 
 /* UI */
 
-
+#start {
+	background-color: #F2905D;
+	color: #FEFEFE;
+	width: 25vw;
+	cursor: pointer;
+}
 
 /* Fonts */
 
-    h1 {
-        font-family: 'VT323', sans-serif;
-        font-size: 48pt;
-    }
+h1 {
+    font-family: 'VT323', sans-serif;
+    font-size: 48pt;
+}
 
-    h2 {
-        font-family: 'VT323', sans-serif;
-        color: #F3915C;
-    }
+h2 {
+   	font-family: 'VT323', sans-serif;
+    color: #F3915C;
+}
 
-    h3 {
-        font-family: 'VT323', sans-serif;
-    }
+h3 {
+    font-family: 'VT323', sans-serif;
+}
 
-    p {
-        font-family: 'PT Sans', sans-serif;
-    }
+p {
+   font-family: 'PT Sans', sans-serif;
+}
 
 /* Animation */
-
-
-#start {
-  position: absolute;
-  width: 100vw;
-  height: 56.25vw;
-  background-image: url(start.svg);
-  background-size: 100%;
-  background-color: rgba(240, 248, 255, 0.75);
-}
-
-#play {
-  position: absolute;
-  width: 20vw;
-  height: 10vw;
-  background-color: white;
-  left: 33vw;
-  top: 42vw;
-
-  cursor: pointer;
-}
 
 .hide {
     visibility: hidden;
