@@ -6,13 +6,24 @@ body {
 }
 
 #screen {
+	display: inline-flex;
 	width: 100vw;
 	height: 100vh;
+	z-index: -1;
 }
 
 #menu_background {
     background-image: url("https://www.natachajay.dk/media/kea_media/spil/titlescreen.png");
 	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	z-index: -1;
+}
+
+#settings {
+	background-color: rgba(0,0,0,0.85);
 	background-size: cover;
 	width: 100vw;
 	height: 100vh;
@@ -34,16 +45,203 @@ body {
 
 #gameover {
 	background-image: url("https://www.natachajay.dk/media/kea_media/spil/gameover.png");
+	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100vw;
 	height: 100vh;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: -1;
 }
+
+	.gameover_banner {
+		position: fixed;
+		width: 100%;
+		top: 10vh;
+		display: flex;
+		justify-content: center;
+		color: #FEFEFE;
+	}
 
 #levelcomplete {
 	background-image: url("https://www.natachajay.dk/media/kea_media/spil/gamecomplete.png");
+	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100vw;
 	height: 100vh;
+	position: fixed;
+	z-index: -1;
+}
+
+	.levelcomplete_banner {
+		position: fixed;
+		width: 100%;
+		top: 10vh;
+		display: flex;
+		justify-content: center;
+		color: #FEFEFE;
+	}
+
+/* UI */
+
+#start {
+	position: fixed;
+	width: 100%;
+	bottom: 10vh;
+	display: flex;
+	justify-content: center;
+}
+
+	.start_sprite {
+		background-color: #F2905D;
+		color: #FEFEFE;
+		min-width: 15vw;
+		border: solid 5px #FEFEFE;
+		border-radius: 25px 25px;
+		text-align: center;
+		z-index: 0;
+		cursor: pointer;
+	}
+
+#logo {
+	background-image: url("https://www.natachajay.dk/media/kea_media/spil/ui/kosmo_kadet_logo.svg");
+	background-repeat: no-repeat;
+	width: 15vw;
+	height: 15vw;
+	z-index: 0;
+	position: fixed;
+	bottom: 10vh;
+	margin: 0 0 0 5%;
+}
+
+#gameover_play_again {
+	display: flex;
+	justify-content: center;
+}
+
+	.gameover_play_again_sprite {
+	background-image: url("https://www.natachajay.dk/media/kea_media/spil/ui/ui_play_again.svg");
+	background-repeat: no-repeat;
+	width: 15vw;
+	height: 15vw;
+	z-index: 0;
+	position: fixed;
+	bottom: 5vh;
+	margin: auto;
+	cursor: pointer;
+	}
+
+#levelcomplete_play_again {
+	display: flex;
+	justify-content: center;
+}
+
+	.levelcomplete_play_again_sprite {
+	background-image: url("https://www.natachajay.dk/media/kea_media/spil/ui/ui_play_again.svg");
+	background-repeat: no-repeat;
+	width: 15vw;
+	height: 15vw;
+	z-index: 0;
+	position: fixed;
+	bottom: 5vh;
+	margin: auto;
+	cursor: pointer;
+	}
+
+/* Settings UI */
+
+#settings_button {
+	background-image: url("https://www.natachajay.dk/media/kea_media/spil/ui/ui_round_button.svg");
+	background-repeat: no-repeat;
+	width: 15vw;
+	height: 15vw;
+	z-index: 0;
+	position: fixed;
+	bottom: 10vh;
+	margin: 0 0 0 85%;
+	cursor: pointer;
+}
+
+#mute_effects {
+	background-image: url("https://www.natachajay.dk/media/kea_media/spil/ui/ui_mute_button.svg");
+	background-repeat: no-repeat;
+	width: 15vw;
+	height: 15vw;
+	z-index: 0;
+	position: fixed;
+	bottom: 10vh;
+	margin: auto;
+	cursor: pointer;
+}
+
+	#unmute_effects {
+		background-image: url("https://www.natachajay.dk/media/kea_media/spil/ui/ui_unmute_button.svg");
+		background-repeat: no-repeat;
+		width: 15vw;
+		height: 15vw;
+		z-index: 0;
+		position: fixed;
+		bottom: 10vh;
+		margin: auto;
+		cursor: pointer;
+	}
+
+#mute_music {
+	background-image: url("https://www.natachajay.dk/media/kea_media/spil/ui/ui_mute_button.svg");
+	background-repeat: no-repeat;
+	width: 15vw;
+	height: 15vw;
+	z-index: 0;
+	position: fixed;
+	bottom: 10vh;
+	margin: auto;
+	cursor: pointer;
+}
+
+	#unmute_music {
+		background-image: url("https://www.natachajay.dk/media/kea_media/spil/ui/ui_unmute_button.svg");
+		background-repeat: no-repeat;
+		width: 15vw;
+		height: 15vw;
+		z-index: 0;
+		position: fixed;
+		bottom: 10vh;
+		margin: auto;
+		cursor: pointer;
+	}
+
+#close {
+	background-image: url("https://www.natachajay.dk/media/kea_media/spil/ui/ui_close_button.svg");
+	background-repeat: no-repeat;
+	width: 15vw;
+	height: 15vw;
+	z-index: 0;
+	position: fixed;
+	bottom: 10vh;
+	margin: auto;
+	cursor: pointer;
+}
+
+/* Fonts */
+
+h1 {
+    font-family: 'VT323', sans-serif;
+    font-size: 3em;
+}
+
+h2 {
+   	font-family: 'VT323', sans-serif;
+    color: #F3915C;
+}
+
+h3 {
+    font-family: 'VT323', sans-serif;
+}
+
+p {
+	font-family: 'PT Sans', sans-serif;
+	
 }
 
 /* Characters */
@@ -82,7 +280,6 @@ body {
 	
 }
 
-
 	.igorina_dead_sprite {
 		background-image: url("https://www.natachajay.dk/media/kea_media/spil/figures/igorina_dead.svg");
 
@@ -119,6 +316,7 @@ body {
 	}
 
 #pinhead_dead {
+	
 }
 
 	.pinhead_dead_sprite {
@@ -149,6 +347,11 @@ body {
 
 	.meteor_small_sprite {
 		background-image: url("https://www.natachajay.dk/media/kea_media/spil/game_elements/meteor.svg");
+		background-repeat: no-repeat;
+		width: 5vw;
+		height: 5vw;
+		z-index: 0;
+		top: -5vh;
 	}
 
 #meteor_large {
@@ -157,6 +360,11 @@ body {
 
 	.meteor_large_sprite {
 		background-image: url("https://www.natachajay.dk/media/kea_media/spil/game_elements/meteor.svg");
+		background-repeat: no-repeat;
+		width: 8vw;
+		height: 8vw;
+		z-index: 0;
+		top: -5vh;
 	}
 
 #meteor_giant {
@@ -165,6 +373,11 @@ body {
 
 	.meteor_giant_sprite {
 		background-image: url("https://www.natachajay.dk/media/kea_media/spil/game_elements/meteor.svg");
+		background-repeat: no-repeat;
+		width: 10vw;
+		height: 10vw;
+		z-index: 0;
+		top: -5vh;
 	}
 
 #gas_cloud_small {
@@ -173,6 +386,10 @@ body {
 
 	.gas_cloud_small_sprite {
 		background-image: url("https://www.natachajay.dk/media/kea_media/spil/game_elements/gas_cloud.svg");
+		background-repeat: no-repeat;
+		width: 5vw;
+		height: 5vw;
+		z-index: 0;
 	}
 
 #gas_cloud_large {
@@ -181,6 +398,10 @@ body {
 
 	.gas_cloud_large_sprite {
 		background-image: url("https://www.natachajay.dk/media/kea_media/spil/game_elements/gas_cloud.svg");
+		background-repeat: no-repeat;
+		width: 8vw;
+		height: 8vw;
+		z-index: 0;
 	}
 
 #sunburst {
@@ -189,62 +410,11 @@ body {
 
 	.sunburst_sprite {
 		background-image: url("https://www.natachajay.dk/media/kea_media/spil/game_elements/sunburst.svg");
-	}
-
-/* UI */
-
-#start {
-	position: fixed;
-	width: 100%;
-	bottom: 10vh;
-}
-
-	.start_sprite {
-		background-color: #F2905D;
-		color: #FEFEFE;
-		min-width: 10vw;
-		max-width: 15vw;
-		border: solid 5px #FEFEFE;
-		border-radius: 25px 25px;
-		text-align: center;
-		margin: auto;
-		z-index: 0;
-		cursor: pointer;
-	}
-
-#logo {
-	position: fixed;
-	width: 100%;
-	bottom: 10vh;
-}
-
-	.logo_sprite {
-		background-image: url("https://www.natachajay.dk/media/kea_media/spil/ui/kosmo_kadet_logo.svg");
 		background-repeat: no-repeat;
-		width: 15vw;
-		height: 15vw;
+		width: 8vw;
+		height: 8vw;
 		z-index: 0;
 	}
-
-/* Fonts */
-
-h1 {
-    font-family: 'VT323', sans-serif;
-    font-size: 48pt;
-}
-
-h2 {
-   	font-family: 'VT323', sans-serif;
-    color: #F3915C;
-}
-
-h3 {
-    font-family: 'VT323', sans-serif;
-}
-
-p {
-   font-family: 'PT Sans', sans-serif;
-}
 
 /* Animation */
 
@@ -335,11 +505,49 @@ p {
 
     }
 
-.fall {
-    animation-name: fall;
-	animation-duration: 2s;
+.drop {
+	animation-name: drop;
+	animation: drop 1.2s forwards;
 }
 
-    @keyframes fall {
+	@keyframes drop {
+	  0% {
+		transform-origin: center;
+		opacity: 1;
+	  }
+	  20% {
+		transform: 
+		  translate3d(0, 20px, 0)
+		  rotate3d(0, 0, 1, -10deg);
+		opacity: 1;
+	  }
+	  40%, 45% {
+		transform: 
+		  translate3d(0, -120px, 0)
+		  rotate3d(0, 0, 1, 10deg);
+		opacity: 1;
+	  }
+	  to {
+		opacity: 0;
+		transform: 
+		  translate3d(0, 2000px, 0)
+		  rotate3d(0, 0, 1, 10deg);
+	  }
+	}
 
-    }
+.pulse {
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in;
+}
+
+	@keyframes pulse {
+	  0% {
+		transform: scale(0.95);
+	  }
+	  100% {
+		transform: scale(1);
+	  }
+	}

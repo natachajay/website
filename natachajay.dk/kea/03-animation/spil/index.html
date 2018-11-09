@@ -13,13 +13,13 @@
 
 <body>
     <div id="screen">
-        <div class="show" id="menu_background">
+        <div class="hide" id="menu_background">
         </div>
-        <div id="game">
+        <div class="hide" id="game">
             <div class="hide" id="game_background">
             </div>
 
-            <div id="game_elements">
+            <div class="hide" id="game_elements">
                 <div class="hide" id="earth">
 					<div class="earth_sprite"></div>
                 </div>
@@ -62,40 +62,54 @@
             </div>
 
             <div class="hide" id="game_ui">
-                <div class="show" id="points">
+                <div class="hide" id="points">
 					<span class="point_indicator"></span>
 					<span class="point_amount"></span>
                 </div>
-                <div class="show" id="energy">
+                <div class="hide" id="energy">
 					<div class="life" id="life_01"></div>
 					<div class="life" id="life_02"></div>
 					<div class="life" id="life_03"></div>
 					<div class="life" id="life_04"></div>
 					<div class="life" id="life_05"></div>
                 </div>
-                <div class="show" id="time">
+                <div class="hide" id="time">
                 </div>
             </div>
         </div>
 
-        <div class="show" id="start">
+        <div class="hide" id="start">
 			<div class="start_sprite">
 				<h1>Start</h1>
 			</div>
         </div>
         <div class="show" id="settings">
-			<div class="settings_sprite">
-			</div>
+			<div class="hide" id="settings_button"></div>
+			<div class="hide" id="mute_music"></div>
+			<div class="hide" id="unmute_music"></div>
+			<div class="hide" id="mute_effects"></div>
+			<div class="hide" id="unmute_effects"></div>
+			<div class="hide" id="close"></div>
         </div>
-		<div class="show" id="logo">
-			<div class="logo_sprite">
-			</div>
+		<div class="hide" id="logo">
 		</div>
 
         <div class="hide" id="gameover">
+			<div class="gameover_banner">
+				<h1>Boo, game over</h1>
+			</div>
+			<div class="hide" id="gameover_play_again">
+			<div class="gameover_play_again_sprite"></div>
+			</div>
         </div>
 
         <div class="hide" id="levelcomplete">
+			<div class="levelcomplete_banner">
+				<h1>Win!</h1>
+			</div>
+			<div class="hide" id="levelcomplete_play_again">
+				<div class="levelcomplete_play_again_sprite"></div>
+			</div>
         </div>
     </div>
 </body>
