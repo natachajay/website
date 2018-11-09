@@ -12,15 +12,17 @@ body {
 
 #menu_background {
     background-image: url("https://www.natachajay.dk/media/kea_media/spil/titlescreen.png");
+	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100vw;
 	height: 100vh;
 	position: fixed;
-	display: none;
+	z-index: -1;
 }
 
 #game_background {
 	background-image: url("https://www.natachajay.dk/media/kea_media/spil/scene.png");
+	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100vw;
 	height: 100vh;
@@ -77,8 +79,14 @@ body {
 }
 
 #igorina_dead {
-	background-image: url("https://www.natachajay.dk/media/kea_media/spil/figures/igorina_dead.svg");
+	
 }
+
+
+	.igorina_dead_sprite {
+		background-image: url("https://www.natachajay.dk/media/kea_media/spil/figures/igorina_dead.svg");
+
+	}
 
 #pinhead_front {
 	position: absolute;
@@ -96,12 +104,27 @@ body {
 	}
 
 #pinhead_back {
-	background-image: url("https://www.natachajay.dk/media/kea_media/spil/figures/pinhead_back.svg");
+	position: absolute;
+	top: 5vh;
+	width: 100%;
 }
 
+	.pinhead_back_sprite {
+		background-image: url("https://www.natachajay.dk/media/kea_media/spil/figures/pinhead_back.svg");
+		background-repeat: no-repeat;
+		background-size: 100%;
+		width: 12vh;
+		height: 24vh;
+		margin: auto;
+	}
+
 #pinhead_dead {
-	background-image: url("https://www.natachajay.dk/media/kea_media/spil/figures/pinhead_dead.svg");
 }
+
+	.pinhead_dead_sprite {
+		background-image: url("https://www.natachajay.dk/media/kea_media/spil/figures/pinhead_dead.svg");
+
+	}
 
 /* Game elements */
 
@@ -120,37 +143,67 @@ body {
 		margin: auto;
 	}
 
-.meteor_small_sprite {
-	background-image: url("https://www.natachajay.dk/media/kea_media/spil/game_elements/meteor.svg");
+#meteor_small {
+	
 }
 
-.meteor_large_sprite {
-	background-image: url("https://www.natachajay.dk/media/kea_media/spil/game_elements/meteor.svg");
+	.meteor_small_sprite {
+		background-image: url("https://www.natachajay.dk/media/kea_media/spil/game_elements/meteor.svg");
+	}
+
+#meteor_large {
+	
 }
 
-.meteor_giant_sprite {
-	background-image: url("https://www.natachajay.dk/media/kea_media/spil/game_elements/meteor.svg");
+	.meteor_large_sprite {
+		background-image: url("https://www.natachajay.dk/media/kea_media/spil/game_elements/meteor.svg");
+	}
+
+#meteor_giant {
+	
 }
 
-.gas_cloud_small_sprite {
-	background-image: url("https://www.natachajay.dk/media/kea_media/spil/game_elements/gas_cloud.svg");
+	.meteor_giant_sprite {
+		background-image: url("https://www.natachajay.dk/media/kea_media/spil/game_elements/meteor.svg");
+	}
+
+#gas_cloud_small {
+	
 }
 
-.gas_cloud_large_sprite {
-	background-image: url("https://www.natachajay.dk/media/kea_media/spil/game_elements/gas_cloud.svg");
+	.gas_cloud_small_sprite {
+		background-image: url("https://www.natachajay.dk/media/kea_media/spil/game_elements/gas_cloud.svg");
+	}
+
+#gas_cloud_large {
+	
 }
 
-.sunburst_sprite {
-	background-image: url("https://www.natachajay.dk/media/kea_media/spil/game_elements/sunburst.svg");
+	.gas_cloud_large_sprite {
+		background-image: url("https://www.natachajay.dk/media/kea_media/spil/game_elements/gas_cloud.svg");
+	}
+
+#sunburst {
+	
 }
+
+	.sunburst_sprite {
+		background-image: url("https://www.natachajay.dk/media/kea_media/spil/game_elements/sunburst.svg");
+	}
 
 /* UI */
 
 #start {
 	background-color: #F2905D;
 	color: #FEFEFE;
-	width: 25vw;
+	width: 15vw;
+	border: solid 5px #FEFEFE;
+	border-radius: 25px 25px;
+	text-align: center;
 	cursor: pointer;
+	margin: auto;
+	bottom: 10vh;
+	z-index: 0;
 }
 
 /* Fonts */
@@ -187,9 +240,11 @@ p {
     filter:blur(5px) brightness(75%);
 }
 
+/* Gameplay animation */
+
 .fade_out {
     animation-name: fade_out;
-    animation-duration: .5s;
+    animation-duration: 1.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
@@ -203,12 +258,25 @@ p {
         }
     }
 
-/* Gameplay animation */
+.fade_in {
+    animation-name: fade_in;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: backwards;
+}
 
+    @keyframes fade_in {
+        100% {
+            opacity: 0;
+        }
+        0% {
+            opacity: 1;
+        }
+    }
 
 .shake {
     animation-name: shake;
-    animation-duration: 3s;
+    animation-duration: 1.5s;
 }
 
     @keyframes shake {
@@ -216,13 +284,13 @@ p {
             transform: rotate(0)
         }
         25% {
-            transform: rotate(30)
+            transform: rotate(90)
         }
         50% {
             transform: rotate(0)
         }
         75% {
-            transform: rotate(30)
+            transform: rotate(90)
         }
         100% {
             transform: rotate(0)
@@ -230,7 +298,8 @@ p {
     }
 
 .attack_slow {
-    
+    animation-name: attack_slow;
+	animation-duration: 3s;
 }
 
     @keyframes attack_slow {
@@ -238,7 +307,8 @@ p {
     }
 
 .attack_fast {
-    
+    animation-name: attack_fast;
+	animation-duration: 1.5s;
 }
 
     @keyframes attack_fast {
@@ -246,7 +316,8 @@ p {
     }
 
 .fall {
-    
+    animation-name: fall;
+	animation-duration: 2s;
 }
 
     @keyframes fall {
