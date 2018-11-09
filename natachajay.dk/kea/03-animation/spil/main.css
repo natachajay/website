@@ -216,13 +216,14 @@ body {
 	width: 100%;
 	bottom: 10vh;
 }
-.logo_sprite {
-	background-image: url("https://www.natachajay.dk/media/kea_media/spil/ui/kosmo_kadet_logo.svg");
-	background-repeat: no-repeat;
-	width: 15vw;
-	height: 15vw;
-	z-index: 0;
-}
+
+	.logo_sprite {
+		background-image: url("https://www.natachajay.dk/media/kea_media/spil/ui/kosmo_kadet_logo.svg");
+		background-repeat: no-repeat;
+		width: 15vw;
+		height: 15vw;
+		z-index: 0;
+	}
 
 /* Fonts */
 
