@@ -202,7 +202,8 @@ body {
 	.start_sprite {
 		background-color: #F2905D;
 		color: #FEFEFE;
-		width: 15vw;
+		min-width: 10vw;
+		max-width: 15vw;
 		border: solid 5px #FEFEFE;
 		border-radius: 25px 25px;
 		text-align: center;
