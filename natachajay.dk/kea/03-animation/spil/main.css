@@ -194,17 +194,22 @@ body {
 /* UI */
 
 #start {
-	background-color: #F2905D;
-	color: #FEFEFE;
-	width: 15vw;
-	border: solid 5px #FEFEFE;
-	border-radius: 25px 25px;
-	text-align: center;
-	cursor: pointer;
-	margin: auto;
+	position: fixed;
+	width: 100%;
 	bottom: 10vh;
-	z-index: 0;
 }
+
+	.start_sprite {
+		background-color: #F2905D;
+		color: #FEFEFE;
+		width: 15vw;
+		border: solid 5px #FEFEFE;
+		border-radius: 25px 25px;
+		text-align: center;
+		margin: auto;
+		z-index: 0;
+		cursor: pointer;
+	}
 
 /* Fonts */
 
