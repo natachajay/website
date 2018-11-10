@@ -13,7 +13,7 @@ body {
 }
 
 #menu_background {
-    background-image: url("https://www.natachajay.dk/media/kea_media/spil/titlescreen.png");
+    background-image: url("https://www.natachajay.dk/media/kea_media/spil/backgrounds/titlescreen.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -33,7 +33,7 @@ body {
 }
 
 #game_background {
-	background-image: url("https://www.natachajay.dk/media/kea_media/spil/scene.png");
+	background-image: url("https://www.natachajay.dk/media/kea_media/spil/backgrounds/scene.png");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -46,7 +46,7 @@ body {
 }
 
 #gameover {
-	background-image: url("https://www.natachajay.dk/media/kea_media/spil/gameover.png");
+	background-image: url("https://www.natachajay.dk/media/kea_media/spil/backgrounds/gameover.png");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -67,7 +67,7 @@ body {
 	}
 
 #levelcomplete {
-	background-image: url("https://www.natachajay.dk/media/kea_media/spil/gamecomplete.png");
+	background-image: url("https://www.natachajay.dk/media/kea_media/spil/backgrounds/gamecomplete.png");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -504,12 +504,12 @@ p {
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
 	animation-delay: 10s;
-	animation-duration: 25s;
+	animation-duration: 30s;
 }
 
     @keyframes sunburst_drop {
 		0% {
-			top: -10vh;
+			top: -15vh;
 		}
 		10% {
 			top: 115vh;
