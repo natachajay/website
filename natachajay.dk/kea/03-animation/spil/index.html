@@ -13,13 +13,13 @@
 
 <body>
     <div id="screen">
-        <div class="hide" id="menu_background">
+        <div class="show" id="menu_background">
         </div>
-        <div class="hide" id="game">
+        <div id="game">
             <div class="hide" id="game_background">
             </div>
 
-            <div class="hide" id="game_elements">
+            <div id="game_elements">
                 <div class="hide" id="earth">
 					<div class="earth_sprite"></div>
                 </div>
@@ -32,25 +32,25 @@
                 <div class="hide" id="igorina_dead">
 					<div class="igorina_dead_sprite"></div>
                 </div>
-                <div class="hide" id="meteor_small">
+                <div class="hide" id="meteor_small" onClick="addPoints(10);">
 					<div class="meteor_small_sprite"></div>
                 </div>
-                <div class="hide" id="meteor_large">
+                <div class="hide" id="meteor_large" onClick="addPoints(5);">
 					<div class="meteor_large_sprite"></div>
                 </div>
-                <div class="hide" id="meteor_giant">
+                <div class="hide" id="meteor_giant" onClick="addPoints(5);">
 					<div class="meteor_giant_sprite"></div>
                 </div>
-                <div class="hide" id="sunburst">
+                <div class="hide" id="sunburst" onClick="heal(1);">
 					<div class="sunburst_sprite"></div>
                 </div>
-                <div class="hide" id="gas_cloud_small">
+                <div class="hide" id="gas_cloud_small" onClick="damage(1);">
 					<div class="gas_cloud_small_sprite"></div>
                 </div>
-                <div class="hide" id="gas_cloud_large">
+                <div class="hide" id="gas_cloud_large" onClick="damage(2);">
 					<div class="gas_cloud_large_sprite"></div>
                 </div>
-                <div class="hide" id="pinhead_front">
+                <div class="hide" id="pinhead_front" onClick="attackPinhead();">
 					<div class="pinhead_front_sprite"></div>
                 </div>
                 <div class="hide" id="pinhead_back">
@@ -62,9 +62,9 @@
             </div>
 
             <div class="hide" id="game_ui">
-                <div class="hide" id="points">
-					<span class="point_indicator"></span>
-					<span class="point_amount"></span>
+                <div id="points">
+					<span id="point_indicator"></span>
+					<span id="point_amount"></span>
                 </div>
                 <div class="hide" id="energy">
 					<div class="life" id="life_01"></div>
@@ -78,28 +78,28 @@
             </div>
         </div>
 
-        <div class="hide" id="start">
+        <div class="show" id="start" onClick="startGame();">
 			<div class="start_sprite">
 				<h1>Start</h1>
 			</div>
         </div>
-        <div class="show" id="settings">
-			<div class="hide" id="settings_button"></div>
+        <div class="hide" id="settings">
+			<div class="show" id="settings_button"></div>
 			<div class="hide" id="mute_music"></div>
 			<div class="hide" id="unmute_music"></div>
 			<div class="hide" id="mute_effects"></div>
 			<div class="hide" id="unmute_effects"></div>
 			<div class="hide" id="close"></div>
         </div>
-		<div class="hide" id="logo">
+		<div class="show" id="logo">
 		</div>
 
         <div class="hide" id="gameover">
 			<div class="gameover_banner">
 				<h1>Boo, game over</h1>
 			</div>
-			<div class="hide" id="gameover_play_again">
-			<div class="gameover_play_again_sprite"></div>
+			<div class="hide" id="gameover_play_again" onClick="resetGame();">
+				<div class="gameover_play_again_sprite"></div>
 			</div>
         </div>
 
@@ -107,7 +107,7 @@
 			<div class="levelcomplete_banner">
 				<h1>Win!</h1>
 			</div>
-			<div class="hide" id="levelcomplete_play_again">
+			<div class="hide" id="levelcomplete_play_again" onClick="resetGame();">
 				<div class="levelcomplete_play_again_sprite"></div>
 			</div>
         </div>

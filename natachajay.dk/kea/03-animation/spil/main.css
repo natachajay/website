@@ -16,6 +16,7 @@ body {
     background-image: url("https://www.natachajay.dk/media/kea_media/spil/titlescreen.png");
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-position: center;
 	width: 100vw;
 	height: 100vh;
 	position: fixed;
@@ -34,6 +35,7 @@ body {
 #game_background {
 	background-image: url("https://www.natachajay.dk/media/kea_media/spil/scene.png");
 	background-repeat: no-repeat;
+	background-position: center;
 	background-size: cover;
 	width: 100vw;
 	height: 100vh;
@@ -46,13 +48,13 @@ body {
 #gameover {
 	background-image: url("https://www.natachajay.dk/media/kea_media/spil/gameover.png");
 	background-repeat: no-repeat;
+	background-position: center;
 	background-size: cover;
 	width: 100vw;
 	height: 100vh;
 	position: fixed;
 	top: 0px;
 	left: 0px;
-	z-index: -1;
 }
 
 	.gameover_banner {
@@ -67,11 +69,11 @@ body {
 #levelcomplete {
 	background-image: url("https://www.natachajay.dk/media/kea_media/spil/gamecomplete.png");
 	background-repeat: no-repeat;
+	background-position: center;
 	background-size: cover;
 	width: 100vw;
 	height: 100vh;
 	position: fixed;
-	z-index: -1;
 }
 
 	.levelcomplete_banner {
@@ -121,15 +123,15 @@ body {
 }
 
 	.gameover_play_again_sprite {
-	background-image: url("https://www.natachajay.dk/media/kea_media/spil/ui/ui_play_again.svg");
-	background-repeat: no-repeat;
-	width: 15vw;
-	height: 15vw;
-	z-index: 0;
-	position: fixed;
-	bottom: 5vh;
-	margin: auto;
-	cursor: pointer;
+		background-image: url("https://www.natachajay.dk/media/kea_media/spil/ui/ui_play_again.svg");
+		background-repeat: no-repeat;
+		width: 15vw;
+		height: 15vw;
+		z-index: 0;
+		position: fixed;
+		bottom: 5vh;
+		margin: auto;
+		cursor: pointer;
 	}
 
 #levelcomplete_play_again {
@@ -138,15 +140,15 @@ body {
 }
 
 	.levelcomplete_play_again_sprite {
-	background-image: url("https://www.natachajay.dk/media/kea_media/spil/ui/ui_play_again.svg");
-	background-repeat: no-repeat;
-	width: 15vw;
-	height: 15vw;
-	z-index: 0;
-	position: fixed;
-	bottom: 5vh;
-	margin: auto;
-	cursor: pointer;
+		background-image: url("https://www.natachajay.dk/media/kea_media/spil/ui/ui_play_again.svg");
+		background-repeat: no-repeat;
+		width: 15vw;
+		height: 15vw;
+		z-index: 0;
+		position: fixed;
+		bottom: 5vh;
+		margin: auto;
+		cursor: pointer;
 	}
 
 /* Settings UI */
@@ -342,7 +344,9 @@ p {
 	}
 
 #meteor_small {
-	
+	position: fixed;
+	left: 10vw;
+	top: -10vh;
 }
 
 	.meteor_small_sprite {
@@ -351,11 +355,12 @@ p {
 		width: 5vw;
 		height: 5vw;
 		z-index: 0;
-		top: -5vh;
 	}
 
 #meteor_large {
-	
+	position: fixed;
+	left: 15vw;
+	top: -10vh;
 }
 
 	.meteor_large_sprite {
@@ -364,11 +369,12 @@ p {
 		width: 8vw;
 		height: 8vw;
 		z-index: 0;
-		top: -5vh;
 	}
 
 #meteor_giant {
-	
+	position: fixed;
+	left: 25vw;
+	top: -10vh;
 }
 
 	.meteor_giant_sprite {
@@ -377,11 +383,12 @@ p {
 		width: 10vw;
 		height: 10vw;
 		z-index: 0;
-		top: -5vh;
 	}
 
 #gas_cloud_small {
-	
+	position: fixed;
+	left: 35vw;
+	top: -10vh;
 }
 
 	.gas_cloud_small_sprite {
@@ -393,7 +400,9 @@ p {
 	}
 
 #gas_cloud_large {
-	
+	position: fixed;
+	left: 40vw;
+	top: -10vh;
 }
 
 	.gas_cloud_large_sprite {
@@ -405,7 +414,9 @@ p {
 	}
 
 #sunburst {
-	
+	position: fixed;
+	left: 45vw;
+	top: -10vh;
 }
 
 	.sunburst_sprite {
@@ -420,6 +431,7 @@ p {
 
 .hide {
     visibility: hidden;
+	z-index: -1;
 }
 
 .show {
@@ -487,22 +499,72 @@ p {
         }
     }
 
+.sunburst_drop {
+    animation-name: sunburst_drop;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-delay: 10s;
+	animation-duration: 25s;
+}
+
+    @keyframes sunburst_drop {
+		0% {
+			top: -10vh;
+		}
+		10% {
+			top: 115vh;
+		}
+		100% {
+			top: 115vh;
+		}
+    }
+
 .attack_slow {
     animation-name: attack_slow;
-	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-duration: 10s;
 }
 
     @keyframes attack_slow {
-
+		from {
+			top: -10vh;
+		}
+		to {
+			top: 115vh;
+		}
     }
 
 .attack_fast {
     animation-name: attack_fast;
-	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-duration: 5s;
 }
 
     @keyframes attack_fast {
+		from {
+			top: -10vh;
+		}
+		to {
+			top: 115vh;
+		}
+    }
 
+.attack_faster {
+    animation-name: attack_faster;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-duration: 3s;
+}
+
+    @keyframes attack_faster {
+		from {
+			top: -10vh;
+		}
+		to {
+			top: 115vh;
+		}
     }
 
 .drop {

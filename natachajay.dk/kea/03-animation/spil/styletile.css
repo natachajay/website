@@ -1,10 +1,10 @@
-/* OVERALL */
+/* Overall */
 
 img {
     width: 100%;
 }
 
-/* DIVS */
+/* Divs */
 
 .sectionwrapper {
     display: flex;
@@ -38,31 +38,32 @@ img {
         width: 850px;
     }
 
-/* FONTS */
+/* Fonts */
 
     h1, h2, h3 {
         margin: 0 0 20px 0;
     }
+		 
+		h1 {
+			font-family: 'VT323', sans-serif;
+			font-size: 3em;
+		}
 
-        h1 {
-            font-family: 'VT323', sans-serif;
-            font-size: 48pt;
-        }
+		h2 {
+			font-family: 'VT323', sans-serif;
+			color: #F3915C;
+		}
 
-        h2 {
-            font-family: 'VT323', sans-serif;
-            color: #F3915C;
-        }
+		h3 {
+			font-family: 'VT323', sans-serif;
+		}
 
-        h3 {
-            font-family: 'VT323', sans-serif;
-        }
+		p {
+			font-family: 'PT Sans', sans-serif;
 
-        p {
-            font-family: 'PT Sans', sans-serif;
-        }
+		}
 
-/* COLORS */
+/* Colors */
 
     #color_column {
         width: 850px;
