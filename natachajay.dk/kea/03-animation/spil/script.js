@@ -387,6 +387,7 @@ function defeat() {
 	}
 	gameover = true;
 	showGameOver();
+	gameOverEffect();
 	hideGame();
 }
 
@@ -414,6 +415,7 @@ function victory() {
 	gamewon = true;
 	gameover = true;
 	showLevelComplete();
+	levelCompleteEffect();
 	hideGame();
 }
 
@@ -466,4 +468,12 @@ function dropStart() {
 
 function clickEffect() {
 	document.querySelector("#click_effect").play();
+}
+
+function gameOverEffect() {
+	document.querySelector("#gameover_effect").play();
+}
+
+function levelCompleteEffect() {
+	document.querySelector("#levelcomplete_effect").play();
 }
