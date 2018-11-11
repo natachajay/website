@@ -1,33 +1,22 @@
-<svg id="play_again_button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 123 145">
+<svg id="ui" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 123 145">
   <defs>
     <style>
-      .cls-1, .cls-3 {
-        fill: #f2f0f0;
-      }
-
-      .cls-2 {
-        fill: #f3915c;
-      }
-
-      .cls-3, .cls-4 {
-        stroke: #f3915c;
+      .cls-1 {
+        fill: none;
+        stroke: #fefefe;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 5px;
       }
 
-      .cls-4 {
-        fill: none;
+      .cls-2 {
+        fill: #fefefe;
       }
     </style>
   </defs>
   <title>ui</title>
-  <g id="round_button">
-    <path class="cls-1" d="M59.5,110.5A40,40,0,1,1,87.78,98.78,39.71,39.71,0,0,1,59.5,110.5Z"/>
-    <path class="cls-2" d="M59.5,33A37.49,37.49,0,1,1,33,44,37.41,37.41,0,0,1,59.5,33m0-5A42.51,42.51,0,1,0,89.55,40.45,42.22,42.22,0,0,0,59.5,28Z"/>
-  </g>
-  <g id="play_again">
-    <path id="C" class="cls-3" d="M75,85a20.5,20.5,0,1,1,0-29"/>
-    <polyline id="arrowhead" class="cls-4" points="79.22 46.13 79.26 60.35 64.26 60.4"/>
+  <g id="play_again_button">
+    <path id="C" class="cls-1" d="M79,87a20.5,20.5,0,1,1,0-29"/>
+    <path id="arrow" class="cls-2" d="M68,64.53a2.5,2.5,0,0,1,0-5l12.5,0,0-11.73A2.49,2.49,0,0,1,83,45.27h0a2.51,2.51,0,0,1,2.5,2.49L85.5,62a2.51,2.51,0,0,1-.73,1.77,2.47,2.47,0,0,1-1.76.74l-15,0Z"/>
   </g>
 </svg>

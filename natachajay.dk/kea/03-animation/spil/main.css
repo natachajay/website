@@ -154,7 +154,7 @@ body {
 /* Settings UI */
 
 #settings_button {
-	background-image: url("https://www.natachajay.dk/media/kea_media/spil/ui/ui_round_button.svg");
+	background-image: url("https://www.natachajay.dk/media/kea_media/spil/ui/ui_settings.svg");
 	background-repeat: no-repeat;
 	width: 15vw;
 	height: 15vw;
@@ -323,7 +323,6 @@ p {
 
 	.pinhead_dead_sprite {
 		background-image: url("https://www.natachajay.dk/media/kea_media/spil/figures/pinhead_dead.svg");
-
 	}
 
 /* Game elements */
