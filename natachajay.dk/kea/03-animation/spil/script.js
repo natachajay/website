@@ -51,7 +51,7 @@ function showSettings() {
 	else {
 		showElement(mute_music);
 	}
-	if (document.querySelector("#effects").muted) {
+	if (document.querySelector(".effects").muted) {
 		showElement(unmute_effects);
 	}
 	else {
@@ -253,6 +253,7 @@ function initiateMeteors() {
 
 	function smashMeteor(element, value) {
 		"use strict"
+		meteorSound();
 		element.classList.remove('attack');
 		addPoints(value);
 		setTimeout(function() {
@@ -260,6 +261,11 @@ function initiateMeteors() {
 			element.classList.add('attack');
 		}, 1000);
 	}
+
+		function meteorSound() {
+			"use strict"
+			document.querySelector("#meteor_effect").play;
+		}
 
 function initiateGas() {
 	"use strict"
@@ -285,6 +291,10 @@ function initiateGas() {
 			}, 1000);
 		}
 
+		function gasSound() {
+			
+		}
+
 function initiateSunburst() {
 	"use strict"
 	var sunburst = document.getElementById("sunburst");
@@ -300,6 +310,10 @@ function initiateSunburst() {
 				replaceElement(element);
 				element.classList.add('sunburst_drop');
 			}, 1000);
+		}
+
+		function burstSound() {
+			
 		}
 
 function addPoints(value) {
@@ -439,3 +453,6 @@ function dropStart() {
 	var start_btn = document.getElementById("start")
 	start_btn.classList.add('drop');
 }
+
+// AUDIO
+

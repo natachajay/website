@@ -116,9 +116,11 @@
 	
 	<!-- AUDIO -->
 	
-	<audio id="music" autoplay loop src="https://www.natachajay.dk/media/kea_media/spil/sound/kosmo_kadet.mp3"></audio>
+	<audio id="music" loop src="https://www.natachajay.dk/media/kea_media/spil/sound/kosmo_kadet.mp3"></audio>
 	
-	<audio id="effects" src="https://www.natachajay.dk/media/kea_media/spil/sound/kosmo_kadet.mp3"></audio>
-	
+	<audio class="effects" id="meteor_effect" src="https://www.natachajay.dk/media/kea_media/spil/sound/whoop.mp3"></audio>
+	<script>
+		document.getElementById("#music").play();
+	</script>
 </body>
 </html>
