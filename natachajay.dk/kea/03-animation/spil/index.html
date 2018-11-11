@@ -18,6 +18,8 @@
         <div id="game">
             <div class="hide" id="game_background">
             </div>
+			
+			<!-- GAME ELEMENTS -->
 
             <div id="game_elements">
                 <div class="hide" id="earth">
@@ -60,7 +62,7 @@
 					<div class="pinhead_dead_sprite"></div>
                 </div>
             </div>
-
+			<!-- UI -->
             <div class="hide" id="game_ui">
                 <div id="points">
 					<span id="point_amount"></span>
@@ -69,6 +71,7 @@
 					<div id="energy_amount"></div>
                 </div>
                 <div class="hide" id="time">
+					<div id="time_amount"></div>
                 </div>
             </div>
         </div>
@@ -80,17 +83,18 @@
         </div>
         <div class="hide" id="settings">
 			<div class="show" id="settings_button" onClick="showSettings();"></div>
-			<div class="hide" id="music">
-			<div class="hide" id="mute_music"></div>
-			<div class="hide" id="unmute_music"></div>
-			</div>
+			<div class="hide" id="mute_music" onClick="muteMusic();"></div>
+			<div class="hide" id="unmute_music" onClick="unmuteMusic();"></div>
 			<div class="hide" id="mute_effects"></div>
 			<div class="hide" id="unmute_effects"></div>
 			<div class="hide" id="close" onClick="hideSettings();"></div>
         </div>
+		
 		<div class="show" id="logo">
 		</div>
-
+		
+		<!-- END GAME -->
+		
         <div class="hide" id="gameover">
 			<div class="gameover_banner">
 				<h1>Boo, game over</h1>
@@ -109,5 +113,12 @@
 			</div>
         </div>
     </div>
+	
+	<!-- AUDIO -->
+	
+	<audio id="music" autoplay loop src="https://www.natachajay.dk/media/kea_media/spil/sound/kosmo_kadet.mp3"></audio>
+	
+	<audio id="effects" src="https://www.natachajay.dk/media/kea_media/spil/sound/kosmo_kadet.mp3"></audio>
+	
 </body>
 </html>

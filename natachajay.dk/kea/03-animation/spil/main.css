@@ -118,6 +118,27 @@ body {
 	margin: 0 0 0 5%;
 }
 
+#time {
+	display: flex;
+    bottom: 5vw;
+    position: fixed;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+#time_amount {
+		background-color: #F2905D;
+		border-radius: 50%;
+		border: solid 5px #FEFEFE;
+		color: #FEFEFE;
+		font-family: 'VT323', "sans-serif";
+		font-size: 3em;
+		width: 12vw;
+		line-height: 12vw;
+		bottom: 5vw;
+		text-align: center;
+}
+
 #points {
 	display: flex;
     bottom: 5vw;
@@ -153,9 +174,9 @@ body {
 		font-family: 'VT323', "sans-serif";
 		text-align: center;
 		font-size: 3em;
-		width: 12vw;
-		height: 12vw;
-		line-height: 12vw;
+		width: 15vw;
+		height: 15vw;
+		line-height: 15vw;
 		bottom: 5vw;
 	}
 
@@ -198,6 +219,10 @@ body {
 		bottom: 5vw;
 		cursor: pointer;
 	}
+
+#game_ui {
+	will-change: contents;
+}
 
 /* Settings UI */
 
@@ -587,10 +612,10 @@ p {
 			top: -15vw;
 		}
 		10% {
-			top: 115vw;
+			top: calc(100vh + 15vw);
 		}
 		100% {
-			top: 115vw;
+			top: calc(100vh + 15vw);
 		}
     }
 
@@ -606,7 +631,7 @@ p {
 			top: -10vw;
 		}
 		to {
-			top: 115vw;
+			top: calc(100vh + 15vw);
 		}
     }
 

@@ -7,15 +7,6 @@ var pinhead_health;
 var gameover;
 var gamewon;
 
-/**
-
-clickStart //Drop start-knappen - brug også til Igorina win-drop, uden klik
-
-// getelembyid(start).addeventlist('click') =         
-//     this.classList.add('drop');
-// });
-**/
-
 
 function showStart() {
 	"use strict"
@@ -44,6 +35,7 @@ function hideStart() {
 }
 
 function showSettings() {
+	"use strict"
 	var settings = document.getElementById("settings");
 	var mute_music = document.getElementById("mute_music");
 	var mute_effects = document.getElementById("mute_effects");
@@ -52,14 +44,23 @@ function showSettings() {
 	var close_btn = document.getElementById("close");
 	hideStart();
 	showElement(settings);
-	showElement(mute_music);
-	showElement(mute_effects);
-	showElement(unmute_music);
-	showElement(unmute_effects);
 	showElement(close_btn);
+	if (document.querySelector("#music").muted) {
+		showElement(unmute_music);
+	}
+	else {
+		showElement(mute_music);
+	}
+	if (document.querySelector("#effects").muted) {
+		showElement(unmute_effects);
+	}
+	else {
+		showElement(mute_effects);
+	}
 }
 
 function hideSettings() {
+	"use strict"
 	var settings = document.getElementById("settings");
 	var mute_music = document.getElementById("mute_music");
 	var mute_effects = document.getElementById("mute_effects");
@@ -73,6 +74,24 @@ function hideSettings() {
 	hideElement(unmute_effects);
 	hideElement(close_btn);
 	showStart();
+}
+
+function unmuteMusic() {
+	"use strict"
+	document.querySelector("#music").muted = false;
+	var unmute_music = document.getElementById("unmute_music");
+	var mute_music = document.getElementById("mute_music");
+	hideElement(unmute_music);
+	showElement(mute_music);
+}
+
+function muteMusic() {
+	"use strict"
+	document.querySelector("#music").muted = true;
+	var unmute_music = document.getElementById("unmute_music");
+	var mute_music = document.getElementById("mute_music");
+	hideElement(mute_music);
+	showElement(unmute_music);
 }
 
 function showGame() {
@@ -144,8 +163,11 @@ function startGame() {
 	health = 10;
 	pinhead_health = 12;
 	// Initiating animations and starting the game
-	hideStart();
-	showGame();
+	dropStart();
+	setTimeout(function() {
+		hideStart();
+		showGame();
+	}, 1200);
 	initiateMeteors();
 	initiateGas();
 	initiateSunburst();
@@ -172,12 +194,6 @@ function initiateTimer() {
 	var x = setInterval(function(){
 		var now = new Date().getTime();
 		var time_remaining = timer - now;
-		
-		var minutes = Math.floor((time_remaining % (1000 * 60 * 60)) / (1000 * 60));
-		var seconds = Math.floor((time_remaining % (1000 * 60)) / 1000);
-		console.log(minutes + ':' + seconds);
-		console.log('points: ' + points);
-		console.log('health: ' + health);
 		if (time_remaining <= 0){
 			clearInterval(x);
 			defeat();
@@ -185,17 +201,31 @@ function initiateTimer() {
 		if (gameover) {
 			clearInterval(x);
 		}
+		showTime(time_remaining);
 		showPoints();
 		showHealth();
 	},1000);
 }
 
+function showTime(time_remaining) {
+	"use strict"
+	var time_indicator = document.getElementById("time_amount");
+	var minutes = Math.floor((time_remaining % (1000 * 60 * 60)) / (1000 * 60));
+	var seconds = Math.floor((time_remaining % (1000 * 60)) / 1000);
+	console.log(minutes + ':' + seconds);
+	time_indicator.innerText = minutes + ':' + seconds;
+}
+
 function showPoints() {
+	"use strict"
+	console.log('points: ' + points);
 	var point_indicator = document.getElementById("point_amount");
 	point_indicator.innerText = points;
 }
 
 function showHealth() {
+	"use strict"
+	console.log('health: ' + health);
 	var energy_indicator = document.getElementById("energy_amount");
 	energy_indicator.innerText = "x" + health;
 }
@@ -404,3 +434,8 @@ function startAnimation(element) {
 		element.classList.remove("start_animation");
 		element.classList.add("pause_animation");
 	}
+
+function dropStart() {
+	var start_btn = document.getElementById("start")
+	start_btn.classList.add('drop');
+}
