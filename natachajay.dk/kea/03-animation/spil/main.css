@@ -156,8 +156,12 @@ body {
 #settings_button {
 	background-image: url("https://www.natachajay.dk/media/kea_media/spil/ui/ui_settings.svg");
 	background-repeat: no-repeat;
-	width: 15vw;
-	height: 15vw;
+	background-color: #F2905D;
+	background-position: center;
+	border: solid 5px #FEFEFE;
+	border-radius: 100px;
+	min-width: 15vw;
+	min-height: 15vw;
 	z-index: 0;
 	position: fixed;
 	bottom: 10vh;
