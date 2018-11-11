@@ -370,6 +370,10 @@ function initiatePinhead() {
 			}
 		}
 
+function pinheadEffect() {
+	document.querySelector("#pinhead_effect").play();
+}
+
 function pulse() {
 	
 }
