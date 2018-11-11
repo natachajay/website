@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans|VT323" rel="stylesheet">
-    <script type="text/javascript" src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans%7CVT323" rel="stylesheet">
+    <script src="script.js"></script>
 
 <title>KOSMO KADET</title>
 </head>
@@ -76,18 +76,18 @@
             </div>
         </div>
 
-        <div class="show" id="start" onClick="startGame();">
+        <div class="show" id="start" onClick="clickEffect(); startGame();">
 			<div class="start_sprite">
 				<h1>Start</h1>
 			</div>
         </div>
         <div class="hide" id="settings">
-			<div class="show" id="settings_button" onClick="showSettings();"></div>
-			<div class="hide" id="mute_music" onClick="muteMusic();"></div>
-			<div class="hide" id="unmute_music" onClick="unmuteMusic();"></div>
-			<div class="hide" id="mute_effects"></div>
-			<div class="hide" id="unmute_effects"></div>
-			<div class="hide" id="close" onClick="hideSettings();"></div>
+			<div class="show" id="settings_button" onClick="clickEffect(); showSettings();"></div>
+			<div class="hide" id="mute_music" onClick="clickEffect(); muteMusic();"></div>
+			<div class="hide" id="unmute_music" onClick="clickEffect(); unmuteMusic();"></div>
+			<div class="hide" id="mute_effects" onClick="clickEffect(); muteEffects();"></div>
+			<div class="hide" id="unmute_effects" onClick="clickEffect(); unmuteEffects();"></div>
+			<div class="hide" id="close" onClick="clickEffect(); hideSettings();"></div>
         </div>
 		
 		<div class="show" id="logo">
@@ -99,7 +99,7 @@
 			<div class="gameover_banner">
 				<h1>Boo, game over</h1>
 			</div>
-			<div class="hide" id="gameover_play_again" onClick="resetGame();">
+			<div class="hide" id="gameover_play_again" onClick="clickEffect(); resetGame();">
 				<div class="gameover_play_again_sprite"></div>
 			</div>
         </div>
@@ -108,7 +108,7 @@
 			<div class="levelcomplete_banner">
 				<h1>Win!</h1>
 			</div>
-			<div class="hide" id="levelcomplete_play_again" onClick="resetGame();">
+			<div class="hide" id="levelcomplete_play_again" onClick="clickEffect(); resetGame();">
 				<div class="levelcomplete_play_again_sprite"></div>
 			</div>
         </div>
@@ -116,11 +116,17 @@
 	
 	<!-- AUDIO -->
 	
-	<audio id="music" loop src="https://www.natachajay.dk/media/kea_media/spil/sound/kosmo_kadet.mp3"></audio>
+	<audio id="music" autoplay loop src="https://www.natachajay.dk/media/kea_media/spil/sound/kosmo_kadet.mp3"></audio>
 	
-	<audio class="effects" id="meteor_effect" src="https://www.natachajay.dk/media/kea_media/spil/sound/whoop.mp3"></audio>
-	<script>
-		document.getElementById("#music").play();
-	</script>
+	<audio class="effects" id="meteor_effect" src="https://www.natachajay.dk/media/kea_media/spil/sound/synth.mp3"></audio>
+	
+	<audio class="effects" id="gas_effect" src="https://www.natachajay.dk/media/kea_media/spil/sound/gas.mp3"></audio>
+	
+	<audio class="effects" id="burst_effect" src="https://www.natachajay.dk/media/kea_media/spil/sound/whoop.mp3"></audio>
+	
+	<audio class="effects" id="click_effect" src="https://www.natachajay.dk/media/kea_media/spil/sound/click.mp3"></audio>
+	
+	<audio class="effects" id="pinhead_effect" src="https://www.natachajay.dk/media/kea_media/spil/sound/pinhead.mp3"></audio>
+	
 </body>
 </html>

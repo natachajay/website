@@ -576,29 +576,6 @@ p {
         }
     }
 
-.shake {
-    animation-name: shake;
-    animation-duration: 1.5s;
-}
-
-    @keyframes shake {
-        0% {
-            transform: rotate(0)
-        }
-        25% {
-            transform: rotate(90)
-        }
-        50% {
-            transform: rotate(0)
-        }
-        75% {
-            transform: rotate(90)
-        }
-        100% {
-            transform: rotate(0)
-        }
-    }
-
 .sunburst_drop {
     animation-name: sunburst_drop;
 	animation-iteration-count: infinite;

@@ -264,7 +264,7 @@ function initiateMeteors() {
 
 		function meteorSound() {
 			"use strict"
-			document.querySelector("#meteor_effect").play;
+			document.querySelector("#meteor_effect").play();
 		}
 
 function initiateGas() {
@@ -283,6 +283,7 @@ function initiateGas() {
 
 	function oopsGas(element, value) {
 			"use strict"
+			gasSound();
 			element.classList.remove('attack');
 			damage(value);
 			setTimeout(function() {
@@ -292,7 +293,8 @@ function initiateGas() {
 		}
 
 		function gasSound() {
-			
+			"use strict"
+			document.querySelector("#gas_effect").play();
 		}
 
 function initiateSunburst() {
@@ -304,6 +306,7 @@ function initiateSunburst() {
 
 	function giveLife(element, value) {
 			"use strict"
+			burstSound();
 			element.classList.remove('sunburst_drop');
 			heal(value);
 			setTimeout(function() {
@@ -313,7 +316,8 @@ function initiateSunburst() {
 		}
 
 		function burstSound() {
-			
+			"use strict"
+			document.querySelector("#burst_effect").play();
 		}
 
 function addPoints(value) {
@@ -456,3 +460,6 @@ function dropStart() {
 
 // AUDIO
 
+function clickEffect() {
+	document.querySelector("#click_effect").play();
+}
