@@ -23,55 +23,50 @@
                 <div class="hide" id="earth">
 					<div class="earth_sprite"></div>
                 </div>
-                <div class="hide" id="igorina_front">
+                <div class="hide elements" id="igorina_front">
 					<div class="igorina_front_sprite"></div>
                 </div>
-                <div class="hide" id="igorina_back">
+                <div class="hide elements" id="igorina_back">
 					<div class="igorina_back_sprite"></div>
                 </div>
-                <div class="hide" id="igorina_dead">
+                <div class="hide elements" id="igorina_dead">
 					<div class="igorina_dead_sprite"></div>
                 </div>
-                <div class="hide" id="meteor_small" onClick="addPoints(10);">
+                <div class="hide elements" id="meteor_small" onClick="smashMeteor(this, 10);">
 					<div class="meteor_small_sprite"></div>
                 </div>
-                <div class="hide" id="meteor_large" onClick="addPoints(5);">
+                <div class="hide elements" id="meteor_large" onClick="smashMeteor(this, 5);">
 					<div class="meteor_large_sprite"></div>
                 </div>
-                <div class="hide" id="meteor_giant" onClick="addPoints(5);">
+                <div class="hide elements" id="meteor_giant" onClick="smashMeteor(this, 5);">
 					<div class="meteor_giant_sprite"></div>
                 </div>
-                <div class="hide" id="sunburst" onClick="heal(1);">
+                <div class="hide elements" id="sunburst" onClick="giveLife(this, 1);">
 					<div class="sunburst_sprite"></div>
                 </div>
-                <div class="hide" id="gas_cloud_small" onClick="damage(1);">
+                <div class="hide elements" id="gas_cloud_small" onClick="oopsGas(this, 1);">
 					<div class="gas_cloud_small_sprite"></div>
                 </div>
-                <div class="hide" id="gas_cloud_large" onClick="damage(2);">
+                <div class="hide elements" id="gas_cloud_large" onClick="oopsGas(this, 2);">
 					<div class="gas_cloud_large_sprite"></div>
                 </div>
-                <div class="hide" id="pinhead_front" onClick="attackPinhead();">
-					<div class="pinhead_front_sprite"></div>
+                <div class="hide elements" id="pinhead_front">
+					<div class="pinhead_front_sprite" onClick="attackPinhead();"></div>
                 </div>
-                <div class="hide" id="pinhead_back">
+                <div class="hide elements" id="pinhead_back">
 					<div class="pinhead_back_sprite"></div>
                 </div>
-                <div class="hide" id="pinhead_dead">
+                <div class="hide elements" id="pinhead_dead">
 					<div class="pinhead_dead_sprite"></div>
                 </div>
             </div>
 
             <div class="hide" id="game_ui">
                 <div id="points">
-					<span id="point_indicator"></span>
 					<span id="point_amount"></span>
                 </div>
                 <div class="hide" id="energy">
-					<div class="life" id="life_01"></div>
-					<div class="life" id="life_02"></div>
-					<div class="life" id="life_03"></div>
-					<div class="life" id="life_04"></div>
-					<div class="life" id="life_05"></div>
+					<div id="energy_amount"></div>
                 </div>
                 <div class="hide" id="time">
                 </div>
@@ -84,12 +79,14 @@
 			</div>
         </div>
         <div class="hide" id="settings">
-			<div class="show" id="settings_button"></div>
+			<div class="show" id="settings_button" onClick="showSettings();"></div>
+			<div class="hide" id="music">
 			<div class="hide" id="mute_music"></div>
 			<div class="hide" id="unmute_music"></div>
+			</div>
 			<div class="hide" id="mute_effects"></div>
 			<div class="hide" id="unmute_effects"></div>
-			<div class="hide" id="close"></div>
+			<div class="hide" id="close" onClick="hideSettings();"></div>
         </div>
 		<div class="show" id="logo">
 		</div>

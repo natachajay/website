@@ -17,7 +17,7 @@ clickStart //Drop start-knappen - brug også til Igorina win-drop, uden klik
 **/
 
 
-function showStart () {
+function showStart() {
 	"use strict"
 	// Elements to be shown on titlescreen
 	var menu_bg = document.getElementById("menu_background");
@@ -30,7 +30,7 @@ function showStart () {
 	showElement(settings_btn);
 }
 
-function hideStart () {
+function hideStart() {
 	"use strict"
 	// Elements to be hidden on titlescreen
 	var menu_bg = document.getElementById("menu_background");
@@ -43,7 +43,39 @@ function hideStart () {
 	hideElement(settings_btn);
 }
 
-function showGame () {
+function showSettings() {
+	var settings = document.getElementById("settings");
+	var mute_music = document.getElementById("mute_music");
+	var mute_effects = document.getElementById("mute_effects");
+	var unmute_music = document.getElementById("unmute_music");
+	var unmute_effects = document.getElementById("unmute_effects");
+	var close_btn = document.getElementById("close");
+	hideStart();
+	showElement(settings);
+	showElement(mute_music);
+	showElement(mute_effects);
+	showElement(unmute_music);
+	showElement(unmute_effects);
+	showElement(close_btn);
+}
+
+function hideSettings() {
+	var settings = document.getElementById("settings");
+	var mute_music = document.getElementById("mute_music");
+	var mute_effects = document.getElementById("mute_effects");
+	var unmute_music = document.getElementById("unmute_music");
+	var unmute_effects = document.getElementById("unmute_effects");
+	var close_btn = document.getElementById("close");
+	hideElement(settings);
+	hideElement(mute_music);
+	hideElement(mute_effects);
+	hideElement(unmute_music);
+	hideElement(unmute_effects);
+	hideElement(close_btn);
+	showStart();
+}
+
+function showGame() {
 	"use strict"
 	// Game elements to be shown
 	var game_bg = document.getElementById("game_background");
@@ -153,31 +185,75 @@ function initiateTimer() {
 		if (gameover) {
 			clearInterval(x);
 		}
+		showPoints();
+		showHealth();
 	},1000);
 }
+
+function showPoints() {
+	var point_indicator = document.getElementById("point_amount");
+	point_indicator.innerText = points;
+}
+
+function showHealth() {
+	var energy_indicator = document.getElementById("energy_amount");
+	energy_indicator.innerText = "x" + health;
+}
+
+// GAME ELEMENTS
 
 function initiateMeteors() {
 	"use strict"
 	var meteor_small = document.getElementById("meteor_small");
 	var meteor_large = document.getElementById("meteor_large");
 	var meteor_giant = document.getElementById("meteor_giant");
-	meteor_small.classList.remove('attack_slow');
-	meteor_large.classList.remove('attack_fast');
-	meteor_giant.classList.remove('attack_faster');
-	meteor_small.classList.add('attack_slow');
-	meteor_large.classList.add('attack_fast');
-	meteor_giant.classList.add('attack_faster');
+	meteor_small.classList.remove('attack');
+	meteor_large.classList.remove('attack');
+	meteor_giant.classList.remove('attack');
+	meteor_small.classList.remove('slow');
+	meteor_large.classList.remove('fast');
+	meteor_giant.classList.remove('faster');
+	meteor_small.classList.add('attack');
+	meteor_large.classList.add('attack');
+	meteor_giant.classList.add('attack');
+	meteor_small.classList.add('slow');
+	meteor_large.classList.add('fast');
+	meteor_giant.classList.add('faster');
 }
+
+	function smashMeteor(element, value) {
+		"use strict"
+		element.classList.remove('attack');
+		addPoints(value);
+		setTimeout(function() {
+			replaceElement(element);
+			element.classList.add('attack');
+		}, 1000);
+	}
 
 function initiateGas() {
 	"use strict"
 	var gas_small = document.getElementById("gas_cloud_small");
 	var gas_large = document.getElementById("gas_cloud_large");
-	gas_small.classList.remove('attack_slow');
-	gas_large.classList.remove('attack_fast');
-	gas_small.classList.add('attack_slow');
-	gas_large.classList.add('attack_fast');
+	gas_small.classList.remove('attack');
+	gas_large.classList.remove('attack');
+	gas_small.classList.remove('slow');
+	gas_large.classList.remove('fast');
+	gas_small.classList.add('attack');
+	gas_large.classList.add('attack');
+	gas_small.classList.add('slow');
+	gas_large.classList.add('fast');
 }
+
+	function oopsGas(element, value) {
+			"use strict"
+			element.classList.remove('attack');
+			damage(value);
+			setTimeout(function() {
+				replaceElement(element);
+				element.classList.add('attack');
+			}, 1000);
+		}
 
 function initiateSunburst() {
 	"use strict"
@@ -185,6 +261,16 @@ function initiateSunburst() {
 	sunburst.classList.remove('sunburst_drop');
 	sunburst.classList.add('sunburst_drop');
 }
+
+	function giveLife(element, value) {
+			"use strict"
+			element.classList.remove('sunburst_drop');
+			heal(value);
+			setTimeout(function() {
+				replaceElement(element);
+				element.classList.add('sunburst_drop');
+			}, 1000);
+		}
 
 function addPoints(value) {
 	"use strict"
@@ -207,26 +293,40 @@ function damage(value) {
 	}
 }
 
+function replaceElement(element) {
+	"use strict"
+	var position = Math.floor(Math.random() * 80) + 10;
+	element.style.left = position + "vw";
+}
+
+// PINHEAD
+
 function initiatePinhead() {
 	"use strict"
 	var pinhead_front = document.getElementById("pinhead_front");
 	showElement(pinhead_front);
 }
 
-function attackPinhead() {
-	"use strict"
-	console.log('Attack Pinhead!');
-	damagePinhead(1);
-	damage(1);
+	function attackPinhead() {
+		"use strict"
+		console.log('Attack Pinhead!');
+		damagePinhead(1);
+		damage(1);
+	}
+
+		function damagePinhead(value) {
+			"use strict"
+			pinhead_health -= value;
+			if (pinhead_health <= 0) {
+				victory();
+			}
+		}
+
+function pulse() {
+	
 }
 
-	function damagePinhead(value) {
-		"use strict"
-		pinhead_health -= value;
-		if (pinhead_health <= 0) {
-			victory();
-		}
-	}
+// END-GAME
 
 function defeat() {
 	"use strict"
@@ -292,3 +392,15 @@ function resetGame() {
 	}
 	startGame();
 }
+
+// ANIMATION
+
+function startAnimation(element) {
+	element.classList.remove("pause_animation");
+	element.classList.add("start_animation");
+}
+
+	function pauseAnimation(element) {
+		element.classList.remove("start_animation");
+		element.classList.add("pause_animation");
+	}

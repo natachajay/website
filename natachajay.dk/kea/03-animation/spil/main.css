@@ -29,7 +29,7 @@ body {
 	width: 100vw;
 	height: 100vh;
 	position: fixed;
-	z-index: -1;
+	z-index: 0;
 }
 
 #game_background {
@@ -109,13 +109,55 @@ body {
 #logo {
 	background-image: url("https://www.natachajay.dk/media/kea_media/spil/ui/kosmo_kadet_logo.svg");
 	background-repeat: no-repeat;
-	width: 15vw;
-	height: 15vw;
+	background-position: center;
+	min-width: 12vw;
+	min-height: 12vw;
 	z-index: 0;
 	position: fixed;
-	bottom: 10vh;
+	top: 5vw;
 	margin: 0 0 0 5%;
 }
+
+#points {
+	display: flex;
+    bottom: 5vw;
+    position: fixed;
+    justify-content: center;
+    width: 100%;
+}
+
+	#point_amount {
+		background-color: #F2905D;
+		border-radius: 50%;
+		border: solid 5px #FEFEFE;
+		color: #FEFEFE;
+		font-family: 'VT323', "sans-serif";
+		font-size: 3em;
+		width: 12vw;
+		line-height: 12vw;
+		bottom: 5vw;
+		text-align: center;
+	}
+
+#energy {
+	display: flex;
+    bottom: 5vw;
+    position: fixed;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+	#energy_amount {
+		background-image: url("https://www.natachajay.dk/media/kea_media/spil/ui/ui_heart.svg");
+		color: #FEFEFE;
+		font-family: 'VT323', "sans-serif";
+		text-align: center;
+		font-size: 3em;
+		width: 12vw;
+		height: 12vw;
+		line-height: 12vw;
+		bottom: 5vw;
+	}
 
 #gameover_play_again {
 	display: flex;
@@ -125,12 +167,15 @@ body {
 	.gameover_play_again_sprite {
 		background-image: url("https://www.natachajay.dk/media/kea_media/spil/ui/ui_play_again.svg");
 		background-repeat: no-repeat;
-		width: 15vw;
-		height: 15vw;
+		background-position: center;
+		background-color: #F2905D;
+		border: solid 5px #FEFEFE;
+		border-radius: 50%;
+		min-width: 12vw;
+		min-height: 12vw;
 		z-index: 0;
 		position: fixed;
-		bottom: 5vh;
-		margin: auto;
+		bottom: 5vw;;
 		cursor: pointer;
 	}
 
@@ -142,12 +187,15 @@ body {
 	.levelcomplete_play_again_sprite {
 		background-image: url("https://www.natachajay.dk/media/kea_media/spil/ui/ui_play_again.svg");
 		background-repeat: no-repeat;
-		width: 15vw;
-		height: 15vw;
+		background-position: center;
+		background-color: #F2905D;
+		border: solid 5px #FEFEFE;
+		border-radius: 50%;
+		min-width: 12vw;
+		min-height: 12vw;
 		z-index: 0;
 		position: fixed;
-		bottom: 5vh;
-		margin: auto;
+		bottom: 5vw;
 		cursor: pointer;
 	}
 
@@ -156,76 +204,96 @@ body {
 #settings_button {
 	background-image: url("https://www.natachajay.dk/media/kea_media/spil/ui/ui_settings.svg");
 	background-repeat: no-repeat;
-	background-color: #F2905D;
 	background-position: center;
+	background-color: #F2905D;
 	border: solid 5px #FEFEFE;
-	border-radius: 100px;
-	min-width: 15vw;
-	min-height: 15vw;
+	border-radius: 50%;
+	min-width: 12vw;
+	min-height: 12vw;
 	z-index: 0;
 	position: fixed;
-	bottom: 10vh;
-	margin: 0 0 0 85%;
+	top: 5vw;
+	margin: 0 0 0 80%;
 	cursor: pointer;
 }
 
 #mute_effects {
 	background-image: url("https://www.natachajay.dk/media/kea_media/spil/ui/ui_mute_button.svg");
 	background-repeat: no-repeat;
-	width: 15vw;
-	height: 15vw;
+	background-position: center;
+	background-color: #F2905D;
+	border: solid 5px #FEFEFE;
+	border-radius: 50%;
+	min-width: 12vw;
+	min-height: 12vw;
 	z-index: 0;
 	position: fixed;
-	bottom: 10vh;
-	margin: auto;
+	bottom: 10vw;
+	margin: 0 0 0 35%;
 	cursor: pointer;
 }
 
 	#unmute_effects {
 		background-image: url("https://www.natachajay.dk/media/kea_media/spil/ui/ui_unmute_button.svg");
 		background-repeat: no-repeat;
-		width: 15vw;
-		height: 15vw;
+		background-position: center;
+		background-color: #F2905D;
+		border: solid 5px #FEFEFE;
+		border-radius: 50%;
+		min-width: 12vw;
+		min-height: 12vw;
 		z-index: 0;
 		position: fixed;
-		bottom: 10vh;
-		margin: auto;
+		bottom: 10vw;
+		margin: 0 0 0 35%;
 		cursor: pointer;
 	}
 
 #mute_music {
 	background-image: url("https://www.natachajay.dk/media/kea_media/spil/ui/ui_mute_button.svg");
 	background-repeat: no-repeat;
-	width: 15vw;
-	height: 15vw;
+	background-position: center;
+	background-color: #F2905D;
+	border: solid 5px #FEFEFE;
+	border-radius: 50%;
+	min-width: 12vw;
+	min-height: 12vw;
 	z-index: 0;
 	position: fixed;
-	bottom: 10vh;
-	margin: auto;
+	bottom: 10vw;
+	margin: 0 0 0 50%;
 	cursor: pointer;
 }
 
 	#unmute_music {
 		background-image: url("https://www.natachajay.dk/media/kea_media/spil/ui/ui_unmute_button.svg");
 		background-repeat: no-repeat;
-		width: 15vw;
-		height: 15vw;
+		background-position: center;
+		background-color: #F2905D;
+		border: solid 5px #FEFEFE;
+		border-radius: 50%;
+		min-width: 12vw;
+		min-height: 12vw;
 		z-index: 0;
 		position: fixed;
-		bottom: 10vh;
-		margin: auto;
+		bottom: 10vw;
+		margin: 0 0 0 50%;
 		cursor: pointer;
 	}
 
 #close {
 	background-image: url("https://www.natachajay.dk/media/kea_media/spil/ui/ui_close_button.svg");
 	background-repeat: no-repeat;
-	width: 15vw;
-	height: 15vw;
+	background-position: center;
+	background-color: #F2905D;
+	border: solid 5px #FEFEFE;
+	border-radius: 150px;
+	min-width: 12vw;
+	min-height: 12vw;
 	z-index: 0;
 	position: fixed;
-	bottom: 10vh;
-	margin: auto;
+	top: 10vw;
+	margin: 0 0 0 42.5%;
 	cursor: pointer;
 }
 
@@ -331,6 +399,10 @@ p {
 
 /* Game elements */
 
+.elements {
+	will-change: top;
+}
+
 #earth {
 	position: absolute;
 	bottom: -10vh;
@@ -349,7 +421,7 @@ p {
 #meteor_small {
 	position: fixed;
 	left: 10vw;
-	top: -10vh;
+	top: -10vw;
 }
 
 	.meteor_small_sprite {
@@ -363,7 +435,7 @@ p {
 #meteor_large {
 	position: fixed;
 	left: 15vw;
-	top: -10vh;
+	top: -10vw;
 }
 
 	.meteor_large_sprite {
@@ -377,7 +449,7 @@ p {
 #meteor_giant {
 	position: fixed;
 	left: 25vw;
-	top: -10vh;
+	top: -10vw;
 }
 
 	.meteor_giant_sprite {
@@ -391,7 +463,7 @@ p {
 #gas_cloud_small {
 	position: fixed;
 	left: 35vw;
-	top: -10vh;
+	top: -10vw;
 }
 
 	.gas_cloud_small_sprite {
@@ -405,7 +477,7 @@ p {
 #gas_cloud_large {
 	position: fixed;
 	left: 40vw;
-	top: -10vh;
+	top: -10vw;
 }
 
 	.gas_cloud_large_sprite {
@@ -419,7 +491,7 @@ p {
 #sunburst {
 	position: fixed;
 	left: 45vw;
-	top: -10vh;
+	top: -10vw;
 }
 
 	.sunburst_sprite {
@@ -512,63 +584,43 @@ p {
 
     @keyframes sunburst_drop {
 		0% {
-			top: -15vh;
+			top: -15vw;
 		}
 		10% {
-			top: 115vh;
+			top: 115vw;
 		}
 		100% {
-			top: 115vh;
+			top: 115vw;
 		}
     }
 
-.attack_slow {
-    animation-name: attack_slow;
+.attack {
+    animation-name: attack;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
+	
+}
+
+    @keyframes attack {
+		from {
+			top: -10vw;
+		}
+		to {
+			top: 115vw;
+		}
+    }
+
+.slow {
 	animation-duration: 10s;
 }
 
-    @keyframes attack_slow {
-		from {
-			top: -10vh;
-		}
-		to {
-			top: 115vh;
-		}
-    }
-
-.attack_fast {
-    animation-name: attack_fast;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
+.fast {
 	animation-duration: 5s;
 }
 
-    @keyframes attack_fast {
-		from {
-			top: -10vh;
-		}
-		to {
-			top: 115vh;
-		}
-    }
-
-.attack_faster {
-    animation-name: attack_faster;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
+.faster {
 	animation-duration: 3s;
 }
-
-    @keyframes attack_faster {
-		from {
-			top: -10vh;
-		}
-		to {
-			top: 115vh;
-		}
-    }
 
 .drop {
 	animation-name: drop;
@@ -616,3 +668,12 @@ p {
 		transform: scale(1);
 	  }
 	}
+
+.start_animation {
+	animation-play-state: running;
+}
+
+	.pause_animation {
+		animation-play-state: paused;
+	}
+
