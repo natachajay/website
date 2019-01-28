@@ -62,13 +62,17 @@ h1 {
   .column {
       width: 100%;
   }
-}{
-    
 }
 
-.assignment:hover .overlay {
-    opacity: 0.5;
+/* OVERLAY */
+
+.assignment_wrapper {
+    position: relative;
 }
+
+    .assignment_wrapper:hover .overlay {
+        opacity: 0.5;
+    }
 
 .overlay {
     position: absolute;
@@ -77,6 +81,7 @@ h1 {
     left: 0;
     right: 0;
     max-width: 100%;
+    max-height: 100%;
     opacity: 0;
     transition: .5s ease;
     background-color: #49454D;
