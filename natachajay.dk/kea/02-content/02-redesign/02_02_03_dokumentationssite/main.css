@@ -98,6 +98,34 @@ body {
     width: 850px;
 }
 
+.colors {
+    display: flex;
+    flex-flow: row wrap;
+    flex-basis: 500px;
+    margin: 0 5px 0 0;
+
+}
+
+    .colors > div[class*="color"]   {
+        height: 60px;
+        flex-basis: 21vw;
+        flex-grow: 1;
+        margin: 1px;
+    }
+
+        .color1 {
+            background-color: #1AB7E6;
+        }
+
+        .color2 {
+            background-color: #007DC8;
+        }
+
+        .color3 {
+            background-color: #ffffff;
+            border: 1px #1AB7E6 dotted;
+        }
+
 .icons {
     display: flex;
     flex-flow: row nowrap;
