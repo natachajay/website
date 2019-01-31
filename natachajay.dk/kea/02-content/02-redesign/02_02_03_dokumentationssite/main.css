@@ -1,130 +1,24 @@
+/* GENERAL */
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    padding: 0 10px;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
 body {
     font-family: 'Lato', sans-serif;
 }
 
-/* Style tile */
+/* STYLETILE */
 
-#styletile .forklaring {
-    font-size: 0.7rem;
-    font-family: 'Open Sans', sans-serif;
-    margin: 10px 0 10px 0;
-
+#styletile_img {
+    width: 100%;
 }
-
-#styletile .forklaring strong {
-    font-weight: 700;
-}
-
-#styletile .content {
-    display: flex;
-    flex-flow: row wrap;
-}
-
-#styletile h2,
-#styletile h3 {
-    font-family: 'Montserrat', sans-serif;
-    margin: 10px 0 10px 0;
-}
-
-#styletile h2 {
-    font-size: 30px;
-    font-weight: 700;
-    color: #000000;
-}
-
-#styletile h3 {
-    font-size: 19px;
-    font-weight: 700;
-    color: #1AB7E6;
-}
-
-#styletile p {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    font-size: 13px;
-    color: #000000;
-}
-
-.name_eks {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    font-size: 15px;
-    color: #000000;
-}
-
-/* Styletile links */
-
-
-#styletile_menulinks {
-    margin: 0;
-}
-
-#menulinks_eks_01 {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
-        text-decoration: none;
-        color: #1AB7E6;
-}
-
-#menulinks_eks_02 {
-    font-family: 'Montserrat', sans-serif;
-    text-decoration: none;
-    font-weight: 400;
-    color: #000000;
-}
-
-#links_eks {
-    font-family: 'Montserrat', sans-serif;
-    text-decoration: none;
-    font-weight: 400;
-    color: #1AB7E6;
-}
-
-.knapper_eks {
-    font-family: 'Montserrat', sans-serif;
-    text-decoration: none;
-    font-weight: 400;
-}
-
-    #knapper_eks_01 {
-        color: #FF0000;
-    }
-
-    #knapper_eks_02 {
-        color: #1AB7E6;
-    }
-
-#color_column {
-    width: 850px;
-}
-
-.colors {
-    display: flex;
-    flex-flow: row wrap;
-    flex-basis: 500px;
-    margin: 0 5px 0 0;
-
-}
-
-    .colors > div[class*="color"]   {
-        height: 60px;
-        flex-basis: 21vw;
-        flex-grow: 1;
-        margin: 1px;
-    }
-
-        .color1 {
-            background-color: #1AB7E6;
-        }
-
-        .color2 {
-            background-color: #007DC8;
-        }
-
-        .color3 {
-            background-color: #ffffff;
-            border: 1px #1AB7E6 dotted;
-        }
 
 .icons {
     display: flex;
