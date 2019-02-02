@@ -14,11 +14,11 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-/* STYLETILE */
-
-#styletile_img {
+#storyboard, #moodboard, #styletile_img, #stills {
     width: 100%;
 }
+
+/* STYLETILE */
 
 .icons {
     display: flex;
@@ -26,11 +26,3 @@ body {
 }
 
 /* VIRKSOMHEDSVIDEO + STILLS */
-
-#storyboard {
-    width: 100%;
-}
-
-#moodboard {
-    width: 100%;
-}
