@@ -24,3 +24,13 @@ body {
     display: flex;
     flex-flow: row nowrap;
 }
+
+/* VIRKSOMHEDSVIDEO + STILLS */
+
+#storyboard {
+    width: 100%;
+}
+
+#moodboard {
+    width: 100%;
+}
