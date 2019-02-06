@@ -42,31 +42,31 @@ h1 {
     margin: 8px -16px;
 }
 
-.row,
-.row > .column {
-    padding: 8px;
-}
+    .row,
+    .row > .column {
+        padding: 8px;
+    }
 
 .column {
     flex: 1 1 0;
 }
 
+    @media screen and (max-width: 900px) {
+    .column {
+        flex-basis: 45vw;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .column {
+          flex-basis: 100vw;
+      }
+    }
+
 .content {
     background-color: white;
     padding: 10px;
     height: 100%;
-}
-
-@media screen and (max-width: 900px) {
-.column {
-    flex-basis: 45vw;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .column {
-      flex-basis: 100vw;
-  }
 }
 
 /* FRONT PAGE */
@@ -75,7 +75,20 @@ h1 {
     margin: 25px;
 }
 
+/* CV */
+
+
+
+/* PORTFOLIO */
+
+
+
 /* OVERLAY */
+
+.overlay_img {
+    width: 100%;
+    display: block;
+}
 
 .assignment_wrapper {
     position: relative;
