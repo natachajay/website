@@ -113,7 +113,7 @@ h1 {
         user-select: none;
     }
 
-.album_text:hover {
-    text-decoration: underline;
-}
+        .album_text:hover {
+            text-decoration: underline;
+        }
 
