@@ -18,34 +18,27 @@
     box-sizing: border-box;
 }
 
-.menu a {
-    text-decoration: none;
-    color: black;
-    padding: 0 10px;
-}
-
-.menu a:hover {
-    text-decoration: underline;
-}
-
 body {
     background-color: #f1f1f1;
-    padding: 20px;
     font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
     font-size: 50px;
+    margin: 0;
+    padding: 
 }
 
-.row {
-    margin: 8px -16px;
+.sectionwrapper {
+    min-height: 100vh;
 }
 
-    .row,
-    .row > .column {
-        padding: 8px;
-    }
+.row,
+.row > .column {
+    padding: 8px;
+}
 
 .column {
     flex: 1 1 0;
@@ -72,8 +65,20 @@ h1 {
 /* FRONT PAGE */
 
 .front_page_cover {
-    margin: 25px;
+    background-image: url(https://www.natachajay.dk/media/waves.gif);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    color: white;
 }
+
+    .front_page_cover > h1 {
+        padding: 25px 0;
+    }
+
+    .front_page_cover > h2 {
+        padding: 75vh 0 0 0;
+    }
 
 /* CV */
 
@@ -81,22 +86,26 @@ h1 {
 
 /* PORTFOLIO */
 
-
+#assignments_iframe {
+    width: 100%;
+    height: 50vh;
+    padding: 0 16px;
+    border: none;
+}
 
 /* OVERLAY */
 
-.overlay_img {
-    width: 100%;
-    display: block;
+.portfolio_content {
+    cursor: pointer;
 }
+
+    .portfolio_content:hover .overlay {
+        opacity: 0.5;
+    }
 
 .assignment_wrapper {
     position: relative;
 }
-
-    .assignment_wrapper:hover .overlay {
-        opacity: 0.5;
-    }
 
 .overlay {
     position: absolute;
@@ -111,10 +120,15 @@ h1 {
     background-color: #49454D;
 }
 
+    .overlay_img {
+        width: 100%;
+        display: block;
+    }
+
     .album_text {
         color: white;
-        text-decoration: none;
         position: absolute;
+        margin: 0;
         top: 50%;
         left: 50%;
         -ms-transform: translate(-50%, -50%);
@@ -125,8 +139,3 @@ h1 {
         -ms-user-select: none;
         user-select: none;
     }
-
-        .album_text:hover {
-            text-decoration: underline;
-        }
-
