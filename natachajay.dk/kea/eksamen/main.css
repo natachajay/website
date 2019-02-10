@@ -8,6 +8,10 @@
     float: right;
 }
 
+.centered {
+    text-align: center;
+}
+
 .flex {
     display: flex;
     justify-content: space-between;
@@ -28,9 +32,13 @@ body {
 h1 {
     font-size: 50px;
     margin: 0;
-    padding: 
+    color: white;
+    position: absolute;
+    width: 100%;
+    top: 50vh;
 }
 
+.container section:not(:last-child)
 .sectionwrapper {
     min-height: 100vh;
 }
@@ -69,15 +77,12 @@ h1 {
     background-size: cover;
     height: 100vh;
     width: 100%;
-    color: white;
 }
 
-    .front_page_cover > h1 {
-        padding: 25px 0;
-    }
-
     .front_page_cover > h2 {
-        padding: 50px 0;
+        padding: 100px 0;
+        color: white;
+        margin: 0;
     }
 
 /* CV */
