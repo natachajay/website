@@ -1,0 +1,6 @@
+#liste {
+  display: grid;
+  grid-auto-flow: row;
+  align-content: center;
+  justify-content: center;
+}
