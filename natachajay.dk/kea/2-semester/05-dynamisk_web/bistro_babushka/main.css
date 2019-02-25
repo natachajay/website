@@ -12,6 +12,10 @@ nav {
     text-align: center;
 }
 
+    .valgt {
+        color: red;
+    }
+
 img {
     width: 100%;
 }
@@ -22,16 +26,14 @@ img {
 }
 
     /* Smartphones (portrait and landscape) */
-    @media only screen and (min-device-width: 320px) and (max-device-width: 400px) {
-    /* Styles */
+    @media only screen and (max-width: 400px) {
         #liste {
             grid-template-columns: 100fr;
         }
     }
 
     /* iPads (portrait and landscape) */
-    @media only screen and (min-device-width: 401px) and (max-device-width: 1024px) {
-    /* Styles */
+    @media only screen and (min-width: 401px) and (max-width: 1024px) {
         #liste {
             grid-template-columns: repeat(2, 10fr);
         }
@@ -39,7 +41,6 @@ img {
 
     /* Desktops and laptops */
     @media only screen  and (min-width: 1025px) {
-    /* Styles */
         #liste {
             grid-template-columns: repeat(4, 10fr);
         }
@@ -47,7 +48,6 @@ img {
 
     /* Large screens */
     @media only screen  and (min-width: 1824px) {
-    /* Styles */
         #liste {
             grid-template-columns: repeat(5, 10fr);
         }
