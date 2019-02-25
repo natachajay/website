@@ -1,4 +1,10 @@
-h1 {
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2 {
     text-align: center;
 }
 
@@ -61,3 +67,34 @@ img {
 p {
     margin: 1vw 0 1vw 0;
 }
+
+#popup {
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(1, 1, 1, 0.8);
+    background-size: cover;
+    display: none;
+}
+
+    #content {
+        min-height: 50vh;
+        background-color: white;
+        width: 70vw;
+        margin: auto;
+    }
+
+    #close {
+        position: fixed;
+        right: 2rem;
+        padding-right: 2rem;
+    }
+
+    #close button {
+        font-size: 2rem;
+        color: white;
+        padding: 1rem 2rem;
+        background: none;
+        border: none;
+    }
