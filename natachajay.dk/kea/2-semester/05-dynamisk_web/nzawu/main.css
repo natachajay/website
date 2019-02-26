@@ -1,0 +1,132 @@
+header {
+    margin: auto;
+    text-align: center;
+}
+
+nav {
+    margin: 5vh 0;
+}
+
+    button {
+        background: none;
+        border: none;
+        font-size: 1em;
+    }
+
+#menu {
+    display: grid;
+    grid-gap: 5vh;
+}
+
+.card {
+    margin: auto;
+    display: grid;
+    background-color: beige;
+}
+
+    /* Smartphones */
+    @media only screen and (max-width: 400px) {
+        .card {
+            grid-template-columns: 1fr;
+            width: 80vw;
+        }
+        
+        .img_column {
+            bottom: -10%;
+        }
+    }
+
+    /* Tablet */
+    @media only screen and (min-width: 401px) {
+        .card {
+            grid-template-columns: 1fr;
+            grid-gap: 5vh;
+            width: 80vw;
+        }
+        
+        .img_column {
+            right: -10%;
+        }
+    }
+
+    /* Desktops and laptops */
+    @media only screen  and (min-width: 1025px) {
+        .card {
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10vh;
+            width: 50%;
+        }
+        
+        .img_column {
+            right: -20%;
+        }
+    }
+
+    /* Large screens */
+    @media only screen  and (min-width: 1824px) {
+        .card {
+            grid-template-columns: repeat(2, 1fr););
+            grid-gap: 10vh;
+            width: 50%;
+        }
+        
+        .img_column {
+            right: -20%;
+        }
+    }
+
+        .column {
+            margin: 1vw;
+        }
+
+        .content_column {
+            background-color: aqua;
+        }
+
+            .content {
+                
+            }
+
+        .img_column {
+            position: relative;
+            border: solid 1px black;
+        }
+
+            .ret_img {
+
+            }
+
+#popup {
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(1, 1, 1, 0.8);
+    background-size: cover;
+    display: none;
+}
+
+    #content {
+        min-height: 50vh;
+        background-color: white;
+        width: 70vw;
+        margin: auto;
+    }
+
+    #close {
+        position: fixed;
+        right: 2rem;
+        padding-right: 2rem;
+    }
+
+    #close button {
+        font-size: 2rem;
+        color: white;
+        padding: 1rem 2rem;
+        background: none;
+        border: none;
+    }
+
+img {
+    width: 100%;
+}
