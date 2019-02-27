@@ -49,8 +49,7 @@ function visRetter() {
                             <h3>${ret.navn}</h3>
                             <p>${ret.lang}</p>
                             <p>${ret.oprindelse}</p>
-                            <p>${ret.pris}</p>
-                            <p>${ret.kategori}</p>
+                            <p>${ret.pris},-</p>
                         </div>
                     </div>
 
