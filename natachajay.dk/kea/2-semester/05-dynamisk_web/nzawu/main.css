@@ -10,6 +10,7 @@ header {
 }
 
 #filtering_nav {
+    padding-top: 5vh ;
     margin: 5vh 0;
 }
 
@@ -167,7 +168,7 @@ header {
     width: 100vw;
     height: 100vh;
     position: fixed;
-    background-color: rgba(1, 1, 1, 0.8);
+    background-color: rgba(1, 1, 1, 0.95);
     background-size: cover;
     display: none;
     z-index: 1;
@@ -217,7 +218,7 @@ footer {
     font-family: 'Lato', sans-serif;
     font-size: 1em;
     color: black;
-    padding-bottom: 5vh;
+    padding: 5vh 0;
 }
 
 img {
