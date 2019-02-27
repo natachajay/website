@@ -30,26 +30,6 @@
         "billede": "caviarbruschetta"
 },
     {
-        "id": 13,
-        "kategori": "entrees",
-        "navn": "Baltisk bondesuppe",
-        "pris": 79,
-        "kort": "Baltisk bondesuppe - en solid starter",
-        "lang": "Baltisk bondesuppe er en solid starter. Godt til dig, der skal drikke godt igennem under måltidet. Suppen består af ged, grønt og masser af løg.",
-        "oprindelse": "Baltikum",
-        "billede": "baltiskbondesuppe"
-},
-    {
-        "id": 14,
-        "kategori": "entrees",
-        "navn": "Østsibirisk kålsuppe",
-        "pris": 69,
-        "kort": "Kålsuppe med 7 kålvarianter",
-        "lang": "Denne lækre suppe består af 7 forskellige slags kål: Hvidkål, grønkål, brunkål, spidskål, kabanossikål, sibirisk kål og kålrabi. Dertil en masse Voda (vand) og krydderier fra Østsibirien.",
-        "oprindelse": "Østsibirien",
-        "billede": "kaalsuppe"
-},
-    {
         "id": 20,
         "kategori": "mains",
         "navn": "Bulgarsk bondesuppe",
@@ -78,46 +58,6 @@
         "lang": "Diplomatiet har haft mange udfordringer i USSR. Derfor blev der sørget godt for dem, og som nogen af de få, fik diplomaterne mange bøffer under den kolde krig. Diplomat-bøffen med grillede grøntsager og koldpresset olie er af ypperste kvalitet - kødet kommer fra udsultede ungkalve i Viktoriagrad.",
         "oprindelse": "Viktoriagrad",
         "billede": "boef"
-},
-    {
-        "id": 23,
-        "kategori": "mains",
-        "navn": "Zygroffs bondeplatte",
-        "pris": 109,
-        "kort": "Zygroffs bondeplatte - bøndernes svar på Tapas",
-        "lang": "Under de trange vilkår på landet Sibirien, bød husmændene på Zygroffs bondeplatte, når der var fest. Gode, grove grøntsager, tørret bøffelkod og masser af æg. Specielt for bondeplatten blev de dejlige caviar skiftet ud med billige kapers.",
-        "oprindelse": "Sibirien",
-        "billede": "bondeplatte"
-},
-    {
-        "id": 24,
-        "kategori": "mains",
-        "navn": "Russisk Tapas",
-        "pris": 199,
-        "kort": "Russisk tapas med tomater og kød",
-        "lang": "Der er blevet sagt meget om det russiske køkken, men godt har sjældent været et af tillægsordene. Russisk tapas er dog lækkert. Inspireret af duften af Italien får du her tørret bøffelkød, hvidt brød og tomater badet i koldpresset olie.",
-        "oprindelse": "Rusland",
-        "billede": "russisktapas"
-},
-    {
-        "id": 25,
-        "kategori": "mains",
-        "navn": "Moldavisk fiskesuppe",
-        "pris": 139,
-        "kort": "Den dejlige, alkoholholdige moldaviske fiskesuppe",
-        "lang": "Denne suppe fra Moldavien er unik ved at være forholdsvis stærk. Suppen koges på basis af Zyganoff Vodka i 24 timer. Meget af alkoholen damper væk, men der er typisk en rest på ca. 8% alkohol tilbage, så spiser du godt med suppe, skal du nok blive bims.",
-        "oprindelse": "Moldavien",
-        "billede": "moldaviskfiskesuppe"
-},
-    {
-        "id": 26,
-        "kategori": "mains",
-        "navn": "Dynryp",
-        "pris": 149,
-        "kort": "Dynrup - Russisk bulgur med skovsvampe",
-        "lang": "Dynrup - Russisk bulgur med skovsvampe fra det østlige Kirgisistan. Svampene minder om kantarelle, men med en mere støvet smag.",
-        "oprindelse": "Rusland",
-        "billede": "dynryp"
 },
     {
         "id": 30,
@@ -150,36 +90,6 @@
         "billede": "kirgisiskroulade"
 },
     {
-        "id": 33,
-        "kategori": "desserts",
-        "navn": "Pavlova i melon",
-        "pris": 49,
-        "kort": "Pavlova - russiske pandekager - i honningmelon fra Nordkorea",
-        "lang": "Pavlova - de berømte festlige russiske pandekager - serveres i lækker honningmelon fra Nordkorea",
-        "oprindelse": "Nordkorea",
-        "billede": "pavlova"
-},
-    {
-        "id": 34,
-        "kategori": "desserts",
-        "navn": "Groggiroshorn",
-        "pris": 39,
-        "kort": "Groggishorn - det russiske svar på pølsehorn",
-        "lang": "Groggishorn - det russiske svar på pølsehorn, bare meget mere rustikt og spændende",
-        "oprindelse": "Rusland",
-        "billede": "groggiroshorn"
-},
-    {
-        "id": 35,
-        "kategori": "desserts",
-        "navn": "Søde, syltede løg",
-        "pris": 59,
-        "kort": "En lækker potpourri af søde, syltede løg",
-        "lang": "Et lækkert festfyrværkeri af festlige søde, vodkasyltede løg",
-        "oprindelse": "Moskva",
-        "billede": "syltedeloeg"
-},
-    {
         "id": 40,
         "kategori": "sideorders",
         "navn": "Russisk ringbrød",
@@ -208,15 +118,5 @@
         "lang": "Russisk salat med ærter, bønner, gulerødder og mayonnaise fra Volgograd",
         "oprindelse": "Volgograd",
         "billede": "russisksalat"
-},
-    {
-        "id": 43,
-        "kategori": "sideorders",
-        "navn": "Kogte kartofler",
-        "pris": 29,
-        "kort": "Kogte kartofler med Murmanske krydderurter",
-        "lang": "Kogte kartofler, dyrket i Murmansk og med spændende murmanske krydderurter indsamlet i Murmansk af murmanskanere",
-        "oprindelse": "Murmansk",
-        "billede": "kartofler"
 }
     ]

@@ -32,7 +32,7 @@ function visRetter() {
                 
                 <div class="column img_column">
                     <div class="ret_img">
-                        <img src="https://www.natachajay.dk/media/kea_media/nzawu/${ret.billede}.jpg">
+                        <img class="spec_ret_img" src="https://www.natachajay.dk/media/kea_media/nzawu/${ret.billede}.jpg">
                     </div>
                 </div>
             </div>

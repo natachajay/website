@@ -1,4 +1,4 @@
-/* Misc -- from the top */
+/* Header */
 
 header {
     margin: auto;
@@ -14,7 +14,8 @@ header {
 }
 
     button {
-        color: white;
+        font-family: 'Lato', sans-serif;
+        color: black;
         background: none;
         border: none;
         font-size: 1em;
@@ -50,6 +51,7 @@ header {
     display: grid;
     grid-gap: 0;
     background-color: rgba(1, 1, 1, 1);
+    box-shadow: rgba(1, 1, 1, 0.6) 2px 2px 15px -3px;
 }
 
     /* Smartphones */
@@ -86,7 +88,7 @@ header {
             grid-template-columns: repeat(2, 1fr);
             grid-gap: 5vh;
             width: 50vw;
-            margin-bottom: 10vh;
+            margin-bottom: 5vh;
         }
         
         .img_column {
@@ -100,7 +102,7 @@ header {
             grid-template-columns: repeat(2, 1fr););
             grid-gap: 5vh;
             width: 50vw;
-            margin-bottom: 10vh;
+            margin-bottom: 5vh;
         }
         
         .img_column {
@@ -122,12 +124,15 @@ header {
 
     .img_column {
         position: relative;
-        border: solid 1px black;
     }
 
         .ret_img {
 
         }
+        
+            .spec_ret_img {
+                box-shadow: rgba(1,1,1,0.4) 3px 2px 15px -4px;
+            }
 
 /* Pop-up */
 
@@ -166,9 +171,21 @@ header {
 
 body {
     color: white;
-    background-color: rgba(1, 1, 1, 0.85);
+    background-color: rgba(223, 237, 255, 0.2);
     margin: 0;
     padding: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Merriweather', serif;
+    margin: 2vh 2vw;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+    margin: 1vh 2vw;
 }
 
 img {
