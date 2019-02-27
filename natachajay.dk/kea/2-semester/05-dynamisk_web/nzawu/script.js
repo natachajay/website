@@ -41,7 +41,7 @@ function visRetter() {
             });
                                                    
             function showSingle(ret) {
-                document.querySelector("#popup_content").innerHTML =
+                document.querySelector("#content").innerHTML =
                 `
                 <div class="card">
                     <div class="column content_column">

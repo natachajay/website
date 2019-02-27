@@ -65,6 +65,11 @@ header {
         top: calc((100vh / 3) * 2 + ((100vh / 3) / 4));
     }
 
+footer {
+    font-size: 
+    margin: auto;
+    text-align: center;
+}
 
 /* The Grid */
 
@@ -171,12 +176,10 @@ header {
     background-color: rgba(1, 1, 1, 0.8);
     background-size: cover;
     display: none;
+    z-index: 1;
 }
 
     #content {
-        min-height: 50vh;
-        background-color: white;
-        width: 70vw;
         margin: auto;
     }
 
