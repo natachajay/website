@@ -15,29 +15,56 @@ header {
 
     button {
         font-family: 'Lato', sans-serif;
-        color: black;
-        background: none;
-        border: none;
         font-size: 1em;
     }
+
+        button.filter {
+                color: black;
+                background: none;
+                border: none;
+        }
 
         button:hover {
             text-decoration: underline;
         }
 
 #hero_image {
-    background-image: url(/natachajay.dk/media/kea_media/nzawu/food.jpg);
+    background-image: url(https://www.natachajay.dk/media/kea_media/nzawu/food.jpg);
     background-size: cover;
     background-position: center;
-    overflow: hidden
-    width: 100vw;
+    background-blend-mode: overlay;
+    background-color: rgba(1, 1, 1, 0.3);
+    width: 100%;
     height: 100vh;
     text-align: center;
 }
 
-#logo {
-    margin-top: 10vh;
+#logo_container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    align-items: center;
+    justify-content: center;
 }
+    #logo {
+        height: calc(100vh /3);
+     }
+
+    .ghost_link {
+        font-family: 'Lato', sans-serif;
+        font-size: 1em;
+        text-decoration: none;
+        color: white;
+        background: none;
+        border: 1px solid white;
+        padding: 5px 10px;
+        position: absolute;
+        top: calc((100vh / 3) * 2 + ((100vh / 3) / 4));
+    }
+
 
 /* The Grid */
 
@@ -50,7 +77,7 @@ header {
     margin: auto;
     display: grid;
     grid-gap: 0;
-    background-color: rgba(1, 1, 1, 1);
+    background-color: rgba(1, 1, 1, 0.9);
     box-shadow: rgba(1, 1, 1, 0.6) 2px 2px 15px -3px;
 }
 

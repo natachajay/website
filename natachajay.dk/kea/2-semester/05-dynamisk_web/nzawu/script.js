@@ -24,7 +24,6 @@ function visRetter() {
                 <div class="column content_column">
                     <div class="content">
                         <h3>${ret.navn}</h3>
-                        <p>${ret.kategori}</p>
                         <p>${ret.kort}</p>
                         <p>${ret.pris},-</p>
                     </div>
@@ -51,12 +50,13 @@ function visRetter() {
                             <p>${ret.lang}</p>
                             <p>${ret.oprindelse}</p>
                             <p>${ret.pris}</p>
+                            <p>${ret.kategori}</p>
                         </div>
                     </div>
 
                     <div class="column img_column">
                         <div class="ret_img">
-                            <img src="https://www.natachajay.dk/media/kea_media/nzawu/large/${ret.billede}.jpg">
+                            <img src="https://www.natachajay.dk/media/kea_media/nzawu/${ret.billede}.jpg">
                         </div>
                     </div>
                 </div>
