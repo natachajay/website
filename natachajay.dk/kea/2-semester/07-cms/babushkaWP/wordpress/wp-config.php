@@ -37,10 +37,6 @@ define( 'DB_CHARSET', 'utf8mb4' );
 /** The Database Collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );
 
-/** Fixing the upload error */
-define( 'UPLOADS', 'wp-content/uploads' );
-require_once(ABSPATH . 'wp-settings.php');
-
 /**#@+
  * Authentication Unique Keys and Salts.
  *
