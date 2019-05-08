@@ -4183,7 +4183,7 @@ function PropertyValuePart(text, line, col, optionalHint) {
     this.wasIdent = Boolean(hint.ident);
 
 }
-
+
 PropertyValuePart.prototype = new SyntaxUnit();
 PropertyValuePart.prototype.constructor = PropertyValuePart;
 

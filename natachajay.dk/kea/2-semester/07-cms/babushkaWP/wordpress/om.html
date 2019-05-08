@@ -1,0 +1,31 @@
+<html>
+    <body>
+        <nav>
+            <a href="/kea/2-semester/07-cms/babushkaWP/wordpress/index.html">Forside</a>
+            <a href="/kea/2-semester/07-cms/babushkaWP/wordpress/dishes.html">Menu</a>
+            <a href="/kea/2-semester/07-cms/babushkaWP/wordpress/om.html">Om</a>
+            <a href="/kea/2-semester/07-cms/babushkaWP/wordpress/kontakt.html">Kontakt</a>
+        </nav>
+        
+        <h1 class="overskrift"></h1>
+        <main class="indhold"></main>
+
+        <script>
+            let indhold;
+            document.addEventListener("DOMContentLoaded", start);
+            function start(){
+                async function getJson(){
+                    let url = "https://natachajay.dk/kea/2-semester/07-cms/babushkaWP/wordpress/wp-json/wp/v2/pages/8"
+                    let jsonData = await fetch(url);
+                    indhold = await jsonData.json();
+                    visIndhold();
+                }
+                function visIndhold(){
+                    document.querySelector(".overskrift").textContent = indhold.title.rendered;
+                    document.querySelector(".indhold").innerHTML = indhold.content.rendered;
+                }
+                getJson();
+            }
+        </script>
+    </body>
+</html>

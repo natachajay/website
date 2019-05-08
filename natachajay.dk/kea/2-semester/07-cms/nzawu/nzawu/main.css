@@ -1,0 +1,227 @@
+/* Header */
+
+header {
+    margin: auto;
+    text-align: center;
+}
+
+#link_nav {
+    margin-top: 5vh;
+}
+
+#filtering_nav {
+    padding-top: 5vh ;
+    margin: 5vh 0;
+}
+
+    button {
+        font-family: 'Lato', sans-serif;
+        font-size: 1em;
+    }
+
+        button.filter {
+                color: black;
+                background: none;
+                border: none;
+        }
+
+        button:hover {
+            text-decoration: underline;
+        }
+
+#hero_image {
+    background-image: url(https://www.natachajay.dk/media/kea_media/nzawu/hero_image.jpg);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-color: rgba(1, 1, 1, 0.3);
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+
+#logo_container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+}
+    #logo {
+        height: calc(100vh /3);
+     }
+
+    .ghost_link {
+        font-family: 'Lato', sans-serif;
+        font-size: 1em;
+        text-decoration: none;
+        color: white;
+        background: none;
+        border: 1px solid white;
+        padding: 5px 10px;
+        position: absolute;
+        top: calc((100vh / 3) * 2 + ((100vh / 3) / 4));
+    }
+
+/* The Grid */
+
+#menu {
+    display: grid;
+    grid-gap: 5vh;
+}
+
+.card {
+    margin: auto;
+    display: grid;
+    grid-gap: 0;
+    background-color: rgba(1, 1, 1, 0.9);
+    box-shadow: rgba(1, 1, 1, 0.6) 2px 2px 15px -3px;
+    cursor: grab;
+}
+
+    /* Smartphones */
+    @media only screen and (max-width: 400px) {
+        .card {
+            grid-template-columns: 1fr;
+            grid-gap: 1vw;
+            width: 90vw;
+            margin-bottom: 5vh;
+        }
+        
+        .img_column {
+            bottom: -10%;
+        }
+    }
+
+    /* Tablet */
+    @media only screen and (min-width: 401px) {
+        .card {
+            grid-template-columns: 1fr;
+            grid-gap: 1vw;
+            width: 90vw;
+            margin-bottom: 5vh;
+        }
+        
+        .img_column {
+            bottom: -10%;
+        }
+    }
+
+    /* Desktops and laptops */
+    @media only screen  and (min-width: 1025px) {
+        .card {
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 5vh;
+            width: 50vw;
+            margin-bottom: 5vh;
+        }
+        
+        .img_column {
+            right: -20%;
+        }
+    }
+
+    /* Large screens */
+    @media only screen  and (min-width: 1824px) {
+        .card {
+            grid-template-columns: repeat(2, 1fr););
+            grid-gap: 5vh;
+            width: 50vw;
+            margin-bottom: 5vh;
+        }
+        
+        .img_column {
+            right: -20%;
+        }
+    }
+
+    .column {
+        
+    }
+
+    .content_column {
+
+    }
+
+        .content {
+
+        }
+
+    .img_column {
+        position: relative;
+    }
+
+        .ret_img {
+
+        }
+        
+            .spec_ret_img {
+                box-shadow: rgba(1,1,1,0.4) 3px 2px 15px -4px;
+            }
+
+/* Pop-up */
+
+#popup {
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(1, 1, 1, 0.95);
+    background-size: cover;
+    display: none;
+    z-index: 1;
+}
+
+    #content {
+        margin: auto;
+    }
+
+    #close {
+        position: fixed;
+        right: 1rem;
+        padding-right: 2rem;
+    }
+
+    #close button {
+        font-size: 2rem;
+        color: white;
+        padding: 1rem 2rem;
+        background: none;
+        border: none;
+    }
+
+/* General */
+
+body {
+    color: white;
+    background-color: rgba(223, 237, 255, 0.2);
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Merriweather', serif;
+    margin: 2vh 2vw;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+    margin: 1vh 2vw;
+}
+
+footer {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    color: black;
+    padding: 5vh 0;
+}
+
+img {
+    width: 100%;
+}

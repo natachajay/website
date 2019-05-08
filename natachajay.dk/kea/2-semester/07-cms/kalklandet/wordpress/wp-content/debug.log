@@ -1,0 +1,3 @@
+[07-May-2019 13:54:15 UTC] PHP Notice:  Trying to get property 'pod_data' of non-object in /var/www/natachajay/kea/2-semester/07-cms/kalklandet/wordpress/wp-content/plugins/pods/classes/PodsRESTFields.php on line 61
+[07-May-2019 13:54:24 UTC] PHP Notice:  Trying to get property 'pod_data' of non-object in /var/www/natachajay/kea/2-semester/07-cms/kalklandet/wordpress/wp-content/plugins/pods/classes/PodsRESTFields.php on line 61
+[07-May-2019 21:28:00 UTC] PHP Notice:  Trying to get property 'pod_data' of non-object in /var/www/natachajay/kea/2-semester/07-cms/kalklandet/wordpress/wp-content/plugins/pods/classes/PodsRESTFields.php on line 61

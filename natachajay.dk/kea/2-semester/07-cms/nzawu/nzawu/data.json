@@ -1,0 +1,82 @@
+[
+    {
+        "id": 10,
+        "kategori": "entrees",
+        "navn": "African Groundnut Soup",
+        "pris": 29,
+        "kort": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "lang": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et leo duis ut diam quam nulla porttitor massa id. Praesent semper feugiat nibh sed.",
+        "oprindelse": "Central African",
+        "billede": "entree_01"
+},
+    {
+        "id": 11,
+        "kategori": "entrees",
+        "navn": "Roasted Fish with Peanut Sauce",
+        "pris": 49,
+        "kort": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "lang": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et leo duis ut diam quam nulla porttitor massa id. Praesent semper feugiat nibh sed.",
+        "oprindelse": "Congo",
+        "billede": "entree_02"
+},
+    {
+        "id": 20,
+        "kategori": "mains",
+        "navn": "Fried Greens of the Season",
+        "pris": 99,
+        "kort": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "lang": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et leo duis ut diam quam nulla porttitor massa id. Praesent semper feugiat nibh sed.",
+        "oprindelse": "Congo",
+        "billede": "main_01"
+},
+    {
+        "id": 21,
+        "kategori": "mains",
+        "navn": "Seasoned Salmon with Rice and Greens",
+        "pris": 89,
+        "kort": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "lang": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et leo duis ut diam quam nulla porttitor massa id. Praesent semper feugiat nibh sed.",
+        "oprindelse": "South Africa",
+        "billede": "main_02"
+},
+    {
+        "id": 30,
+        "kategori": "desserts",
+        "navn": "Toast with Figs",
+        "pris": 49,
+        "kort": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "lang": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et leo duis ut diam quam nulla porttitor massa id. Praesent semper feugiat nibh sed.",
+        "oprindelse": "North Africa",
+        "billede": "dessert_01"
+},
+    {
+        "id": 31,
+        "kategori": "desserts",
+        "navn": "Malva Pudding with Cognac Pears",
+        "pris": 59,
+        "kort": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "lang": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et leo duis ut diam quam nulla porttitor massa id. Praesent semper feugiat nibh sed.",
+        "oprindelse": "South Africa",
+        "billede": "dessert_02"
+},
+    {
+        "id": 40,
+        "kategori": "drinks",
+        "navn": "Coffee",
+        "pris": 29,
+        "kort": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "lang": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et leo duis ut diam quam nulla porttitor massa id. Praesent semper feugiat nibh sed.",
+        "oprindelse": "Ethiopia",
+        "billede": "drink_01"
+},
+    {
+        "id": 41,
+        "kategori": "drinks",
+        "navn": "Herbal Tea",
+        "pris": 19,
+        "kort": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "lang": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et leo duis ut diam quam nulla porttitor massa id. Praesent semper feugiat nibh sed.",
+        "oprindelse": "North Africa",
+        "billede": "drink_02"
+    }   
+]
