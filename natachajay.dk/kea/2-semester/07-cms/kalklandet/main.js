@@ -22,6 +22,10 @@ async function loadNavLoop(slug){
     let subJsonData = await fetch(subUrl);
     let subData = await subJsonData.json();
     
+    subData.sort(function(a, b) {
+        return a.order - b.order;
+    })
+    
     // Fill subcaterogies
     subData.forEach(item =>{
         let klon = document.getElementById("outer_template").cloneNode(true).content;
@@ -42,6 +46,9 @@ async function loadNavLoop(slug){
         fetch(navUrl).then(navJsonData => {
             navJsonData.json().then(navData => {
                 // Fill nav
+                navData.sort(function(a, b) {
+                    return a.order - b.order;
+                })
                 navData.forEach(navItem =>{
                     // Menu item
                     let navNode = document.createElement("SPAN");
@@ -89,6 +96,10 @@ async function loadLoop(slug){
     let postsJsonData = await fetch(postsUrl);
     let postsData = await postsJsonData.json();
     
+    postsData.sort(function(a, b) {
+        return a.order - b.order;
+    })
+    
     postsData.forEach(post => {
         let klon = document.querySelector("template").cloneNode(true).content;
         klon.querySelector(".underoverskrift").innerHTML = post.title.rendered;
@@ -110,6 +121,12 @@ async function loadIndex(){
     let data = await jsonData.json();
     let categoryId = data[0].id;
     
+    
+    let aktueltCategoryUrl = baseURL + "categories?slug=aktuelt";
+    let aktueltCategoryJsonData = await fetch(aktueltCategoryUrl);
+    let aktueltCategoryData = await aktueltCategoryJsonData.json();
+    let aktueltCategoryId = aktueltCategoryData[0].id;
+    
     // Fill category info
     if (data[0].hero_image){
         document.getElementById('hero_image').style.backgroundImage = `url('${data[0].hero_image.guid}')`;
@@ -123,8 +140,12 @@ async function loadIndex(){
     let postsJsonData = await fetch(postsUrl);
     let postsData = await postsJsonData.json();
     
+    postsData.sort(function(a, b) {
+        return a.order - b.order;
+    })
+    
     postsData.forEach(post => {
-        let klon = document.querySelector("template").cloneNode(true).content;
+        let klon = document.getElementById("upper_template").cloneNode(true).content;
         klon.querySelector(".overskrift").innerHTML = post.title.rendered;
         klon.querySelector(".content_text").innerHTML = post.content.rendered;
         if (post.billede) {
@@ -133,20 +154,28 @@ async function loadIndex(){
         else {
             klon.querySelector(".content_img").remove();
         }
+        document.querySelector("main").appendChild(klon);
     });
     
-    let postsUrl = baseURL + "opslag?per_page=3&categories=";
+    let aktueltUrl = baseURL + "opslag?per_page=3&categories=";
     
     // Gather subcategories
-    let subUrl = baseURL + `categories?parent=${categoryId}`;
+    let subUrl = baseURL + `categories?parent=${aktueltCategoryId}`;
     let subJsonData = await fetch(subUrl);
     let subData = await subJsonData.json();
     subData.forEach(sub => {
-        postsUrl += `${sub.id},`;
+        aktueltUrl += `${sub.id},`;
     });
     
-    let postsJsonData = await fetch(postsUrl);
-    let postsData = await postsJsonData.json();
+    let aktueltJsonData = await fetch(aktueltUrl);
+    let aktueltData = await aktueltJsonData.json();
+    aktueltData.forEach(post => {
+        let klon = document.getElementById("lower_template").cloneNode(true).content;
+        klon.querySelector(".oprettelse_dato").innerHTML = post.dato_for_oprettelse;
+        klon.querySelector(".aktuelt_overskrift").innerHTML = post.title.rendered;
+        klon.querySelector(".excerpt").innerHTML = post.excerpt.rendered;
+        document.querySelector(".aktuelt_wrapper").appendChild(klon);
+    })
 }
 
 async function loadAktueltLoop(){
@@ -236,3 +265,4 @@ function showNavPostItem(element_id){
 
 // TODO
 // Alternate positions - if divisible by 2, align by adding 'reverse' class
+// Sort by order number

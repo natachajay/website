@@ -7,7 +7,8 @@
                 <p id="summary"></p>
             </div>
         </div>
-        <template>
+        <main id="indhold"></main>
+        <template id="upper_template">
             <div class="sectionwrapper">
                 <div class="content_wrapper">
                     <div class="content">
@@ -20,8 +21,8 @@
             </div>
         </template>
 
-        <template>
-            <div class="opslag">
+        <template id="lower_template">
+            <div class="opslag" onclick="window.location.href='aktuelt.php'">
                 <p class="oprettelse_dato"></p>
                 <h2 class="aktuelt_overskrift"></h2>
                 <p class="excerpt"></p>
@@ -33,7 +34,7 @@
                 <h2 id="aktuelt">Seneste</h2>
             </div>
         </div>
-
+        <script>loadIndex();</script>
 
 <?php
     include 'footer.php';
