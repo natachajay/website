@@ -103,6 +103,52 @@ async function loadLoop(slug){
     });
 }
 
+async function loadIndex(){
+    // Gather category info
+    let url = baseURL + "categories?slug=forside";
+    let jsonData = await fetch(url);
+    let data = await jsonData.json();
+    let categoryId = data[0].id;
+    
+    // Fill category info
+    if (data[0].hero_image){
+        document.getElementById('hero_image').style.backgroundImage = `url('${data[0].hero_image.guid}')`;
+    } else {
+        document.getElementById('hero_image').style.backgroundImage = "url('https://natachajay.dk/kea/2-semester/07-cms/kalklandet/wordpress/wp-content/uploads/2019/05/12747285_10207485059598118_4545225225364258132_o.jpg')";
+    }
+    document.getElementById('overskrift').textContent = data[0].name;
+    document.getElementById('summary').innerHTML = data[0].summary;
+    
+    let postsUrl = baseURL + `posts?categories=${categoryId}`;
+    let postsJsonData = await fetch(postsUrl);
+    let postsData = await postsJsonData.json();
+    
+    postsData.forEach(post => {
+        let klon = document.querySelector("template").cloneNode(true).content;
+        klon.querySelector(".overskrift").innerHTML = post.title.rendered;
+        klon.querySelector(".content_text").innerHTML = post.content.rendered;
+        if (post.billede) {
+            klon.querySelector(".content_img").src = post.billede.guid;
+        }
+        else {
+            klon.querySelector(".content_img").remove();
+        }
+    });
+    
+    let postsUrl = baseURL + "opslag?per_page=3&categories=";
+    
+    // Gather subcategories
+    let subUrl = baseURL + `categories?parent=${categoryId}`;
+    let subJsonData = await fetch(subUrl);
+    let subData = await subJsonData.json();
+    subData.forEach(sub => {
+        postsUrl += `${sub.id},`;
+    });
+    
+    let postsJsonData = await fetch(postsUrl);
+    let postsData = await postsJsonData.json();
+}
+
 async function loadAktueltLoop(){
     // Gather category info
     let url = baseURL + "categories?slug=aktuelt";
