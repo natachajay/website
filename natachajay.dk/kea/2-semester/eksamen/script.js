@@ -3,7 +3,7 @@ let categoryList = [];
 
 async function loadProductLoop(){
     // Gather category info
-    let url = baseUrl + "product";
+    let url = baseUrl + "product?per_page=100";
     let jsonData = await fetch(url);
     let data = await jsonData.json();
     
@@ -20,7 +20,7 @@ async function loadProductLoop(){
         klon.querySelector(".product_price").innerHTML = `&euro; ${item.price}`;
         //Tilføj categoryID som data-category
         let categoryId = item.categories[0];
-        klon.dataset.categoryId = categoryId;
+        klon.querySelector(".sectionwrapper").dataset.categoryId = categoryId;
         // Tilføj categoryID til listen
         if (categoryList.indexOf(categoryId) === -1) {
             categoryList.push(categoryId)
@@ -32,11 +32,11 @@ async function loadProductLoop(){
     ** Opsæt filtreringsmenu
     */
     // Hent alle kategorier
-    let catUrl = baseUrl + "categories";
+    let catUrl = baseUrl + "categories?per_page=100";
     let catJsonData = await fetch(catUrl);
     let catData = await catJsonData.json();
     // Filtrer alle kategorier vha. categoryList
-    let filteredList = catData.filter(item => categoryList.includes(item.categories[0]));
+    let filteredList = catData.filter(item => categoryList.includes(item.id));
     // For hver kategori der er tilbage:
         // Opret et element for kategorien i filtreringsmenuen med categoryID som data-cat
     let filterParentTemplate = document.querySelector(".filtering_parent_temp");
@@ -44,14 +44,14 @@ async function loadProductLoop(){
     let filterMenu = document.querySelector(".filtering_menu");
     filteredList.forEach(function(item) {
         let klon = filterTemplate.cloneNode(true).content;
-        klon.innerHTML = item.name;
-        klon.dataset.categoryId = item.id;
-        klon.dataset.categoryType = 'child';
-        klon.addEventListener("click", function(){filterClick(this);});
+        klon.querySelector(".filtering_menu_item").innerHTML = item.name;
+        klon.querySelector(".filtering_menu_item").dataset.categoryId = item.id;
+        klon.querySelector(".filtering_menu_item").dataset.categoryType = 'child';
+        klon.querySelector(".filtering_menu_item").addEventListener("click", function(){filterClick(this);}, false);
         // If parent not exist:
         // Opret et element for parent hvis ikke allerede gjort
-        let parent = filterMenu.querySelector(`[data-categoryId='${item.parent}']`);
-        if (parent === null) {
+        let parent = filterMenu.querySelector(`[data-category-id='${item.parent}']`);
+        if (parent == null) {
             parent = addFilteringParent(item.parent, catData) 
         }
         parent.appendChild(klon);
@@ -84,20 +84,20 @@ function filterClick(filterElement){
 
 function displayProducts(categoryId) {
     // Vis alle products med produktets categoryId === categoryId
-    document.querySelectorAll(`.sectionwrapper[data-categoryId='${categoryId}']`).forEach(product => product.classList.remove("hidden"));
+    document.querySelectorAll(`.sectionwrapper[data-category-id='${categoryId}']`).forEach(product => product.classList.remove("hidden"));
 }
 
 function addFilteringParent(parent_id, catData) {
     let filterMenu = document.querySelector(".filtering_menu");
     let parentCategory = catData.find(category => category.id === parent_id);
-    let parentKlon = filterParentTemplate.cloneNode(true).content;
+    let parentKlon = document.querySelector(".filtering_parent_temp").cloneNode(true).content;
     parentKlon.querySelector(".filter_parent").innerHTML = parentCategory.name;
-    parentKlon.dataset.categoryId = parent_id;
-    parentKlon.dataset.categoryType = 'parent';
-    parentKlon.addEventListener("click", function(){filterClick(this);});
+    parentKlon.querySelector(".filter_wrapper").dataset.categoryId = parent_id;
+    parentKlon.querySelector(".filter_wrapper").dataset.categoryType = 'parent';
+    parentKlon.querySelector(".filter_wrapper").addEventListener("click", function(){filterClick(this);}, false);
     // Ryk barn ind i parent
     filterMenu.appendChild(parentKlon);
-    return parentKlon;
+    return filterMenu.querySelector(`.filter_wrapper[data-category-id='${parent_id}']`);
 }
 
 function loadProductSingle(product) {
