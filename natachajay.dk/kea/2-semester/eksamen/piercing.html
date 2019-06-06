@@ -9,29 +9,46 @@
         <script src="script.js"></script>
     </head>
     <body>
+        <!-- HERO AREA -->
         <div href="index.html" class="logo logo_box">
         </div>
         
         <div class="hero_image">
         </div>
         
+        <!-- MENU -->
+        
         <nav id="menu">
-            <a href="shop.php">Shop</a>
-            <a href="piercing.php">Piercing</a>
-            <a href="our-world.php">Our World</a>
+            <a href="collection.html">Collection</a>
+            <a href="piercing.html">Piercing</a>
+            <a href="our-world.html">Our World</a>
         </nav>
         
-        /* UNDER-MENU GOES HERE */
+        <!-- UNDER-MENU -->
+        <menu class="article_menu"></menu>
         
-        <main class="content"></main>
+        <template class="piercing_menu_parent_temp">
+            <section class="piercing_menu_wrapper">
+            </section>
+        </template>
+        
+        <template class="piercing_menu_item_temp">
+            <p class="piercing_menu_item"></p>
+        </template>
+        
+        <!-- CONTENT -->
+        
+        <main class="piercing_content"></main>
         <template class="upper_temp">
             <section class="sectionwrapper">
                 <div class="upper_section">
-                    <h1 class="content_title"></h1>
-                    <p class="page_content"></p>
+                    <h1 class="piercing_content_title"></h1>
+                    <p class="åiercing_page_content"></p>
                 </div>
             </section>
         </template>
+        
+        <!-- FOOTER -->
         
         <footer>
             <div id="subscribe_newsletter"></div>

@@ -9,19 +9,34 @@
         <script src="script.js"></script>
     </head>
     <body>
+        <!-- HERO AREA -->
         <div href="index.html" class="logo logo_box">
         </div>
         
         <div class="hero_image">
         </div>
         
+        <!-- MENU -->
+        
         <nav id="menu">
-            <a href="shop.php">Shop</a>
-            <a href="piercing.php">Piercing</a>
-            <a href="our-world.php">Our World</a>
+            <a href="collection.html">Collection</a>
+            <a href="piercing.html">Piercing</a>
+            <a href="our-world.html">Our World</a>
         </nav>
         
-        /* UNDER-MENU GOES HERE */
+        <!-- UNDER-MENU -->
+        <menu class="article_menu"></menu>
+        
+        <template class="article_menu_parent_temp">
+            <section class="article_menu_wrapper">
+            </section>
+        </template>
+        
+        <template class="article_menu_item_temp">
+            <p class="article_menu_item"></p>
+        </template>
+        
+        <!-- CONTENT -->
         
         <main class="content"></main>
         <template class="upper_temp">
@@ -32,6 +47,8 @@
                 </div>
             </section>
         </template>
+        
+        <!-- FOOTER -->
         
         <footer>
             <div id="subscribe_newsletter"></div>

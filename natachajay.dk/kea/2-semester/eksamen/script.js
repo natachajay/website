@@ -21,6 +21,8 @@ async function loadProductLoop(){
         //Tilføj categoryID som data-category
         let categoryId = item.categories[0];
         klon.querySelector(".sectionwrapper").dataset.categoryId = categoryId;
+        //Tilføj productId
+        klon.querySelector(".sectionwrapper").dataset.productId = item.id;
         // Tilføj categoryID til listen
         if (categoryList.indexOf(categoryId) === -1) {
             categoryList.push(categoryId)
@@ -47,14 +49,17 @@ async function loadProductLoop(){
         klon.querySelector(".filtering_menu_item").innerHTML = item.name;
         klon.querySelector(".filtering_menu_item").dataset.categoryId = item.id;
         klon.querySelector(".filtering_menu_item").dataset.categoryType = 'child';
-        klon.querySelector(".filtering_menu_item").addEventListener("click", function(){filterClick(this);}, false);
-        // If parent not exist:
+        klon.querySelector(".filtering_menu_item").addEventListener("click", function(event){
+            filterClick(this);
+            event.stopPropagation();
+        }, false);
+        // If parent doesn't exist:
         // Opret et element for parent hvis ikke allerede gjort
         let parent = filterMenu.querySelector(`[data-category-id='${item.parent}']`);
         if (parent == null) {
             parent = addFilteringParent(item.parent, catData) 
         }
-        parent.appendChild(klon);
+        parent.querySelector(".filter_children").appendChild(klon);
     });
 }
 
@@ -73,7 +78,7 @@ function filterClick(filterElement){
         // Udfør OPERATION_D for alle børn
         filterElement.querySelectorAll(".filter_children > p").forEach(product => displayProducts(product.dataset.categoryId));
         // Fold alle ind
-        document.querySelectorAll(".filter_wrapper.filter_children").forEach(child => child.classList.add("hidden"));
+        document.querySelectorAll(".filter_wrapper > .filter_children").forEach(child => child.classList.add("hidden"));
         // Fold den klikkede ud
         filterElement.querySelector(".filter_children").classList.remove("hidden");
     }
@@ -94,30 +99,93 @@ function addFilteringParent(parent_id, catData) {
     parentKlon.querySelector(".filter_parent").innerHTML = parentCategory.name;
     parentKlon.querySelector(".filter_wrapper").dataset.categoryId = parent_id;
     parentKlon.querySelector(".filter_wrapper").dataset.categoryType = 'parent';
-    parentKlon.querySelector(".filter_wrapper").addEventListener("click", function(){filterClick(this);}, false);
+    parentKlon.querySelector(".filter_wrapper").addEventListener("click", function(event){
+        filterClick(this);
+        event.stopPropagation();
+    }, false);
     // Ryk barn ind i parent
     filterMenu.appendChild(parentKlon);
     return filterMenu.querySelector(`.filter_wrapper[data-category-id='${parent_id}']`);
 }
 
-function loadProductSingle(product) {
+// Product = sectionwrapper
+async function loadProductSingle(product) {
     // Tag produktets id
+    let currentProduct = product.dataset.productId;
     // Hent produktet fra WP vha. id
+    let productUrl = baseUrl + `product/${currentProduct}`;
+    let productJsonData = await fetch(productUrl);
+    let productData = await productJsonData.json();
     // Opret singleView for produktet
+    let singleViewElm = document.querySelector(".singleview_sectionwrapper");
+    singleViewElm.querySelector(".product_title").innerHTML = productData.title.rendered;
+    singleViewElm.querySelector(".product_description").innerHTML = productData.content.rendered;
+    singleViewElm.querySelector(".product_price").innerHTML = `€ ${productData.price}`;
+    // Check om billederne eksisterer enkeltvis
+    let singleViewImgs = document.querySelector(".singleview_img_section");
+    singleViewImgs.innerHTML = "";
+    let primaryProductImg = productData.primary_product_image;
+    if (primaryProductImg) {
+        let element = document.createElement("img");
+        element.src = primaryProductImg.guid;
+        element.classList.add("shown");
+        singleViewImgs.appendChild(element);
+        
+        let secondProductImg = productData.secondary_product_image;
+        if (secondProductImg) {
+            element = document.createElement("img");
+            element.src = secondProductImg.guid;
+            singleViewImgs.appendChild(element);
+            
+            let thirdProductImg = productData.third_product_image;
+            if (thirdProductImg) {
+                element = document.createElement("img");
+                element.src = thirdProductImg.guid;
+                singleViewImgs.appendChild(element);
+                
+                let extraProductImg = productData.extra_product_image;
+                if (extraProductImg) {
+                    element = document.createElement("img");
+                    element.src = extraProductImg.guid;
+                    singleViewImgs.appendChild(element);
+                }
+            }
+        }
+    }
+    
+    singleViewElm.classList.remove("hidden");
 }
 
+function exitSingleView() {
+    document.querySelector(".singleview_sectionwrapper").classList.add("hidden");
+}
+
+
 function displayPrevious() {
-    // Find billedet med "vis" klassen
-    // Skjul billedet
+    // Find billedet med "vis" klassen og skjul det
+    let currentElm = document.querySelector(".singleview_img_section img.shown");
+    currentElm.classList.remove("shown");
     // Find billedet der kommer lige inden
+    let prevElm = currentElm.previousElementSibling;
     // Hvis billedet ikke eksisterer: Find det sidste barn af parent
+    if (prevElm == null) {
+        prevElm = currentElm.parentElement.lastChild;
+    }
     // Vis det fundne billede
+    prevElm.classList.add("shown");
 }
 
 function displayNext() {
     // Find billedet med "vis" klassen
+    let currentElm = document.querySelector(".singleview_img_section img.shown");
     // Skjul billedet
+    currentElm.classList.remove("shown");
     // Find billedet der kommer lige efter
+    let nextElm = currentElm.nextElementSibling;
     // Hvis billedet ikke eksisterer: Find det første barn af parent
+    if (nextElm == null) {
+        nextElm = currentElm.parentElement.firstChild;
+    }
     // Vis det fundne billede
+    nextElm.classList.add("shown");
 }
