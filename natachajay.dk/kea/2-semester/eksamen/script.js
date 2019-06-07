@@ -1,15 +1,19 @@
 let baseUrl = "https://natachajay.dk/kea/2-semester/eksamen/wordpress/wp-json/wp/v2/";
 let categoryList = [];
 
-async function loadProductLoop(){
+async function initiateProductLoop(){
+    // Indsæt alle produkter
+    await loadProducts();
+    // Opsæt filtreringsmenu
+    initiateFilterMenu();
+}
+
+async function loadProducts() {
     // Gather category info
     let url = baseUrl + "product?per_page=100";
     let jsonData = await fetch(url);
     let data = await jsonData.json();
     
-    /*
-    ** Indsæt alle produkter
-    */
     let loopTemplate = document.querySelector(".upper_temp");
     let mainElement = document.querySelector("main.content");
     data.forEach(function(item) {
@@ -29,10 +33,9 @@ async function loadProductLoop(){
         }
         mainElement.appendChild(klon);
     });
-    
-    /*
-    ** Opsæt filtreringsmenu
-    */
+}
+
+async function initiateFilterMenu() {
     // Hent alle kategorier
     let catUrl = baseUrl + "categories?per_page=100";
     let catJsonData = await fetch(catUrl);
@@ -156,7 +159,7 @@ async function loadProductSingle(product) {
     singleViewElm.classList.remove("hidden");
 }
 
-function exitSingleView() {
+function exitSingleView(event) {
     document.querySelector(".singleview_sectionwrapper").classList.add("hidden");
 }
 
@@ -188,4 +191,23 @@ function displayNext() {
     }
     // Vis det fundne billede
     nextElm.classList.add("shown");
+}
+
+// skal loade den pågældende artikel efter man er landet i our-world.php
+function loadArticle() {
+    // find artiklens slug ud fra GET parametre
+    // find pågældende artikel og jsonify den vha. slug
+    // indsæt titel + content
+}
+
+// skal loade når hjemmesiden loader
+function articleMenu() {
+    // find artikler og jsonify dem
+    // for hver artikel:
+        // navgiv menupunkt efter headline
+        // set href til our-world.php?slug=${den-her-nyheds-slug}
+}
+
+function toggleArticleMenu() {
+    
 }
