@@ -1,4 +1,3 @@
-<!-- include php -->
 <?php 
     include ('header.php');
 ?>
@@ -46,8 +45,6 @@
         <script>
             initiateProductLoop();
         </script>
-        
-<!-- include footer -->
 <?php 
     include ('footer.php');
 ?>

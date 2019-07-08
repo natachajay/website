@@ -1,4 +1,3 @@
-<!-- include header -->
 <?php
     include 'header.php';
 ?>
@@ -16,7 +15,7 @@
     <script>
         loadArticle();
     </script>
-<!-- include footer -->
+
 <?php
     include 'footer.php';
 ?>
