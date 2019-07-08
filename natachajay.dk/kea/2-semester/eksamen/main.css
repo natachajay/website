@@ -9,3 +9,9 @@
 .singleview_img_section img.shown {
     display: initial;
 }
+
+.hero_image {
+    background-color: skyblue;
+    width: 100vw;
+    height: 100vh;
+}

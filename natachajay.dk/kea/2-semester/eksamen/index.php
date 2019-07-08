@@ -1,9 +1,7 @@
-<?php
-    include 'header.php';
+<?php 
+    include ('header.php');
 ?>
 
-        <main class="content"></main>
-        <template class="front_page_temp">
             <section class="sectionwrapper">
                 <div class="upper_section">
                     <div id="box_left" class="content_box little_box"></div>
@@ -16,8 +14,7 @@
                 <div class="lower_section">
                     <div id="lower_box" class="content_box midsize_box"></div>
                 </div>
-            </section>
-        </template>    
+            </section> 
         
 <?php
     include 'footer.php';
