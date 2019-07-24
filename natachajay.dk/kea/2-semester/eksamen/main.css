@@ -4,6 +4,10 @@ h1, h2, h3, h4 {
     padding: 0;
 }
 
+img {
+    width: 100%;
+}
+
 body {
     margin: auto;
 }
@@ -17,7 +21,7 @@ header {
 }
 
 footer {
-    background-color: aquamarine;
+    background-color: darkseagreen;
     width: 100%;
     height: 20vh;
     margin-top: 2vh;
@@ -45,7 +49,8 @@ footer {
 }
 
     .top_menu > a {
-        margin: 2vh 5vw;
+        padding: 2vh 5vw;
+        background-color: white;
         text-decoration: none;
     }
 
@@ -76,10 +81,52 @@ footer {
 
 /* COLLECTION */
 
-.singleview_img_section img {
+/* SINGLEVIEW */
+
+.close_button {
+    position: fixed;
+    right: 2rem;
+    padding-right: 2rem;
+}
+
+.singleview_sectionwrapper {
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(1, 1, 1, 0.8);
+    background-size: cover;
     display: none;
 }
 
-.singleview_img_section img.shown {
-    display: initial;
+.singleview_product_box {
+    
+}
+
+    .singleview_img_section {
+        width: 50%;
+    }
+
+        .singleview_img_section img {
+            display: none;
+        }
+
+        .singleview_img_section img.shown {
+            display: initial;
+        }
+
+
+#content {
+    min-height: 50vh;
+    background-color: white;
+    width: 70vw;
+    margin: auto;
+}
+
+#close button {
+    font-size: 2rem;
+    color: white;
+    padding: 1rem 2rem;
+    background: none;
+    border: none;
 }
