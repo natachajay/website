@@ -81,6 +81,16 @@ footer {
 
 /* COLLECTION */
 
+.content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product_box {
+    height: 100%;
+    width: 20vw;
+}
+
 /* SINGLEVIEW */
 
 .close_button {
@@ -103,7 +113,6 @@ footer {
 }
 
     .singleview_img_section {
-        max-width: 50%;
     }
 
         .singleview_img_section img {
