@@ -103,7 +103,7 @@ footer {
 }
 
     .singleview_img_section {
-        width: 50%;
+        max-width: 50%;
     }
 
         .singleview_img_section img {
@@ -113,19 +113,3 @@ footer {
         .singleview_img_section img.shown {
             display: initial;
         }
-
-
-#content {
-    min-height: 50vh;
-    background-color: white;
-    width: 70vw;
-    margin: auto;
-}
-
-#close button {
-    font-size: 2rem;
-    color: white;
-    padding: 1rem 2rem;
-    background: none;
-    border: none;
-}
