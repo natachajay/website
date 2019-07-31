@@ -27,6 +27,10 @@ footer {
     margin-top: 2vh;
 }
 
+#logo {
+    height: calc(100vh /3);
+ }
+
 .hero_image {
     background-image: url(https://www.natachajay.dk/media/kea_media/nzawu/hero_image.jpg);
     background-size: cover;
@@ -54,9 +58,9 @@ footer {
         text-decoration: none;
     }
 
-#logo {
-    height: calc(100vh /3);
- }
+.filtering_menu {
+    justify-content: center;
+}
 
 /* FRONT PAGE */
 
@@ -64,7 +68,6 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    cursor: pointer;
 }
 
     .frontpage_box {
@@ -79,17 +82,36 @@ footer {
             text-align: center;
         }
 
+.frontpage_box:hover .overlay {
+				opacity: 0.5;
+		}
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        max-height: 100%;
+        max-width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: #49454D;
+    }
+
 /* COLLECTION */
 
 .content {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
-.product_box {
-    height: 100%;
-    width: 20vw;
-}
+    .product_box {
+        flex-basis: 25%;
+    }
+
+/* media queries */
 
 /* SINGLEVIEW */
 
