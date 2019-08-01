@@ -108,7 +108,10 @@ footer {
 }
 
     .product_box {
+        display: flex;
+        flex-direction: column;
         flex-basis: 25%;
+        align-items: center;
     }
 
 /* media queries */
