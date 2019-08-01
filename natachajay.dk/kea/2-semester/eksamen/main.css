@@ -110,8 +110,8 @@ footer {
     .product_box {
         display: flex;
         flex-direction: column;
-        flex-basis: 25%;
         align-items: center;
+        flex-basis: 25%;
     }
 
 /* media queries */
