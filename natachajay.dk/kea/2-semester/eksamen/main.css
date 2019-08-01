@@ -137,7 +137,10 @@ footer {
     
 }
 
-    .singleview_img_section {
+    .singleview_img_sectionwrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
 
         .singleview_img_section img {
