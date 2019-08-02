@@ -60,9 +60,14 @@ footer {
     }
 
         .top_menu_content_wrapper > a {
-            padding: 2.5vh 5vw;
+            color: black;
             text-decoration: none;
+            padding: 2.5vh 5vw;
         }
+
+.top_menu_content_wrapper > a:hover {
+    text-decoration: line-through white;
+}
 
 .filtering_menu {
     justify-content: center;
@@ -103,8 +108,8 @@ footer {
     }
 
         .frontpage_box:hover .overlay {
-                        opacity: 0.5;
-                }
+            opacity: 0.5;
+        }
 
 /* COLLECTION */
 
