@@ -77,7 +77,8 @@ footer {
 }
 
     .frontpage_box {
-        background-color: antiquewhite;
+        position: relative;
+        background-color: aliceblue;
         width: 75vw;
         height: 50vh;
         margin: 2vh 0 2vh 0;
@@ -89,9 +90,14 @@ footer {
         }
 
     .overlay {
+        position: absolute;
         height: 100%;
         width: 100%;
-        opacity: 1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
         transition: .5s ease;
         background-color: #49454D;
     }
