@@ -71,8 +71,8 @@ function filterClick(filterElement){
     /*
     ** Færdiggør filtreringsmenu
     */
-    // Skjul alle produkter
     
+    // Skjul alle produkter
     let main = document.querySelector("main.content");
     main.querySelectorAll(".sectionwrapper").forEach(product => product.classList.add("hidden"));
     
