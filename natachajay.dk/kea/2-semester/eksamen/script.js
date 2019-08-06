@@ -1,6 +1,8 @@
 let baseUrl = "https://natachajay.dk/kea/2-semester/eksamen/wordpress/wp-json/wp/v2/";
 let categoryList = [];
 
+// COLLECTION
+
 async function initiateProductLoop(){
     // Indsæt alle produkter
     await loadProducts();
@@ -193,13 +195,18 @@ function displayNext() {
     nextElm.classList.add("shown");
 }
 
+// OUR WORLD
+
 // skal loade den pågældende artikel efter man er landet i our-world.php
 function articleSingleView(slug) {
     // find artiklens slug ud fra GET parametre
     
     // find pågældende artikel og jsonify den vha. slug
-    
+    let currentArticle = baseUrl + "posts?slug=${articleData.slug}/";
+    let currentArticleJsonData = await fetch currentArticle;
+    let currentArticleData = currentArticleJsonData.json();
     // indsæt titel + content
+    document.querySelector(".article_title").innerHTML = currentArticleData
 }
 
 // skal loade når hjemmesiden loader
@@ -224,7 +231,7 @@ async function articleListView() {
     // navgiv box efter headline
     document.querySelector(".article_cta_title").innerHTML = `${articleData.title.rendered}`;
     // set href til ?slug=${den-her-nyheds-slug}
-    document.querySelector(".article_cta").setAttribute("href", "`https://natachajay.dk/kea/2-semester/eksamen/wordpress/wp-json/wp/v2/posts?slug=${article.slug}/`");
+    document.querySelector(".article_cta").setAttribute("href", "`https://natachajay.dk/kea/2-semester/eksamen/wordpress/wp-json/wp/v2/posts?slug=${articleData.slug}/`");
 }
 
 function toggleArticleMenu() {
