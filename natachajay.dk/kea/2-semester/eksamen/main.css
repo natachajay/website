@@ -73,15 +73,15 @@ footer {
     justify-content: center;
 }
 
-/* FRONT PAGE */
+/* CTA */
 
-#frontpage_content_wrapper {
+#frontpage_content_wrapper, .article_cta {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-    .frontpage_box {
+    .frontpage_box, .article_cta_box {
         position: relative;
         background-color: aliceblue;
         width: 75vw;
@@ -89,12 +89,12 @@ footer {
         margin: 2vh 0 2vh 0;
     }
 
-        .frontpage_box > h2 {
+        .frontpage_box > h1, .article_cta_box > h1 {
             padding-top: 22.5vh;
             text-align: center;
         }
 
-    .overlay {
+    .overlay, .article_overlay {
         position: absolute;
         height: 100%;
         width: 100%;
@@ -107,7 +107,7 @@ footer {
         background-color: #49454D;
     }
 
-        .frontpage_box:hover .overlay {
+        *:hover > .overlay, .article.overlay {
             opacity: 0.5;
         }
 

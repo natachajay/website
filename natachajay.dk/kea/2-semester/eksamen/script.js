@@ -197,32 +197,60 @@ function displayNext() {
 
 // OUR WORLD
 
-// skal loade den pågældende artikel efter man er landet i our-world.php
-async function articleSingleView(slug) {
-    // find artiklens slug ud fra GET parametre
-    
-    // find pågældende artikel og jsonify den vha. slug
-    // indsæt titel + content
-}
-
-// skal loade når hjemmesiden loader
+// loader når hjemmesiden loader
 async function articleListView() {
     // find artikler og jsonify dem
     let articleUrl = baseUrl + "posts";
     let articleJsonData = await fetch(articleUrl);
-    let articleData = articleJsonData.json();
+    let articleData = await articleJsonData.json();
     
     // klon artikel template for hver artikel
     let articleTemplate = document.querySelector(".article_temp");
-    let mainArticleElement = document.querySelector("main.article_content");
+    let mainArticleElement = document.querySelector("main.ourworld_content");
     articleData.forEach(function(article) {
         let klon = articleTemplate.cloneNode(true).content;
+        // indsæt titel, img og slug i dataset + append
         klon.querySelector(".article_cta_title").innerHTML = article.title.rendered;
-        klon.querySelector(".article_overlay").backgroundImage = article.featured_image;
-        //TODO: onclick
+        klon.querySelector(".article_overlay").backgroundImage = article.featured_image.guid;
+        klon.querySelector(".article_cta").dataset.slug = article.slug;
+        // indsæt artiklen i (hidden) singleview
+        klon.querySelector(".article_content").innerHTML = article.content.rendered;
         mainArticleElement.appendChild(klon);
     });
-
-function toggleArticleMenu() {
-    
 }
+
+// loader den pågældende artikel i singleview
+function articleSingleView(article) {
+    let singleView = document.getElementById("article_singleview");
+    singleView.querySelector(".article_singleview_title").innerHTML = article.querySelector(".article_cta_title").innerHTML;
+    singleView.querySelector(".article_singleview_content").innerHTML = article.querySelector(".article_content").innerHTML;
+    hideArticleListView();
+    displayArticleSingleView();
+}
+
+    function exitArticleSingleView() {
+        hideArticleSingleView();
+        displayArticleListView();
+    }
+
+    function displayArticleSingleView() {
+        let singleView = document.getElementById("article_singleview");
+        singleView.classList.remove("hidden");
+    }
+
+    function hideArticleSingleView() {
+        let singleView = document.getElementById("article_singleview");
+        singleView.classList.add("hidden");
+    }
+
+    function displayArticleListView() {
+        document.querySelectorAll(".article_cta").forEach(function(item){
+            item.classList.remove("hidden");
+        });
+    }
+
+    function hideArticleListView() {
+        document.querySelectorAll(".article_cta").forEach(function(item){
+            item.classList.add("hidden");
+        });
+    }
