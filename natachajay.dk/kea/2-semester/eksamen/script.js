@@ -217,12 +217,11 @@ async function articleListView() {
     let mainArticleElement = document.querySelector("main.article_content");
     articleData.forEach(function(article) {
         let klon = articleTemplate.cloneNode(true).content;
-        klon.querySelector(".article_cta_title").innerHTML = articleData.title.rendered;
-        klon.querySelector(".article_overlay").backgroundImage = articleData.featured_image;
-        klon.querySelector(".article_cta").setAttribute("href", "`https://natachajay.dk/kea/2-semester/eksamen/wordpress/wp-json/wp/v2/posts?slug=${articleData.slug}/`");
-        }
+        klon.querySelector(".article_cta_title").innerHTML = article.title.rendered;
+        klon.querySelector(".article_overlay").backgroundImage = article.featured_image;
+        //TODO: onclick
         mainArticleElement.appendChild(klon);
-    );
+    });
 
 function toggleArticleMenu() {
     
