@@ -208,24 +208,23 @@ async function articleListView() {
     let articleUrl = baseUrl + "posts";
     let articleJsonData = await fetch articleUrl;
     let articleData = articleJsonData.json();
+    
     // klon artikel template for hver artikel
     let articleTemplate = document.querySelector(".article_temp");
-    let mainArticleElement = document.querySelector("main.content");
-    data.forEach(function(article) {
+    let mainArticleElement = document.querySelector("main.article_content");
+    articleData.forEach(function(article) {
         // Tilføj til listen over artikler
         let klon = articleTemplate.cloneNode(true).content;
-        klon.querySelector(".article_overlay").src = article.featured_image;
-        klon.querySelector(".article_cta_title").innerHTML = article.title.rendered;
+        klon.querySelector(".article_cta_title").innerHTML = articleData.title.rendered;
+        klon.querySelector(".article_overlay").backgroundImage = articleData.featured_image;
         }
         mainArticleElement.appendChild(klon);
     });
 // for hver artikel:
     // navgiv box efter headline
-    document.querySelector(".article_cta_title").innerHTML = `${article.title.rendered}`;
+    document.querySelector(".article_cta_title").innerHTML = `${articleData.title.rendered}`;
     // set href til ?slug=${den-her-nyheds-slug}
     document.querySelector(".article_cta").setAttribute("href", "`https://natachajay.dk/kea/2-semester/eksamen/wordpress/wp-json/wp/v2/posts?slug=${article.slug}/`");
-    // set background image
-    document.querySelector(".article_overlay").setAttribute("style", "background-image: url("`https://natachajay.dk/kea/2-semester/eksamen/wordpress/wp-json/wp/v2/posts/${article.featured_image}/`");
 }
 
 function toggleArticleMenu() {
