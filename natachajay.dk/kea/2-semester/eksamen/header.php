@@ -50,18 +50,6 @@
                 <p class="filtering_menu_item"></p>
             </template>
 
-            <!-- PIERCING MENU -->
-            <menu class="article_menu"></menu>
-
-            <template class="piercing_menu_parent_temp">
-                <section class="piercing_menu_wrapper">
-                </section>
-            </template>
-
-            <template class="piercing_menu_item_temp">
-                <p class="piercing_menu_item"></p>
-            </template>
-
             <!-- ARTICLE MENU -->
             <menu class="article_menu"></menu>
 

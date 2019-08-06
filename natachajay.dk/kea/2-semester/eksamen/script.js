@@ -194,17 +194,35 @@ function displayNext() {
 }
 
 // skal loade den pågældende artikel efter man er landet i our-world.php
-function loadArticle() {
+function articleSingleView(slug) {
     // find artiklens slug ud fra GET parametre
+    
     // find pågældende artikel og jsonify den vha. slug
+    
     // indsæt titel + content
 }
 
 // skal loade når hjemmesiden loader
-function articleMenu() {
+async function articleListView() {
     // find artikler og jsonify dem
+    let articleUrl = baseUrl + "posts";
+    let articleJsonData = await fetch articleUrl;
+    let articleData = articleJsonData.json();
+    
+    let articleTemplate = document.querySelector(".article_temp");
+    let mainElement = document.querySelector("main.content");
+    data.forEach(function(article) {
+        // Tilføj til listen over artikler
+        let klon = articleTemplate.cloneNode(true).content;
+        klon.querySelector(".article_overlay").src = article.featured_image;
+        klon.querySelector(".article_cta_title").innerHTML = article.title.rendered;
+        }
+        mainElement.appendChild(klon);
+    });
+}
+
     // for hver artikel:
-        // navgiv menupunkt efter headline
+        // navgiv box efter headline
         // set href til our-world.php?slug=${den-her-nyheds-slug}
 }
 
