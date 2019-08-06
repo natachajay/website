@@ -49,11 +49,4 @@
             <template class="filtering_temp">
                 <p class="filtering_menu_item"></p>
             </template>
-
-            <!-- ARTICLE MENU -->
-            <menu class="article_menu"></menu>
-
-            <template class="article_menu_item_temp">
-                <p class="article_menu_item" onclick="loadArticle(this);"></p>
-            </template>
         </header>
