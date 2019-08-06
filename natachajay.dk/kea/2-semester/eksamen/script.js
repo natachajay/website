@@ -220,7 +220,7 @@ async function articleListView() {
         klon.querySelector(".article_cta_title").innerHTML = articleData.title.rendered;
         klon.querySelector(".article_overlay").backgroundImage = articleData.featured_image;
         klon.querySelector(".article_cta").setAttribute("href", "`https://natachajay.dk/kea/2-semester/eksamen/wordpress/wp-json/wp/v2/posts?slug=${articleData.slug}/`");
-        )}
+        }
         mainArticleElement.appendChild(klon);
     );
 
