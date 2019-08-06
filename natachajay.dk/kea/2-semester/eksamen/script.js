@@ -203,7 +203,7 @@ function articleSingleView(slug) {
 }
 
 // skal loade når hjemmesiden loader
-function articleListView() {
+async function articleListView() {
     // find artikler og jsonify dem
     let articleUrl = baseUrl + "posts";
     let articleJsonData = await fetch articleUrl;
