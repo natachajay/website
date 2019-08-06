@@ -209,7 +209,7 @@ async function articleSingleView(slug) {
 async function articleListView() {
     // find artikler og jsonify dem
     let articleUrl = baseUrl + "posts";
-    let articleJsonData = await fetch articleUrl;
+    let articleJsonData = await fetch(articleUrl);
     let articleData = articleJsonData.json();
     
     // klon artikel template for hver artikel
