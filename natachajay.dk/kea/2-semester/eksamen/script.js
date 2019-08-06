@@ -198,7 +198,7 @@ function displayNext() {
 // OUR WORLD
 
 // skal loade den pågældende artikel efter man er landet i our-world.php
-function articleSingleView(slug) {
+async function articleSingleView(slug) {
     // find artiklens slug ud fra GET parametre
     
     // find pågældende artikel og jsonify den vha. slug
