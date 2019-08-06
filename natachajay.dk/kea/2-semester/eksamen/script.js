@@ -202,11 +202,7 @@ async function articleSingleView(slug) {
     // find artiklens slug ud fra GET parametre
     
     // find pågældende artikel og jsonify den vha. slug
-    let currentArticle = baseUrl + "posts?slug=${articleData.slug}/";
-    let currentArticleJsonData = await fetch currentArticle;
-    let currentArticleData = currentArticleJsonData.json();
     // indsæt titel + content
-    document.querySelector(".article_title").innerHTML = currentArticleData
 }
 
 // skal loade når hjemmesiden loader
@@ -220,19 +216,13 @@ async function articleListView() {
     let articleTemplate = document.querySelector(".article_temp");
     let mainArticleElement = document.querySelector("main.article_content");
     articleData.forEach(function(article) {
-        // Tilføj til listen over artikler
         let klon = articleTemplate.cloneNode(true).content;
         klon.querySelector(".article_cta_title").innerHTML = articleData.title.rendered;
         klon.querySelector(".article_overlay").backgroundImage = articleData.featured_image;
+        klon.querySelector(".article_cta").setAttribute("href", "`https://natachajay.dk/kea/2-semester/eksamen/wordpress/wp-json/wp/v2/posts?slug=${articleData.slug}/`");
         }
         mainArticleElement.appendChild(klon);
-    });
-// for hver artikel:
-    // navgiv box efter headline
-    document.querySelector(".article_cta_title").innerHTML = `${articleData.title.rendered}`;
-    // set href til ?slug=${den-her-nyheds-slug}
-    document.querySelector(".article_cta").setAttribute("href", "`https://natachajay.dk/kea/2-semester/eksamen/wordpress/wp-json/wp/v2/posts?slug=${articleData.slug}/`");
-}
+    );
 
 function toggleArticleMenu() {
     
