@@ -24,10 +24,10 @@ async function loadProducts() {
         klon.querySelector(".product_img").src = item.primary_product_image.guid;
         klon.querySelector(".product_title").innerHTML = item.title.rendered;
         klon.querySelector(".product_price").innerHTML = `&euro; ${item.price}`;
-        //Tilføj categoryID som data-category
+        // Tilføj categoryID som data-category
         let categoryId = item.categories[0];
         klon.querySelector(".sectionwrapper").dataset.categoryId = categoryId;
-        //Tilføj productId
+        // Tilføj productId
         klon.querySelector(".sectionwrapper").dataset.productId = item.id;
         // Tilføj categoryID til listen
         if (categoryList.indexOf(categoryId) === -1) {
@@ -68,8 +68,7 @@ async function initiateFilterMenu() {
     });
 }
 
-function filterClick(filterElement){
-    
+function filterClick(filterElement) {
     /*
     ** Færdiggør filtreringsmenu
     */
@@ -95,6 +94,11 @@ function filterClick(filterElement){
 function displayProducts(categoryId) {
     // Vis alle products med produktets categoryId === categoryId
     document.querySelectorAll(`.sectionwrapper[data-category-id='${categoryId}']`).forEach(product => product.classList.remove("hidden"));
+}
+
+function displayAllProducts() {
+    // Vis alle products
+    document.querySelectorAll(".sectionwrapper.product_box").forEach(product => product.classList.remove("hidden"));
 }
 
 function addFilteringParent(parent_id, catData) {

@@ -94,6 +94,7 @@ footer {
         }
 
     .overlay {
+        z-index: 5;
         position: absolute;
         height: 100%;
         width: 100%;
@@ -110,7 +111,7 @@ footer {
     }
 
     .article_overlay {
-        
+        background-color: peachpuff;
     }
 
         *:hover > .overlay {
@@ -118,6 +119,26 @@ footer {
         }
 
 /* COLLECTION */
+
+.filtering_menu {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+    .filter_parent {
+        padding: 0 2vw;
+    }
+
+        .filter_children {     
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+            .filtering_menu_item {
+                padding: 0 2vw;
+            }
 
 .content {
     display: flex;
@@ -131,8 +152,6 @@ footer {
         align-items: center;
         flex-basis: 25%;
     }
-
-/* media queries */
 
 /* SINGLEVIEW */
 
@@ -172,3 +191,12 @@ footer {
             .singleview_img_section img.shown {
                 display: initial;
             }
+
+
+/* MEDIA QUERIES */
+
+/* front page */
+
+/* collection */
+
+/* our world */

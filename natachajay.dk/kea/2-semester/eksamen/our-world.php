@@ -1,11 +1,12 @@
 <?php
     include 'header.php';
 ?>
+        <div id="anchor_ourworld"></div>
 
 <!-- ARTICLE CONTENT -->
 
 <!-- LIST VIEW -->
-        <main id="article_anchor" class="ourworld_content">
+        <main class="ourworld_content">
             <div id="article_singleview" class="hidden">
                 <div class="article_close_button" onclick="exitArticleSingleView();">
                     <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" height="64px">
