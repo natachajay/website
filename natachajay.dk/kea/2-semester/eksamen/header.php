@@ -18,13 +18,13 @@
             <!-- MAIN MENU -->
             <nav class="top_menu">
                 <div class="top_menu_content_wrapper">
-                    <a href="index.html">
+                    <a id="home" href="index.html">
                         <h4>Home</h4>
                     </a>
-                    <a href="collection.php">
+                    <a id="collection" href="collection.php">
                         <h4>Collection</h4>
                     </a>
-                    <a href="our-world.php" onclick="toggleArticleMenu();">
+                    <a id="our_world" href="our-world.php">
                         <h4>Our World</h4>
                     </a>
                 </div>

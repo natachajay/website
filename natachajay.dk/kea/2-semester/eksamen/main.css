@@ -66,7 +66,7 @@ footer {
         }
 
 .top_menu_content_wrapper > a:hover {
-    text-decoration: line-through white;
+    text-decoration: underline black;
 }
 
 .filtering_menu {
@@ -83,7 +83,6 @@ footer {
 
     .frontpage_box, .article_cta_box {
         position: relative;
-        background-color: aliceblue;
         width: 75vw;
         height: 50vh;
         margin: 2vh 0 2vh 0;
@@ -94,7 +93,7 @@ footer {
             text-align: center;
         }
 
-    .overlay, .article_overlay {
+    .overlay {
         position: absolute;
         height: 100%;
         width: 100%;
@@ -104,10 +103,17 @@ footer {
         bottom: 0;
         opacity: 0;
         transition: .5s ease;
+    }
+
+    .frontpage_overlay {
         background-color: #49454D;
     }
 
-        *:hover > .overlay, .article.overlay {
+    .article_overlay {
+        
+    }
+
+        *:hover > .overlay {
             opacity: 0.5;
         }
 

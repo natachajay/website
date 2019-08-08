@@ -36,7 +36,7 @@
         </section>
         
         <!-- LOOP VIEW -->
-        <main class="content"></main>
+        <main id="collection_anchor" class="content"></main>
         <template class="upper_temp">
             <section class="sectionwrapper product_box" onclick="loadProductSingle(this);">
                 <img class="product_img">
