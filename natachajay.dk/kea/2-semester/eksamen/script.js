@@ -215,7 +215,7 @@ async function articleListView() {
         let klon = articleTemplate.cloneNode(true).content;
         // indsæt titel, img og slug i dataset + append
         klon.querySelector(".article_cta_title").innerHTML = article.title.rendered;
-        klon.querySelector(".article_cta_box").backgroundImage = article.featured_image.guid;
+        klon.querySelector(".article_cta_box").style.backgroundImage = `url('${article.featured_image.guid}')`;
         klon.querySelector(".article_cta").dataset.slug = article.slug;
         // indsæt artiklen i (hidden) singleview
         klon.querySelector(".article_content").innerHTML = article.content.rendered;

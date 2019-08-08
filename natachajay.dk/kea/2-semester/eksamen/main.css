@@ -73,7 +73,7 @@ footer {
     justify-content: center;
 }
 
-/* CTA */
+/* ALL CTA */
 
 #frontpage_content_wrapper, .article_cta {
     display: flex;
@@ -86,11 +86,14 @@ footer {
         width: 75vw;
         height: 50vh;
         margin: 2vh 0 2vh 0;
+        background-size: cover;
     }
 
         .frontpage_box > h1, .article_cta_box > h1 {
             padding-top: 22.5vh;
             text-align: center;
+            color: white;
+            text-shadow: 2px 2px 3px black;
         }
 
     .overlay {
