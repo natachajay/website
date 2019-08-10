@@ -6,6 +6,7 @@
         <meta name="robots" content="noindex">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="main.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab&display=swap" rel="stylesheet">
         <script src="script.js"></script>
     </head>
     
@@ -18,13 +19,13 @@
             <!-- MAIN MENU -->
             <nav class="top_menu">
                 <div class="top_menu_content_wrapper">
-                    <a href="index.html#the_anchor_frontpage">
+                    <a id="home" href="index.html#anchor_frontpage">
                         <h4>Home</h4>
                     </a>
-                    <a href="collection.php">
+                    <a id="collection" href="collection.php#anchor_collection">
                         <h4>Collection</h4>
                     </a>
-                    <a href="our-world.php" onclick="toggleArticleMenu();">
+                    <a id="our_world" href="our-world.php#anchor_ourworld">
                         <h4>Our World</h4>
                     </a>
                 </div>
@@ -34,6 +35,7 @@
                 <div class="hero_image">
                 </div>
             </section>
+        </header>
 
         <!-- UNDER HERO AREA -->
             <!-- COLLECTION FILTERING MENU -->
@@ -71,11 +73,23 @@
         
         <!-- FOOTER -->
         <footer>
-            <div id="subscribe_newsletter"></div>
-            <section class="footer_wrapper">
-                <div id="left_footer" class="footer_box"></div>
-                <div id="mid_footer badge_box" class="footer_box"></div>
-                <div id="right_footer" class="footer_box"></div>
+            <section id="footer_wrapper">   
+                <div id="newsletter_wrapper">
+                    <div id="newsletter_content">
+                        <label for="email">Subscribe to our newsletter</label>
+                        <form>
+                            <input type="email" name="newsletter" id="email">
+                        </form>
+                        <button onclick="alert('You did it, mate!');">Submit</button>
+                    </div>
+                </div>
+                <div id="social_wrapper">
+                    <a href="https://instagram.com/mariablackjewellery">
+                    <img id="fb_icon" class="icons" src="media/facebook_icon.svg" alt="FB"></a>
+                    <a href="https://facebook.com/mariablackjewellery">
+                    <img id="ig_icon" class="icons" src="media/instagram_icon.svg" alt="IG">
+                    </a>
+                </div>
             </section>
         </footer>
     </body>

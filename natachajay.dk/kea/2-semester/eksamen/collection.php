@@ -26,25 +26,25 @@
         <section class="singleview_sectionwrapper hidden">
             <div class="singleview_product_bg" onclick="exitSingleView(event);"></div>
             <div class="singleview_product_box">
-                <div class="close_button" onclick="exitSingleView();">
-                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" height="64px">
-                        <line x1="0%" y1="0%" x2="100%" y2="100%" style="stroke: rgb(0, 0, 0);stroke-width: 4;"></line>
-                        <line x1="100%" y1="0%" x2="0%" y2="100%" style="stroke: rgb(0, 0, 0);stroke-width: 4;"></line>
+                <div class="close_button buttons" onclick="exitSingleView();">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" height="5vh">
+                        <line x1="0%" y1="0%" x2="100%" y2="100%" style="stroke: rgb(255,255,255);stroke-width: 4;"></line>
+                        <line x1="100%" y1="0%" x2="0%" y2="100%" style="stroke: rgb(255,255,255);stroke-width: 4;"></line>
                     </svg>
                 </div>
                 
                 <div class="singleview_img_sectionwrapper">
-                    <div id="display_previous" onclick="displayPrevious();">
-                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" height="64px">
-                            <line x1="0%" y1="50%" x2="100%" y2="100%" style="stroke: rgb(0, 0, 0);stroke-width: 4;"></line>
-                            <line x1="100%" y1="0%" x2="0%" y2="50%" style="stroke: rgb(0, 0, 0);stroke-width: 4;"></line>
+                    <div id="display_previous" class="buttons" onclick="displayPrevious();">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" height="5vh">
+                            <line x1="0%" y1="50%" x2="100%" y2="100%" style="stroke: rgb(255,255,255);stroke-width: 4;"></line>
+                            <line x1="100%" y1="0%" x2="0%" y2="50%" style="stroke: rgb(255,255,255);stroke-width: 4;"></line>
                         </svg>
                     </div>
                     <div class="singleview_img_section"></div>
-                    <div id="display_next" onclick="displayNext();">
-                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" height="64px">
-                            <line x1="0%" y1="0%" x2="100%" y2="50%" style="stroke: rgb(0, 0, 0);stroke-width: 4;"></line>
-                            <line x1="100%" y1="50%" x2="0%" y2="100%" style="stroke: rgb(0, 0, 0);stroke-width: 4;"></line>
+                    <div id="display_next" class="buttons" onclick="displayNext();">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" height="5vh">
+                            <line x1="0%" y1="0%" x2="100%" y2="50%" style="stroke: rgb(255,255,255);stroke-width: 4;"></line>
+                            <line x1="100%" y1="50%" x2="0%" y2="100%" style="stroke: rgb(255,255,255);stroke-width: 4;"></line>
                         </svg>
                     </div>
                 </div>
