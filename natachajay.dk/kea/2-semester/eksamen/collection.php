@@ -1,6 +1,7 @@
 <?php 
     include ('header.php');
 ?>
+        <div id="anchor_collection"></div>
 
         <!-- COLLECTION FILTERING MENU -->
         <menu class="filtering_menu">
@@ -20,7 +21,6 @@
             <p class="filtering_menu_item"></p>
         </template>
 
-        <div id="anchor_collection"></div>
 
         <!-- SINGLE VIEW -->
         <section class="singleview_sectionwrapper hidden">

@@ -13,7 +13,8 @@
     <body>
         <header>
         <!-- HERO AREA -->
-            <div href="index.html" class="logo logo_box">
+            <div class="logo_container">
+                <img class="logo" src="media/mb_logo_white.svg" alt="Maria Black logo">
             </div>
         <!-- MENUS -->
             <!-- MAIN MENU -->
