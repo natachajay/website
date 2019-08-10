@@ -3,6 +3,8 @@ h1, h2, h3, h4 {
     margin: 0;
     padding: 0;
     font-family: 'Roboto Slab', serif;
+    font-weight: 200;
+    color: #2A2B2D;
 }
 
 img {
@@ -12,6 +14,8 @@ img {
 body {
     margin: auto;
     font-family: 'Open Sans', sans-serif;
+    color: #2A2B2D;
+    user-select: none;
 }
 
 .hidden {
@@ -60,9 +64,14 @@ body {
     text-decoration: underline black;
 }
 
-a, .buttons {
+nav > a, .buttons {
     user-select: none;
     font-family: 'Roboto Slab', serif;
+    color: #2A2B2D;
+}
+
+button {
+    font-family: 'Open Sans', sans-serif;
 }
 
 /* ALL CTA (collection + our world) */
@@ -101,16 +110,20 @@ a, .buttons {
         transition: .5s ease;
     }
 
+        .overlay > h1 {
+            color: #F4F3F1;
+        }
+
         .overlay:hover {
             cursor: pointer;
         }
 
     .frontpage_overlay {
-        background-color: #49454D;
+        background-color: #C0C1D3;
     }
 
     .article_overlay {
-        background-color: peachpuff;
+        background-color: #EDE3E4;
     }
 
         *:hover > .overlay {
@@ -142,17 +155,17 @@ a, .buttons {
             justify-content: center;
         }
 
-                .filtering_menu_item {
-                    padding: 0 2vw;
-                }
+            .filtering_menu_item {
+                padding: 0 2vw;
+            }
 
-                .filtering_menu_item:hover {
-                    text-decoration: underline black;
-                }
+            .filtering_menu_item:hover {
+                text-decoration: underline black;
+            }
 
-                .filtering_menu_item:active {
-                    font-weight: 800;
-                }
+            .filtering_menu_item:active {
+                font-weight: 800;
+            }
 
 /* content */
 
@@ -182,7 +195,7 @@ a, .buttons {
 }
 
 #display_previous, #display_next {
-    padding: 20% 2.5vw;
+    padding: 25vh 2.5vw;
 }
 
 .singleview_sectionwrapper {
@@ -198,10 +211,14 @@ a, .buttons {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 30vh;
-    width: 50%;
+    margin-top: 10vh;
+    width: 75vw;
     color: white;
     text-align: center;
+}
+
+.singleview_product_box > h3 {
+    color: white;
 }
 
     .singleview_img_sectionwrapper {
@@ -211,7 +228,7 @@ a, .buttons {
     }
 
         .singleview_img_section {
-            width: 50%;
+            width: 55vw;
         }
 
             .singleview_img_section img {

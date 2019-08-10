@@ -2,10 +2,11 @@
             <section id="footer_wrapper">   
                 <div id="newsletter_wrapper">
                     <div id="newsletter_content">
-                        <label for="email">Subscribe to our newsletter</label>
+                        <label for="email" style="font-style: italic">Subscribe to our newsletter</label>
                         <form>
                             <input type="email" name="newsletter" id="email">
                         </form>
+                        <br>
                         <button onclick="alert('You did it, mate!');">Submit</button>
                     </div>
                 </div>

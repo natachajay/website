@@ -2,23 +2,23 @@
     include ('header.php');
 ?>
 
-            <!-- COLLECTION FILTERING MENU -->
-            <menu class="filtering_menu">
-                <section class="filter_wrapper" onclick="displayAllProducts();">
-                    <p class="filter_parent">All</p>
-                </section>
-            </menu>
+        <!-- COLLECTION FILTERING MENU -->
+        <menu class="filtering_menu">
+            <section class="filter_wrapper" onclick="displayAllProducts();">
+                <p class="filter_parent">All</p>
+            </section>
+        </menu>
 
-            <template class="filtering_parent_temp">
-                <section class="filter_wrapper">
-                    <p class="filter_parent"></p>
-                    <div class="filter_children hidden"></div>
-                </section>
-            </template>
+        <template class="filtering_parent_temp">
+            <section class="filter_wrapper">
+                <p class="filter_parent"></p>
+                <div class="filter_children hidden"></div>
+            </section>
+        </template>
 
-            <template class="filtering_temp">
-                <p class="filtering_menu_item"></p>
-            </template>
+        <template class="filtering_temp">
+            <p class="filtering_menu_item"></p>
+        </template>
 
         <div id="anchor_collection"></div>
 
