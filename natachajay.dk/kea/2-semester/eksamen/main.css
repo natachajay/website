@@ -384,10 +384,11 @@ footer {
     .close_button {
         right: 1rem;
         top: 1rem;
+        padding: 1rem 0;
     }
     
     #display_previous, #display_next {
-        margin: 12.5vh 1.5vw;
+        margin: 15vh 1.5vw;
     }
     
 }
@@ -443,6 +444,19 @@ footer {
         height: 100vh;
         margin: 2vh 0 2vh 0;
     }
+    
+    .article_singleview_title {
+        padding-top: 12.5vh;
+    }
+    
+    .article_singleview_content {
+        width: 90vw;
+    }
+    
+    .article_close_button {
+    right: 1rem;
+    padding: 2rem 0 0;
+}
 }
 
 /* Medium to large devices (tablets and computers, 768px and up) */
