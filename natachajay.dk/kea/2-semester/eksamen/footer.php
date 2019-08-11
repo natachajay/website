@@ -11,9 +11,9 @@
                     </div>
                 </div>
                 <div id="social_wrapper">
-                    <a href="https://instagram.com/mariablackjewellery">
-                    <img id="fb_icon" class="icons" src="media/facebook_icon.svg" alt="FB"></a>
                     <a href="https://facebook.com/mariablackjewellery">
+                    <img id="fb_icon" class="icons" src="media/facebook_icon.svg" alt="FB"></a>
+                    <a href="https://instagram.com/mariablackjewellery">
                     <img id="ig_icon" class="icons" src="media/instagram_icon.svg" alt="IG">
                     </a>
                 </div>
