@@ -14,7 +14,7 @@
         <header>
         <!-- HERO AREA -->
             <div class="logo_container">
-                <img class="logo" src="media/mb_logo_white.svg" alt="Maria Black logo">
+                <img class="logo" src="media/mb_logo_black.svg" alt="Maria Black logo">
             </div>
         <!-- MENUS -->
             <!-- MAIN MENU -->

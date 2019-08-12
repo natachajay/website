@@ -39,7 +39,7 @@ body {
 
 
 .hero_image {
-    background-image: url(https://www.natachajay.dk/media/kea_media/nzawu/hero_image.jpg);
+    background-image: url(media/DSC05786.jpg);
     background-size: cover;
     background-position: center;
     background-blend-mode: overlay;
@@ -109,6 +109,22 @@ button {
             color: white;
             text-shadow: 2px 2px 3px #2A2B2D;
         }
+
+    #jewellery_cta {
+        background-image: url(media/DSC05603.jpg);
+    }
+
+    #finejewellery_cta {
+        background-image: url(media/DSC05531.jpg);
+    }
+
+    #ourworld_cta {
+        background-image: url(media/DSC05752.jpg);
+    }
+
+    #jewellery_cta, #finejewellery_cta, #ourworld_cta {
+        background-size: cover;
+    }
 
     .overlay {
         z-index: 5;
