@@ -303,7 +303,9 @@ class CP_AppBookingPlugin extends CP_APPBOOK_BaseClass {
             $fields[$j] = strtolower(trim($fields[$j]));
         
         // print table
-        for($i=0; $i<count($selection); $i++)
+        if (!count($selection))
+            echo '<div class="cpappb_noapps">'.__('No appointments found with the selected filters','appointment-hour-booking').'</div>';
+        else for($i=0; $i<count($selection); $i++)
         {
             echo '<div class="cpapp_no_wrap">';
             for($j=0; $j<count($fields); $j++)
@@ -1985,7 +1987,7 @@ class CP_AppBookingPlugin extends CP_APPBOOK_BaseClass {
         
         $fields = array_values(array_diff ($fields, $fields_exclude));
 
-        // print table
+        // print table        
         for($i=0; $i<count($selection); $i++)
         {
             for($j=0; $j<count($fields); $j++)

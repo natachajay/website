@@ -708,7 +708,13 @@ Please note that the pro features aren't advised as part of the free plugin in t
 = 1.1.65 =
 * Fixing issue with padding times
 
+= 1.1.66 =
+* Bug fixes to availability calculation and improvements
+
+= 1.1.67 =
+* Translation updates
+
 == Upgrade Notice ==
 
-= 1.1.65 =
-* Fixing issue with padding times
+= 1.1.67 =
+* Translation updates

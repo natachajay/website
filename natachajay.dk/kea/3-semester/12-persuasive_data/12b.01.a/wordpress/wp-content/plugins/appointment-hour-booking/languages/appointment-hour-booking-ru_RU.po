@@ -2038,3 +2038,6 @@ msgstr ""
 
 msgid "Send notification emails for this booking"
 msgstr ""
+
+msgid "No appointments found with the selected filters"
+msgstr ""

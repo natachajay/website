@@ -270,7 +270,7 @@ $.extend(
 			    }        
             }
             for (var i=arr.length-1;i>=0;i--)
-			    if (arr[i].t1+me.duration > arr[i].t2 || arr[i].t1 > 24*60)
+			    if (arr[i].t1+me.bduration > arr[i].t2 || arr[i].t1 > 24*60)
                     arr.splice(i, 1 );
 			
 			return arr;		  
@@ -360,7 +360,7 @@ $.extend(
 		  	  	st += me.pb;
 		  	  	if (st >= et)
 		  	        et += 24 * 60;  
-		  	  	while (st + duration + me.pa <=et  && st<24 * 60)
+		  	  	while (st + me.bduration + me.pa <=et  && st<24 * 60)
 		  	  	{ 
 		  	  	    html = "<div class=\"availableslot\"><a href=\"\" d=\""+arr[i].day+"\" h1=\""+Math.floor((st)/60)+"\" m1=\""+((st)%60)+"\" h2=\""+Math.floor((st+duration)/60)+"\" m2=\""+((st+duration)%60)+"\">"+me.formatString({st:st,et:st+duration},false,me.tz)+"<span class=\"ahb_slot_availability\"><span class=\"p\">ahbslotavailabilityP</span><span class=\"t\">ahbslotavailabilityT</span></span></a></div>";
 		  	  	    htmlSlots[htmlSlots.length] = {st:st,html:html,t:$.datepicker.parseDate("yy-mm-dd",arr[i].day).getTime()+st*60*1000};
