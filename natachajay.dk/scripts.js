@@ -54,7 +54,7 @@ function resizeSlidingCards() {
 	window.scrollBy(0, -1);
 	
 	/* Ensure the content fits */
-	$(".thisisadiv").each(function() {
+	$(".sectionwrapper").each(function() {
 		var totalHeight = 0;
 		$(this).children().each(function(){
 			totalHeight = totalHeight + $(this).outerHeight(true);
