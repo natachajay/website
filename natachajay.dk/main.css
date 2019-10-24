@@ -3,12 +3,37 @@
 
 /* Overall */
 
-img {
-    width: 100%;
+body {
+	margin: 0;
 }
 
+    img {
+        width: 100%;
+    }
+
+    .headings {
+        margin: 25vh 10vw 0 10vw;
+        color: #49454D;
+        font-family: 'Amiri', serif;
+        font-size: 2em;
+        font-weight: 580;
+    }
+
+    .content_right {
+        text-align: right;
+    }
+
+    .content_left {
+        text-align: left;
+    }
+
+    .content_center {
+        text-align: center;
+    }
+
 /* Menu */
-#menu {
+
+.menu_main {
 	position: fixed;
 	z-index: 9999;
 	width: 100%;
@@ -17,36 +42,37 @@ img {
     background-color: rgba(0, 26, 31, 0.55);
 }
 
-	.menuitems {
+	.menu_items {
 		font-family: 'Open Sans', serif;
-        font-size: 1.2em;
-		font-weight: bold;
+        font-size: 1em;
+		font-weight: 500;
 		color: white;
 		text-shadow: 0px 1px 5px #49454D;
-        padding: 0 2.5vw;
+        margin: 0 2.5vw;
 	}
 
-		.menuitems:last-child {
+		.menu_items:last-child {
 			padding: 0 5vw 0 0;
 		}
 
-		.menuitems:link {
+		.menu_items:link {
 			text-decoration: none;
 		}
 
-		.menuitems:visited {
+		.menu_items:visited {
 			text-decoration: none;
 		}
 
-		.menuitems:hover {
+		.menu_items:hover {
 			text-decoration: underline;
 		}
 
-		.menuitems:active {
+		.menu_items:active {
 			text-decoration: none;
 		}
 
 /* Sliding cards */
+
 .sectionwrapper {
     background-color: white;
     width: 100%;
@@ -54,180 +80,65 @@ img {
     box-shadow: 0px 5px 30px 5px rgba(0,0,0,0.2);
 	top: 0;
 	box-sizing: border-box;
-	padding: 0 75px;
 }
 
 /* INDIVIDUAL PAGE CONTENT */
 
-/* Landing page */
+/* Top card */
 
-#logo {
-    background-image: url(media/logo_white.svg);
-    
+.logo_container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
 }
 
-#landing_page {
+    .logo {
+        height: calc(100vh /6);
+     }
+
+/* Hero */
+
+#home_page {
 	background-image: url(media/DSC04059.jpg);
 	background-size: cover;
 }
 
-	#introduction_high {
-		font-family: 'Amiri', serif;
-		font-weight: 200;
-		font-size: 8.5vw;
-		text-align: center;
-		color: white;
-		line-height: 8.5vw;
-		padding-top: 40vh;
-	}
+/* Middle card */
 
-		@media screen and (orientation: portrait) {
-			#introduction_high {
-				font-size: 11vw;
-				line-height: 11vw;
-			}
-		}	
-
-	#introduction_low {
-		font-family: 'Open Sans', serif;
-		font-weight: 550;
-		color: white;
-	}
-
-/* Portfolio page */
-
-#portfolio_wrapper {
-	display: flex;
-	justify-content: space-evenly;
-	flex-flow: wrap;
-	padding: 50px 0 0 0;
+.content_portfolio {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-	.album_wrapper {
-		position: relative;
-		max-width: 350px;
-		max-height: 197px;
-		margin: 0 10px;
-		margin-bottom: 20px;
-	}
-	
-		.album_wrapper:hover .overlay {
-				opacity: 0.5;
-		}
-
-		.album {
-			background-color: white;
-			max-width: 100%;
-		}
-		
-			#album_03, #album_05 {
-				width: 350px;
-				max-height: 197px;
-			}
-
-		.overlay {
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			max-height: 197px;
-			max-width: 100%;
-			opacity: 0;
-			transition: .5s ease;
-			background-color: #49454D;
-			}
-
-			.album_text {
-				color: white;
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				-ms-transform: translate(-50%, -50%);
-				transform: translate(-50%, -50%);
-				text-align: center;
-				-webkit-user-select: none;
-				-moz-user-select: none;
-				-ms-user-select: none;
-				user-select: none;
-			}
-
-/* ABOUT */
-
-#about_text {
+.grid_wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-/* GENERAL PAGE CONTENT (sorted by position on page) */
-
-body {
-	font-family: 'Open Sans', serif;
-	margin: 0;
+.grid_box {
+    background-color: navy;
+    flex-basis: 25%;
+    height: 25vh;
 }
 
-.content_high {
-	padding-top: 25vh;
-	line-height: 4vw;
-	color: #49454D;
-	font-family: 'Amiri', serif;
-	font-size: 4vw;
-	font-weight: 580;
-}
+/* Bottom card */
 
-	@media screen and (orientation: portrait) {
-		.content_high {
-			font-size: 7.5vw;
-			line-height: 7.5vw;
-		}
-	}
-
-.content_low {
-    padding-top: 10vh;
-    padding-bottom: 25vh;
+.content_about {
+    margin: 5vh 10vw;
 	color: black;
-	font-family: 'Open Sans', serif;
-}
-
-	@media screen and (orientation: portrait) {
-		.content_low {
-			padding-top: 5vh;
-		}
-	}
-
-	.small_text {
-	font-size: 1.5vw;
-}
-
-	@media screen and (orientation: portrait) {
-		.small_text {
-			font-size: 3.5vw;
-		}
-	}
-
-.content_right {
-	text-align: right;
-}
-
-.content_center {
-	text-align: center;
 }
 
 footer {
+    font-size: 0.9em;
 	text-align: center;
     padding-bottom: 5vh;
-	font-size: 1.5vw;
 }
 
-	@media screen and (orientation: portrait) {
-		footer {
-			font-size: 3vw;
-		}
-	}
-
-#footer_tiny {
-	font-size: 1.25vw;
-}
-	@media screen and (orientation: portrait) {
-		#footer_tiny {
-			font-size: 2.5vw;
-		}
-	}
+    #footer_tiny {
+        font-size: 0.8em;
+    }

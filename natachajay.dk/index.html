@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+<title>stay wild, flower child</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -10,47 +11,87 @@
 <link rel="mask-icon" href="media/favicon/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#9f00a7">
 <meta name="theme-color" content="#ffffff">
-    
-<title>stay wild, flower child</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Amiri" rel="stylesheet">
-	<link type="text/css" rel="stylesheet" href="main.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.js"></script>
-	<script src="jquery-3.3.1.js"></script>
-	<script src="scripts.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Amiri" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="main.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.js"></script>
+<script src="jquery-3.3.1.js"></script>
+<script src="scripts.js"></script>
 </head>
-	
+
     <body>
 		<!-- MENU -->
-		<div id="menu">
-			<a class="menuitems" href="#landing_page" id="menu_home">HOME</a>
-			<a class="menuitems" href="#portfolio" id="menu_portfolio">PORTFOLIO</a>
-			<a class="menuitems" href="#about" id="menu_about">ABOUT + BOOKING</a>
+		<div class="menu_main">
+			<a class="menu_items" href="#home_page" id="menu_home">HOME</a>
+			<a class="menu_items" href="#portfolio" id="menu_portfolio">PORTFOLIO</a>
+			<a class="menu_items" href="#about" id="menu_about">ABOUT + BOOKING</a>
 		</div>
-		
+        
 		<div id="wrapper">
-			<div id="landing_page" class="sectionwrapper dark" style="position: relative; z-index: 5;" alt="">
-				<div id="introduction_high" class="content_center">
-                    <div id="logo">
-                    </div>
-				</div>
+            <!-- HERO -->
+			<div id="home_page" class="sectionwrapper dark" style="position: relative; z-index: 5;" alt="">
+                <div class="logo_container">
+                    <img class="logo" src="media/logo_white.svg" alt="Natacha Jay logo">
+                </div>
 			</div>
 			
-			<!-- PORTFOLIO CONTENT -->
+			<!-- PORTFOLIO -->
 			<div id="portfolio" class="sectionwrapper" style="position: fixed; z-index: 4;">
+                <!-- SINGLE VIEW -->
+                <section class="singleview_sectionwrapper hidden">
+                    <div class="singleview_project_bg" onclick="exitSingleView(event);"></div>
+                    <div class="singleview_project_box">
+                        <div class="close_button buttons" onclick="exitSingleView();">
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" height="5vh">
+                                <line x1="0%" y1="0%" x2="100%" y2="100%" style="stroke: rgb(255,255,255);stroke-width: 4;"></line>
+                                <line x1="100%" y1="0%" x2="0%" y2="100%" style="stroke: rgb(255,255,255);stroke-width: 4;"></line>
+                            </svg>
+                        </div>
+
+                        <div class="singleview_img_sectionwrapper">
+                            <div id="display_previous" class="buttons" onclick="displayPrevious();">
+                                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" height="5vh">
+                                    <line x1="0%" y1="50%" x2="100%" y2="100%" style="stroke: rgb(255,255,255);stroke-width: 4;"></line>
+                                    <line x1="100%" y1="0%" x2="0%" y2="50%" style="stroke: rgb(255,255,255);stroke-width: 4;"></line>
+                                </svg>
+                            </div>
+                            <div class="singleview_img_section"></div>
+                            <div id="display_next" class="buttons" onclick="displayNext();">
+                                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" height="5vh">
+                                    <line x1="0%" y1="0%" x2="100%" y2="50%" style="stroke: rgb(255,255,255);stroke-width: 4;"></line>
+                                    <line x1="100%" y1="50%" x2="0%" y2="100%" style="stroke: rgb(255,255,255);stroke-width: 4;"></line>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <h3 class="project_title"></h3>
+                        <p class="project_description"></p>
+                        <div class="colors">
+                            <div id="color_01"></div>
+                            <div id="color_02"></div>
+                            <div id="color_03"></div>
+                            <div id="color_04"></div>
+                        </div>
+                    </div>
+                </section>
+                
+                <nav class="portfolio_menu">
+                </nav>
+                
                 <!-- LOOP VIEW -->
-                <main class="portfolio_main"></main>
-                <template class="portfolio_temp">
-                    <section class="sectionwrapper grid_box" onclick="loadGridSingle(this);">
-                    </section>
+                <main class="content_portfolio"></main>
+                
+                <template class="temp_portfolio">
+                    <div class="grid_box">
+                    </div>
                 </template>
 			</div>
 			
-			<!-- ABOUT CONTENT -->
+			<!-- ABOUT -->
 			<div id="about" class="sectionwrapper" style="position: fixed; z-index: 3;">
-				<div class="content_high content_left">
+				<div class="headings content_left">
 					Hi, there!
 				</div>
-				<div id="about_text" class="content_low content_left small_text">
+				<div id="about_text" class="content_about content_left small_text">
 					My name is Natacha and I am a visual storyteller from Copenhagen.<br>
 					In other words, I'm the chick with the camera. 💁
 					<br>
