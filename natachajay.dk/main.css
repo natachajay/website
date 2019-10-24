@@ -1,6 +1,12 @@
 @charset "UTF-8";
 /* CSS Document */
 
+/* Overall */
+
+img {
+    width: 100%;
+}
+
 /* Menu */
 #menu {
 	position: fixed;
@@ -54,6 +60,11 @@
 /* INDIVIDUAL PAGE CONTENT */
 
 /* Landing page */
+
+#logo {
+    background-image: url(media/logo_white.svg);
+    
+}
 
 #landing_page {
 	background-image: url(media/DSC04059.jpg);
