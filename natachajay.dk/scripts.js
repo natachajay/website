@@ -2,11 +2,6 @@
 /* jshint browser: true */
 /* globals $:false */
 
-// GLOBAL VARIABLES
-
-let baseUrl = "https://natachajay.dk/wordpress/wp-json/wp/v2/";
-let categoryList = [];
-
 // SLIDING CARDS
 
 var childInView;
@@ -153,7 +148,16 @@ function resizeOverlayToCover() {
 
 // PORTFOLIO
 
-loadProjects() {
+// PORTFOLIO: GLOBAL VARIABLES
+
+let baseUrl = "https://natachajay.dk/wordpress/wp-json/wp/v2/";
+let categoryList = [];
+
+async function initiateProjectLoop() {
+    await loadProjects();
+}
+
+async function loadProjects() {
     // Gather category info
     let url = baseUrl + "project?per_page=100";
     let jsonData = await fetch(url);
