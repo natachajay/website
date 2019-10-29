@@ -1,22 +1,22 @@
 <!doctype html>
 <html>
-<head>
-<title>stay wild, flower child</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="media/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="media/favicon/favicon-16x16.png">
-<link rel="manifest" href="media/favicon/site.webmanifest">
-<link rel="mask-icon" href="media/favicon/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="msapplication-TileColor" content="#9f00a7">
-<meta name="theme-color" content="#ffffff">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans|Amiri" rel="stylesheet">
-<link type="text/css" rel="stylesheet" href="main.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.js"></script>
-<script src="jquery-3.3.1.js"></script>
-<script src="scripts.js"></script>
-</head>
+    <head>
+        <title>stay wild, flower child</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="media/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="media/favicon/favicon-16x16.png">
+        <link rel="manifest" href="media/favicon/site.webmanifest">
+        <link rel="mask-icon" href="media/favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#9f00a7">
+        <meta name="theme-color" content="#ffffff">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Amiri" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="main.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.js"></script>
+        <script src="jquery-3.3.1.js"></script>
+        <script src="scripts.js"></script>
+    </head>
 
     <body>
 		<!-- MENU -->
@@ -38,9 +38,9 @@
 			<div id="portfolio" class="sectionwrapper" style="position: fixed; z-index: 4;">
                 <!-- SINGLE VIEW -->
                 <section class="singleview_sectionwrapper hidden">
-                    <div class="singleview_project_bg" onclick="exitSingleView(event);"></div>
+                    <div class="singleview_project_bg"></div>
                     <div class="singleview_project_box">
-                        <div class="close_button buttons" onclick="exitSingleView();">
+                        <div class="close_button buttons">
                             <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" height="5vh">
                                 <line x1="0%" y1="0%" x2="100%" y2="100%" style="stroke: rgb(255,255,255);stroke-width: 4;"></line>
                                 <line x1="100%" y1="0%" x2="0%" y2="100%" style="stroke: rgb(255,255,255);stroke-width: 4;"></line>
@@ -48,14 +48,14 @@
                         </div>
 
                         <div class="singleview_img_sectionwrapper">
-                            <div id="display_previous" class="buttons" onclick="displayPrevious();">
+                            <div id="display_previous" class="buttons">
                                 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" height="5vh">
                                     <line x1="0%" y1="50%" x2="100%" y2="100%" style="stroke: rgb(255,255,255);stroke-width: 4;"></line>
                                     <line x1="100%" y1="0%" x2="0%" y2="50%" style="stroke: rgb(255,255,255);stroke-width: 4;"></line>
                                 </svg>
                             </div>
                             <div class="singleview_img_section"></div>
-                            <div id="display_next" class="buttons" onclick="displayNext();">
+                            <div id="display_next" class="buttons">
                                 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" height="5vh">
                                     <line x1="0%" y1="0%" x2="100%" y2="50%" style="stroke: rgb(255,255,255);stroke-width: 4;"></line>
                                     <line x1="100%" y1="50%" x2="0%" y2="100%" style="stroke: rgb(255,255,255);stroke-width: 4;"></line>
@@ -81,8 +81,10 @@
                 <main class="content_portfolio"></main>
                 
                 <template class="temp_portfolio">
-                    <div class="grid_box">
-                    </div>
+                    <section class="box_wrapper">
+                        <div class="grid_box">
+                        </div>
+                    </section>
                 </template>
 			</div>
 			

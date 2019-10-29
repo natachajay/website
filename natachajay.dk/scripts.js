@@ -2,6 +2,13 @@
 /* jshint browser: true */
 /* globals $:false */
 
+// GLOBAL VARIABLES
+
+let baseUrl = "https://natachajay.dk/wordpress/wp-json/wp/v2/";
+let categoryList = [];
+
+// SLIDING CARDS
+
 var childInView;
 var prevScrollTop;
 
@@ -142,4 +149,31 @@ function resizeOverlayToCover() {
 		var album = $($(this).find(".album")[0]);
 		overlay.height(album.height());
 	});
+}
+
+// PORTFOLIO
+
+loadProjects() {
+    // Gather category info
+    let url = baseUrl + "project?per_page=100";
+    let jsonData = await fetch(url);
+    let data = await jsonData.json();
+    
+    let loopTemplate = document.querySelector(".temp_portfolio");
+    let mainElement = document.querySelector(".content_portfolio");
+    data.forEach(function(item) {
+        // Add to list of projects
+        let klon = loopTemplate.cloneNode(true).content_portfolio;
+        klon.querySelector(".grid_box").style.backgroundImage = item.cover_image.guid;
+        // Add categoryID as data-category
+        let categoryId = item.categories[0];
+        klon.querySelector(".box_wrapper").dataset.categoryId = categoryId;
+        // Add projectId
+        klon.querySelector(".box_wrapper").dataset.projectId = item.id;
+        // Add categoryId to the global variables list
+        if (categoryList.indexOf(categoryId) === -1) {
+            categoryList.push(categoryId)
+        }
+        mainElement.appendChild(klon);
+    });
 }
