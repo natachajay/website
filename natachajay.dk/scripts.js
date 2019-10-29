@@ -168,12 +168,12 @@ async function loadProjects() {
     data.forEach(function(item) {
         // Add to list of projects
         let klon = loopTemplate.cloneNode(true).content_portfolio;
-        klon.querySelector(".grid_box").style.backgroundImage = item.cover_image.guid;
+        klon.querySelector(".grid_box").object.style.backgroundImage = item.cover_image.guid;
         // Add categoryID as data-category
         let categoryId = item.categories[0];
-        klon.querySelector(".box_wrapper").dataset.categoryId = categoryId;
+        klon.querySelector(".grid_box").dataset.categoryId = categoryId;
         // Add projectId
-        klon.querySelector(".box_wrapper").dataset.projectId = item.id;
+        klon.querySelector(".grid_box").dataset.projectId = item.id;
         // Add categoryId to the global variables list
         if (categoryList.indexOf(categoryId) === -1) {
             categoryList.push(categoryId)
