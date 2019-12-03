@@ -13,50 +13,6 @@ async function initiateProjectLoop() {
     await loadProjects();
 }
 
-$(document).ready(function(){
-    $('.content_portfolio').slick({
-            dots: false,
-            arrows: true,
-            appendArrows: $(".content_portfolio"),
-            infinite: true,
-            speed: 300,
-            slidesToShow: 4,
-            slidesToScroll: 4,
-            responsive: [
-        {
-                breakpoint: 1024,
-                settings: {
-                slidesToShow: 4,
-                slidesToScroll: 4,
-                infinite: true,
-                dots: false,
-                arrows: true
-            }
-        },
-            {
-                breakpoint: 600,
-                settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-                arrows: true,
-                adaptiveHeight: true
-            }
-        },
-            {
-                breakpoint: 360,
-                settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-                adaptiveHeight: true
-            }
-        }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
-          ]
-    });
-});
-
 async function loadProjects() {
     // Gather category info
     let url = baseUrl + "project?per_page=100";
