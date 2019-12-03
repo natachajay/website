@@ -19,27 +19,33 @@ body {
         font-weight: 580;
     }
 
-    .content_right {
-        text-align: right;
-    }
+.content_right {
+    text-align: right;
+}
 
-    .content_left {
-        text-align: left;
-    }
+.content_left {
+    text-align: left;
+}
 
-    .content_center {
-        text-align: center;
-    }
+.content_center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
 
 /* Menu */
 
 .menu_main {
-	position: fixed;
-	z-index: 9999;
-	width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+	position: absolute;
+    top: 85vh;
+	width: 50%;
 	text-align: center;
 	padding: 2.5vh 2.5vw;
-    background-color: rgba(0, 26, 31, 0.55);
+    background-color: rgba(0, 26, 31);
 }
 
 	.menu_items {
@@ -50,11 +56,6 @@ body {
 		text-shadow: 0px 1px 5px #49454D;
         margin: 0 2.5vw;
 	}
-
-		.menu_items:last-child {
-			padding: 0 5vw 0 0;
-		}
-
 		.menu_items:link {
 			text-decoration: none;
 		}
@@ -77,7 +78,7 @@ body {
     background-color: white;
     width: 100%;
 	/* height: 1000px; */
-    box-shadow: 0px 5px 30px 5px rgba(0,0,0,0.2);
+    /*box-shadow: 0px 5px 30px 5px rgba(0,0,0,0.2);*/
 	top: 0;
 	box-sizing: border-box;
 }
@@ -102,8 +103,15 @@ body {
 /* Hero */
 
 #home_page {
+    display: flex;
+    justify-content: center;
 	background-image: url(media/DSC04059.jpg);
-	background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-color: rgba(1, 1, 1, 0.3);
+    width: 100%;
+    height: 100vh;
 }
 
 /* Middle card */
@@ -121,9 +129,24 @@ body {
 }
 
 .grid_box {
-    background-color: navy;
     flex-basis: 25%;
     height: 25vh;
+    background-position: center;
+    background-size: cover;
+}
+
+@media only screen (max-width: 768px) {
+    .grid_box {
+        flex-basis: 100%;
+        height: 50vh;
+    }
+}
+
+@media only screen (min-width: 769px) {
+    .grid_box {
+        flex-basis: 50%;
+        height: 25%;
+    }
 }
 
 /* Bottom card */

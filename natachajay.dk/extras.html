@@ -22,22 +22,23 @@
     </head>
 
     <body>
+		<!-- MENU -->
+		<div class="menu_main">
+			<a class="menu_items" href="#home_page" id="menu_home">HOME</a>
+			<a class="menu_items" href="#portfolio" id="menu_portfolio">PORTFOLIO</a>
+			<a class="menu_items" href="#about" id="menu_about">ABOUT + BOOKING</a>
+		</div>
+        
 		<div id="wrapper">
             <!-- HERO -->
-			<div id="home_page" class="sectionwrapper dark">
+			<div id="home_page" class="sectionwrapper dark" style="position: relative; z-index: 5;" alt="">
                 <div class="logo_container">
                     <img class="logo" src="media/logo_white.svg" alt="Natacha Jay logo">
-                </div>
-                <!-- MENU -->
-                <div class="menu_main">
-                    <a class="menu_items" href="#home_page" id="menu_home">Home</a>
-                    <a class="menu_items" href="#portfolio" id="menu_portfolio">Portfolio</a>
-                    <a class="menu_items" href="#about" id="menu_about">Booking</a>
                 </div>
 			</div>
 			
 			<!-- PORTFOLIO -->
-			<div id="portfolio" class="sectionwrapper">
+			<div id="portfolio" class="sectionwrapper" style="position: fixed; z-index: 4;">
                 <!-- FILTER MENU -->
                 <menu class="filtering_menu">
                     <section class="filter_wrapper" onclick="displayAllProducts();">
@@ -97,7 +98,7 @@
 			</div>
 			
 			<!-- ABOUT -->
-			<div id="about" class="sectionwrapper">
+			<div id="about" class="sectionwrapper" style="position: fixed; z-index: 3;">
 				<div class="headings content_left">
 					Hi, there!
 				</div>
@@ -127,6 +128,8 @@
 					</span>
 				</footer>
 			</div>
+		</div>
+		<div id="filler">
 		</div>
         <script>
             initiateProjectLoop();

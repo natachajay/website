@@ -2,150 +2,6 @@
 /* jshint browser: true */
 /* globals $:false */
 
-// SLIDING CARDS
-
-var childInView;
-var prevScrollTop;
-
-$("document").ready(function() {
-	"use strict";
-	childInView = 0;
-	prevScrollTop = $(this).scrollTop();
-	
-	initiate();
-	
-	
-    $(".menuitems").click(function() {
-		scrollToElem($(this).attr('href'));
-		return false;
-    });
-	
-	$(window).scroll(function() {
-		var elem, inView;
-		var currentScrollTop = $(this).scrollTop();
-		
-		if (currentScrollTop === prevScrollTop) {
-			return;
-		}
-		if (currentScrollTop > prevScrollTop) {
-			elem = $("#wrapper").children()[childInView];
-			inView = isScrolledIntoView(elem);
-			
-			if (!inView) {
-				scrolldowntrigger();
-			}
-		}
-		else if (currentScrollTop < prevScrollTop && childInView > 0) {
-			elem = $("#wrapper").children()[childInView-1];
-			inView = isScrolledIntoView(elem);
-			
-			if (inView) {
-				scrolluptrigger();
-			}
-		}
-		prevScrollTop = currentScrollTop;
-	});
-});
-
-function resizeSlidingCards() {
-	"use strict";
-	/* window-height * 1.1 to ensure it fills the whole screen when addressbar is gone */
-    $("#filler").css("height", $(window).height()*2);
-	/* Scroll to readjust filler etc. */
-	window.scrollBy(0, 1);
-	window.scrollBy(0, -1);
-	
-	/* Ensure the content fits */
-	$(".sectionwrapper").each(function() {
-		var totalHeight = 0;
-		$(this).children().each(function(){
-			totalHeight = totalHeight + $(this).outerHeight(true);
-		});
-		var min_height = Math.max($(window).height()*1.1, totalHeight);
-		$(this).css("min-height", min_height);
-	});
-	resizeOverlayToCover();
-}
-
-
-function initiate() {
-	"use strict";
-	window.addEventListener('orientationchange', resizeSlidingCards);
-	window.addEventListener('resize', resizeSlidingCards);
-    resizeSlidingCards();
-}
-
-function isScrolledIntoView(elem) {
-	"use strict";
-    var docViewTop = $(window).scrollTop();
-    var docViewBottom = docViewTop + $(window).height();
-
-    var elemTop = $(elem).offset().top;
-    var elemBottom = elemTop + $(elem).height();
-
-	return ((elemTop <= docViewBottom) && (elemBottom >= docViewTop));
-}
-
-function scrolldowntrigger() {
-	"use strict";
-	if (childInView === $("#wrapper").children().length - 1) {
-		return;
-	}
-    childInView++;
-    var newElem = $("#wrapper").children() [childInView];
-    $(newElem).css("position", "relative");
-	if (childInView === $("#wrapper").children().length - 1) {
-		$("#filler").css("display", "none");
-	}
-}
-
-function scrolluptrigger() {
-	"use strict";
-	$("#filler").css("display", "block");
-	if (childInView === 0) {
-		return;
-	}
-    var oldElem = $("#wrapper").children() [childInView];
-    var divHeight = $("#filler").css("height") - $(oldElem).css("height");
-    $("#filler").css("height", divHeight);
-    
-    $(oldElem).css("position", "fixed");
-    childInView--;
-}
-
-function scrollToElem(elemId) {
-	"use strict";
-	var currentScrollTop = $(window).scrollTop();
-	var child = $("#wrapper " + elemId);
-	var childNo = Array.from(child[0].parentNode.children).indexOf(child[0]);
-	
-	if (childNo > childInView) {
-		var distance = 0;
-		for (var i = 0; i < childNo; i++) {
-			distance += $(child.parent().children()[i])[0].offsetHeight;
-		}
-		$('html, body').animate({
-			scrollTop: distance
-		}, 500);
-	}
-	else {
-		$('html, body').animate({
-			scrollTop: child.offset().top
-		}, 500);	
-	}
-	prevScrollTop = currentScrollTop;
-}
-
-
-function resizeOverlayToCover() {
-	"use strict";
-	$(".album_wrapper").each(function() {
-		var overlay = $($(this).find(".overlay")[0]);
-		var album = $($(this).find(".album")[0]);
-		overlay.height(album.height());
-	});
-}
-
 // PORTFOLIO
 
 // PORTFOLIO: GLOBAL VARIABLES
@@ -157,6 +13,50 @@ async function initiateProjectLoop() {
     await loadProjects();
 }
 
+$(document).ready(function(){
+    $('.content_portfolio').slick({
+            dots: false,
+            arrows: true,
+            appendArrows: $(".content_portfolio"),
+            infinite: true,
+            speed: 300,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            responsive: [
+        {
+                breakpoint: 1024,
+                settings: {
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                infinite: true,
+                dots: false,
+                arrows: true
+            }
+        },
+            {
+                breakpoint: 600,
+                settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                arrows: true,
+                adaptiveHeight: true
+            }
+        },
+            {
+                breakpoint: 360,
+                settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                adaptiveHeight: true
+            }
+        }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+          ]
+    });
+});
+
 async function loadProjects() {
     // Gather category info
     let url = baseUrl + "project?per_page=100";
@@ -167,8 +67,8 @@ async function loadProjects() {
     let mainElement = document.querySelector(".content_portfolio");
     data.forEach(function(item) {
         // Add to list of projects
-        let klon = loopTemplate.cloneNode(true).content_portfolio;
-        klon.querySelector(".grid_box").object.style.backgroundImage = item.cover_image.guid;
+        let klon = loopTemplate.cloneNode(true).content;
+        klon.querySelector(".grid_box").style.backgroundImage = `url('${item.cover_image.guid}')`;
         // Add categoryID as data-category
         let categoryId = item.categories[0];
         klon.querySelector(".grid_box").dataset.categoryId = categoryId;
@@ -181,3 +81,30 @@ async function loadProjects() {
         mainElement.appendChild(klon);
     });
 }
+
+async function intitiateFilterMenu() {
+    // Gather category info
+    let catUrl = baseURL + "categories?per_page=100";
+    let catJsonData = await fetch(catUrl);
+    let catData = await catJsonData.json();
+    // Filter all categories through categoryList
+    let filteredList = catData.filter(item => categoryList.includes(item.id));
+    // For every category
+        // Create elm for category in the filter menu with categoryID as data-cat
+    let filterTemplate = document.querySelector(".temp_filtering");
+    let filterMenu = document.querySelector(".menu_filtering");
+    filteredList.forEach(function(item) {
+        let clone = filterTemplate.cloneNode(true).content;
+        clone.querySelector(".menu_filtering_item").innerHTML = item.name;
+        clone.querySelector(".menu_filtering_item").dataset.categoryId = item.id;
+        clone.querySelector(".menu_filtering_item").addEventListener("click", function(event) {
+            filterClick(this);
+            event.stopPropagation();
+        }, false);
+    });
+}
+
+function filterClick(filterElement) {
+    // Finish - what happens when you click a filter_menu_item?
+}
+
