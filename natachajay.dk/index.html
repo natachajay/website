@@ -27,19 +27,16 @@
                 <div class="menu_main">
                     <a class="menu_items" href="#home_page" id="menu_home">Home</a>
                     <a class="menu_items" href="#portfolio" id="menu_portfolio">Portfolio</a>
-                    <a class="menu_items" href="#about" id="menu_about">Booking</a>
+                    <a class="menu_items" href="#booking" id="menu_booking">Booking</a>
                 </div>
 			</div>
 			
 			<!-- PORTFOLIO -->
 			<div id="portfolio" class="sectionwrapper">
                 <!-- FILTER MENU -->
-                <menu class="filtering_menu">
-                    <section class="filter_wrapper" onclick="displayAllProducts();">
-                        <p class="filter_parent">All projects</p>
-                    </section>
+                <menu class="menu_filtering">
+                        <p class="menu_filtering_item default active" data-category-id="all" onclick="filterClick(this)">All projects</p>
                 </menu>
-
                 <template class="temp_filtering">
                     <p class="menu_filtering_item"></p>
                 </template>
@@ -84,7 +81,6 @@
                 
                 <!-- LOOP VIEW -->
                 <main class="content_portfolio"></main>
-                
                 <template class="temp_portfolio">
                         <div class="grid_box">
                         </div>

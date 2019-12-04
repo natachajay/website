@@ -5,6 +5,7 @@
 
 body {
 	margin: 0;
+    overflow-x: hidden;
 }
 
     img {
@@ -79,7 +80,6 @@ body {
 			text-decoration: none;
 		}
 
-/* Sliding cards */
 
 .sectionwrapper {
     background-color: white;
@@ -122,6 +122,24 @@ body {
 }
 
 /* Middle card */
+
+.menu_filtering {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.menu_filtering_item:hover {
+    text-decoration: underline;
+}
+
+.menu_filtering_item:active {
+    text-decoration: underline;
+}
+
+.menu_filtering_item.active {
+    text-decoration: underline;
+}
 
 #portfolio {
     height: 100vh;
