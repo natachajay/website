@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* CSS Document */
 
-/* Overall */
+/* OVERALL */
 
 body {
     font-family: 'Open Sans', sans-serif;
@@ -18,26 +18,33 @@ body {
         color: #49454D;
         font-family: 'Amiri', serif;
         font-size: 2em;
-        font-weight: 580;
+        font-weight: 600;
+}
+
+    .content_right {
+        text-align: right;
     }
 
-.content_right {
-    text-align: right;
-}
+    .content_left {
+        text-align: left;
+    }
 
-.content_left {
-    text-align: left;
-}
+    .content_center {
+        text-align: center;
+    }
 
-.content_center {
-    text-align: center;
-}
+    .hidden {
+        display: none;
+    }
 
-.hidden {
-    display: none;
-}
+    .sectionwrapper {
+        background-color: white;
+        width: 100%;
+        top: 0;
+        box-sizing: border-box;
+    }
 
-/* Menu */
+/* MENUS */
 
 .menu_main {
     display: flex;
@@ -77,19 +84,30 @@ body {
 			text-decoration: underline;
 		}
 
-
-.sectionwrapper {
-    background-color: white;
-    width: 100%;
-	/* height: 1000px; */
-    /*box-shadow: 0px 5px 30px 5px rgba(0,0,0,0.2);*/
-	top: 0;
-	box-sizing: border-box;
+.menu_filtering {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
 }
+
+    .menu_filtering_item:hover {
+        cursor: pointer;
+    }
+
+    .menu_filtering_item:active {
+        text-decoration: underline;
+    }
+
+    .menu_filtering_item.active {
+        text-decoration: underline;
+    }
+
 
 /* INDIVIDUAL PAGE CONTENT */
 
-/* Top card */
+/* HERO */
 
 .logo_container {
     display: flex;
@@ -104,8 +122,6 @@ body {
         height: calc(100vh /6);
      }
 
-/* Hero */
-
 #home_page {
     display: flex;
     justify-content: center;
@@ -118,27 +134,7 @@ body {
     height: 100vh;
 }
 
-/* Middle card */
-
-.menu_filtering {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 0;
-    font-family: 'Open Sans', sans-serif;
-}
-
-.menu_filtering_item:hover {
-    cursor: pointer;
-}
-
-.menu_filtering_item:active {
-    text-decoration: underline;
-}
-
-.menu_filtering_item.active {
-    text-decoration: underline;
-}
+/* PORTFOLIO */
 
 #portfolio {
     height: 100vh;
@@ -178,16 +174,18 @@ body {
             }
         }
 
-/* Bottom card */
+/* BOOKING */
 
 #booking {
     height: 100vh;
 }
 
-.content_about {
-    margin: 5vh 10vw;
-	color: black;
-}
+    .content_about {
+        margin: 5vh 10vw;
+        color: black;
+    }
+
+/* FOOTER */
 
 footer {
     font-size: 0.9em;
