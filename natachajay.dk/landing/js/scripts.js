@@ -21,7 +21,7 @@ async function loadProjects() {
     let data = await jsonData.json();
     
     let loopTemplate = document.querySelector(".temp_portfolio");
-    let mainElement = document.querySelector(".content_portfolio");
+    let mainElement = document.querySelector("#content_portfolio");
     data.forEach(function(item) {
         // Add to list of projects
         let klon = loopTemplate.cloneNode(true).content;
@@ -71,7 +71,7 @@ async function initiateFilterMenu() {
             // Add "active" to this filtermenu_item
             filterElement.classList.add("active");
             // Hide all projects
-            let main = document.querySelector("main.content_portfolio");
+            let main = document.querySelector("main#content_portfolio");
             main.querySelectorAll(".grid_box").forEach(project => project.classList.add("hidden"));
             // Call function to display all corresponding project items
             displayProjects(filterElement.dataset.categoryId);
