@@ -4,6 +4,7 @@
 /* Overall */
 
 body {
+    font-family: 'Open Sans', sans-serif;
 	margin: 0;
     overflow-x: hidden;
 }
@@ -72,12 +73,8 @@ body {
 			text-decoration: none;
 		}
 
-		.menu_items:hover {
-			text-decoration: underline;
-		}
-
 		.menu_items:active {
-			text-decoration: none;
+			text-decoration: underline;
 		}
 
 
@@ -127,10 +124,12 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .menu_filtering_item:hover {
-    text-decoration: underline;
+    cursor: pointer;
 }
 
 .menu_filtering_item:active {
@@ -193,7 +192,7 @@ body {
 footer {
     font-size: 0.9em;
 	text-align: center;
-    padding-bottom: 5vh;
+    bottom: 50vh;
 }
 
     #footer_tiny {
