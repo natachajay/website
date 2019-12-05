@@ -44,6 +44,16 @@ body {
         box-sizing: border-box;
     }
 
+#up_button {
+    height: 5vh;
+    width: 5vh;
+    background-color: deeppink;
+    position: fixed;
+    bottom: 5vh;
+    right: 5vw;
+    cursor: pointer;
+}
+
 /* MENUS */
 
 .menu_main {
@@ -122,7 +132,7 @@ body {
         height: calc(100vh /6);
      }
 
-#home_page {
+#home {
     display: flex;
     justify-content: center;
 	background-image: url(media/DSC04059.jpg);

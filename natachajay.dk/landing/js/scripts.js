@@ -2,6 +2,22 @@
 /* jshint browser: true */
 /* globals $:false */
 
+// OVERALL
+
+function initiateUpBtn() {
+    let upBtn = document.querySelector("#up_button");
+    let tippingPoint = window.innerHeight;
+    
+    window.addEventListener("scroll", function() {
+        if ( window.pageYOffset > tippingPoint ) {
+            upBtn.classList.remove("hidden");
+        }
+        else {
+            upBtn.classList.add("hidden");
+        }
+    });
+}
+
 // PORTFOLIO
 
 // PORTFOLIO: GLOBAL VARIABLES

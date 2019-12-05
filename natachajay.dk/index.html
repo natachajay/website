@@ -17,9 +17,11 @@
     </head>
 
     <body>
+        <div id="up_button" class="hidden" onclick="document.documentElement.scrollTop = document.querySelector('.menu_main').offsetTop - 50">
+        </div>
 		<div id="wrapper">
             <!-- HERO -->
-			<div id="home_page" class="sectionwrapper dark">
+			<div id="home" class="sectionwrapper dark">
                 <div class="logo_container">
                     <img class="logo" src="media/logo_white.svg" alt="Natacha Jay logo">
                 </div>
@@ -119,6 +121,7 @@
         
         <script>
             initiateProjectLoop();
+            initiateUpBtn();
         </script>
 	</body>
 </html>
