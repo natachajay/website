@@ -62,9 +62,10 @@ body {
 	position: absolute;
     top: 85vh;
 	width: 50%;
+    max-width: 500px;
 	text-align: center;
 	padding: 2.5vh 2.5vw;
-    background-color: rgba(0, 26, 31);
+    background-color: rgba(0, 26, 31, 0.80);
 }
 
 @media only screen and (max-width: 769px) {
@@ -147,7 +148,7 @@ body {
 /* PORTFOLIO */
 
 #portfolio {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 #content_portfolio {
