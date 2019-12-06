@@ -59,12 +59,13 @@ body {
 .menu_main {
     display: flex;
     justify-content: space-evenly;
-	position: absolute;
+    position: absolute;
     top: 85vh;
-	width: 50%;
-    max-width: 500px;
-	text-align: center;
-	padding: 2.5vh 2.5vw;
+    width: 25%;
+    max-width: 250px;
+    border: solid white 1px;
+    text-align: center;
+    padding: 2.5vh 2.5vw;
     background-color: rgba(0, 26, 31, 0.80);
 }
 
@@ -184,17 +185,6 @@ body {
                 height: 33vw;
             }
         }
-
-/* BOOKING */
-
-#booking {
-    height: 100vh;
-}
-
-    .content_about {
-        margin: 5vh 10vw;
-        color: black;
-    }
 
 /* FOOTER */
 
