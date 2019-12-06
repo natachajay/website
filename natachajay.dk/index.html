@@ -4,11 +4,11 @@
         <title>stay wild, flower child</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="media/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="media/favicon/favicon-16x16.png">
-        <link rel="manifest" href="media/favicon/site.webmanifest">
-        <link rel="mask-icon" href="media/favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="apple-touch-icon" sizes="180x180" href="landing/media/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="landing/media/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="landing/media/favicon/favicon-16x16.png">
+        <link rel="manifest" href="landing/media/favicon/site.webmanifest">
+        <link rel="mask-icon" href="landing/media/favicon/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="msapplication-TileColor" content="#9f00a7">
         <meta name="theme-color" content="#ffffff">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Amiri" rel="stylesheet">
@@ -18,6 +18,7 @@
 
     <body>
         <div id="up_button" class="hidden" onclick="document.documentElement.scrollTop = document.querySelector('.menu_main').offsetTop - 50">
+            <img src="landing/media/icons/up.svg">
         </div>
 		<div id="wrapper">
             <!-- HERO -->
@@ -25,6 +26,21 @@
                 <div class="logo_container">
                     <img class="logo" src="media/logo_white.svg" alt="Natacha Jay logo">
                 </div>
+                
+                <!-- SOCIALS -->
+                <div class="socials_wrapper">
+                    <div id="instagram_icon" class="icons" onclick="window.location.href = 'http://www.instagram.com/natachajay'"> 
+                        <img src="landing/media/icons/instagram.svg">
+                    </div>
+                    <div id="youtube_icon" class="icons" onclick="window.location.href = 'http://www.youtube.com/user/natachajay/videos'"> 
+                        <img src="landing/media/icons/youtube.svg">
+                    </div>
+                    <!-- TO DO: INSERT ONCLICK CONTACT FORM SINGLEVIEW BELOW -->
+                    <div id="mail" class="icons" onclick="window.location.href = 'mailto:natachajay@gmail.com'"> 
+                        <img src="landing/media/icons/telegram.svg">
+                    </div>
+                </div>
+                
                 <!-- MENU -->
                 <div class="menu_main">
                     <a class="menu_items" href="#portfolio" id="menu_portfolio">PORTFOLIO</a>
@@ -58,7 +74,6 @@
                                 <line x1="100%" y1="0%" x2="0%" y2="100%" style="stroke: rgb(255,255,255);stroke-width: 4;"></line>
                             </svg>
                         </div>
-
                         <div class="singleview_img_sectionwrapper">
                             <div id="display_previous" class="buttons">
                                 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" height="5vh">
@@ -74,15 +89,8 @@
                                 </svg>
                             </div>
                         </div>
-
                         <h3 class="project_title"></h3>
                         <p class="project_description"></p>
-                        <div class="colors">
-                            <div id="color_01"></div>
-                            <div id="color_02"></div>
-                            <div id="color_03"></div>
-                            <div id="color_04"></div>
-                        </div>
                     </div>
                 </section>
             </div>

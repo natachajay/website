@@ -47,7 +47,6 @@ body {
 #up_button {
     height: 5vh;
     width: 5vh;
-    background-color: deeppink;
     position: fixed;
     bottom: 5vh;
     right: 5vw;
@@ -121,7 +120,20 @@ body {
 
 /* HERO */
 
+#home {
+    display: flex;
+    justify-content: center;
+	background-image: url(media/DSC04059.jpg);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-color: rgba(1, 1, 1, 0.3);
+    width: 100%;
+    height: 100vh;
+}
+
 .logo_container {
+    position: absolute;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -134,17 +146,45 @@ body {
         height: calc(100vh /6);
      }
 
-#home {
+.socials_wrapper {
     display: flex;
-    justify-content: center;
-	background-image: url(media/DSC04059.jpg);
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: overlay;
-    background-color: rgba(1, 1, 1, 0.3);
-    width: 100%;
-    height: 100vh;
+    width: 15vw;
+    margin: 60vh 0;
 }
+
+    .icons {
+        z-index: 1;
+        margin: 0 .5vw;
+        width: 100%;
+        max-height: 5vh;
+        cursor: pointer;
+    }
+
+    @media only screen and (max-width: 500px) {
+        .socials_wrapper {
+            width: 32.5vw;
+        }
+
+            .icons {
+                margin: 1vw;
+            }
+    }
+
+    @media only screen and (min-width: 501px) and (max-width: 1000px) {
+        .socials_wrapper {
+            width: 25vw;
+        }
+
+            .icons {
+                margin: 1vw;
+            }
+    }
+
+    @media only screen and (min-width: 1001px) {
+        .socials_wrapper {
+            width: 10vw;
+        }
+    }
 
 /* PORTFOLIO */
 
@@ -186,12 +226,70 @@ body {
             }
         }
 
+/* SINGLEVIEW */
+
+.buttons {
+    margin: 0;
+    padding: 0;
+}
+
+.close_button {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+}
+
+#display_previous, #display_next {
+    margin: 35vh;
+}
+
+.singleview_sectionwrapper {
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(1, 1, 1, 0.9);
+    background-size: cover;
+}
+
+    .singleview_project_box {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 8vh;
+        width: 100vw;
+        color: white;
+        text-align: center;
+    }
+
+    .singleview_project_box > h3 {
+        color: white;
+    }
+
+        .singleview_img_sectionwrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+            .singleview_img_section {
+                width: 55vw;
+                overflow: hidden;
+            }
+                .singleview_img_section img {
+                    display: none;
+                }
+
+                .singleview_img_section img.shown {
+                    display: initial;
+                }
+
 /* FOOTER */
 
 footer {
-    font-size: 0.9em;
+    font-size: 0.85em;
 	text-align: center;
-    bottom: 50vh;
+    margin-bottom: 5vh;
 }
 
     #footer_tiny {
