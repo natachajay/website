@@ -44,6 +44,8 @@ body {
         box-sizing: border-box;
     }
 
+/* OVERALL BUTTONS ETC. */
+
 #up_button {
     height: 5vh;
     width: 5vh;
@@ -111,10 +113,6 @@ body {
         text-decoration: underline;
     }
 
-    .menu_filtering_item.active {
-        text-decoration: underline;
-    }
-
 
 /* INDIVIDUAL PAGE CONTENT */
 
@@ -132,59 +130,59 @@ body {
     height: 100vh;
 }
 
-.logo_container {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-}
-
-    .logo {
-        height: calc(100vh /6);
-     }
-
-.socials_wrapper {
-    display: flex;
-    width: 15vw;
-    margin: 60vh 0;
-}
-
-    .icons {
-        z-index: 1;
-        margin: 0 .5vw;
+    .logo_container {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
         width: 100%;
-        max-height: 5vh;
-        cursor: pointer;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
     }
 
-    @media only screen and (max-width: 500px) {
-        .socials_wrapper {
-            width: 32.5vw;
+        .logo {
+            height: calc(100vh /6);
+         }
+
+    .socials_wrapper {
+        display: flex;
+        width: 15vw;
+        margin: 60vh 0;
+    }
+
+        .icons {
+            z-index: 1;
+            margin: 0 .5vw;
+            width: 100%;
+            max-height: 5vh;
+            cursor: pointer;
         }
 
-            .icons {
-                margin: 1vw;
+        @media only screen and (max-width: 500px) {
+            .socials_wrapper {
+                width: 32.5vw;
             }
-    }
 
-    @media only screen and (min-width: 501px) and (max-width: 1000px) {
-        .socials_wrapper {
-            width: 25vw;
+                .icons {
+                    margin: 1vw;
+                }
         }
 
-            .icons {
-                margin: 1vw;
+        @media only screen and (min-width: 501px) and (max-width: 1000px) {
+            .socials_wrapper {
+                width: 25vw;
             }
-    }
 
-    @media only screen and (min-width: 1001px) {
-        .socials_wrapper {
-            width: 10vw;
+                .icons {
+                    margin: 1vw;
+                }
         }
-    }
+
+        @media only screen and (min-width: 1001px) {
+            .socials_wrapper {
+                width: 10vw;
+            }
+        }
 
 /* PORTFOLIO */
 
@@ -192,56 +190,56 @@ body {
     min-height: 100vh;
 }
 
-#content_portfolio {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100vw;
-}
-
-.grid_wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-    .grid_box {
-        flex-basis: 25vw;
-        height: 25vw;
-        background-position: center;
-        background-size: cover;
+    #content_portfolio {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100vw;
     }
 
-        @media only screen and (max-width: 500px) {
-            .grid_box {
-                flex-basis: 50vw;
-                height: 50vw;
-            }
+    .grid_wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+        .grid_box {
+            flex-basis: 25vw;
+            height: 25vw;
+            background-position: center;
+            background-size: cover;
         }
 
-        @media only screen and (max-width: 900px) and (min-width: 501px) {
-            .grid_box {
-                flex-basis: 33vw;
-                height: 33vw;
+            @media only screen and (max-width: 500px) {
+                .grid_box {
+                    flex-basis: 50vw;
+                    height: 50vw;
+                }
             }
-        }
 
-/* SINGLEVIEW */
+            @media only screen and (max-width: 900px) and (min-width: 501px) {
+                .grid_box {
+                    flex-basis: 33vw;
+                    height: 33vw;
+                }
+            }
+
+/* PORTFOLIO: SINGLEVIEW */
 
 .buttons {
     margin: 0;
     padding: 0;
 }
 
-.close_button {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-}
+    .close_button {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+    }
 
-#display_previous, #display_next {
-    margin: 35vh;
-}
+    #display_previous, #display_next {
+        margin: 35vh;
+    }
 
 .singleview_sectionwrapper {
     top: 0;
@@ -262,9 +260,9 @@ body {
         text-align: center;
     }
 
-    .singleview_project_box > h3 {
-        color: white;
-    }
+        .singleview_project_box > h3 {
+            color: white;
+        }
 
         .singleview_img_sectionwrapper {
             display: flex;
