@@ -1,0 +1,15 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 548">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <title>multiple_files</title>
+  <g>
+    <path class="cls-1" d="M455,5V488H435V25H60V5H455m5-5H55V30H430V493h30V0Z"/>
+    <path class="cls-1" d="M430,30V513H35V30H430m5-5H30V518H435V25Z"/>
+  </g>
+  <rect class="cls-1" y="55" width="405" height="493"/>
+</svg>
