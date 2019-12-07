@@ -1,4 +1,4 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 548">
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 530 553">
   <defs>
     <style>
       .cls-1 {
@@ -8,8 +8,11 @@
   </defs>
   <title>multiple_files</title>
   <g>
-    <path class="cls-1" d="M455,5V488H435V25H60V5H455m5-5H55V30H430V493h30V0Z"/>
-    <path class="cls-1" d="M430,30V513H35V30H430m5-5H30V518H435V25Z"/>
+    <path class="cls-1" d="M515,15V412H465V65H140V15H515M530,0H125V80H450V427h80V0Z"/>
+    <path class="cls-1" d="M450,81V478H75V81H450m15-15H60V493H465V66Z"/>
   </g>
-  <rect class="cls-1" y="55" width="405" height="493"/>
+  <g>
+    <rect class="cls-1" x="0.5" y="126.5" width="404" height="426"/>
+    <path class="cls-1" d="M404,127V552H1V127H404m1-1H0V553H405V126Z"/>
+  </g>
 </svg>

@@ -222,6 +222,5 @@ function displayNext() {
     
 }
 
-
-
 // END OF PORTFOLIO
+
