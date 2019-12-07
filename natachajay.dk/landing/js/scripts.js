@@ -22,8 +22,9 @@ function initiateUpBtn() {
 
 // PORTFOLIO: GLOBAL VARIABLES
 
-let baseUrl = "https://natachajay.dk/wordpress/wp-json/wp/v2/";
-let categoryList = [];
+var baseUrl = "https://natachajay.dk/wordpress/wp-json/wp/v2/";
+var categoryList = [];
+var projectFiles;
 
 async function initiateProjectLoop() {
     await loadProjects();
@@ -108,23 +109,32 @@ async function initiateFilterMenu() {
         document.querySelectorAll(".grid_box").forEach(project => project.classList.remove("hidden"));
     }
 
-// SINGLEVIEW (UNDER CONSTRUCTION)
+// SINGLEVIEW
 
 async function loadProjectSingle(project) {
     // Get project id
-    let currentProject = project.dataset.projectId;
+    var currentProject = project.dataset.projectId;
     // Get project from WP by id
     let projectUrl = baseUrl + `project/${currentProject}`;
     let projectJsonData = await fetch(projectUrl);
     let projectData = await projectJsonData.json();
+    
     // Create singleView for current project
     let singleViewElm = document.querySelector(".singleview_sectionwrapper");
     singleViewElm.querySelector(".project_title").innerHTML = projectData.title.rendered;
     singleViewElm.querySelector(".project_description").innerHTML = projectData.content.rendered;
     
-    // Check if project files exist individually
+    // Get project files from array?
+    projectFiles = projectData.project_files;
+    let coverEntry = {"guid":projectData.cover_image.guid};
+    projectFiles.unshift(coverEntry);
     
-    // Insert project files
+    // Insert cover-img first
+    var singleViewImg = document.querySelector(".singleview_img");
+    singleViewImg.alt = `${projectData.title.rendered}`;
+    singleViewImg.dataset.position = 0;
+    
+    singleViewImg.src = projectFiles[0].guid;
     
     singleViewElm.classList.remove("hidden");
 }
@@ -133,34 +143,31 @@ function exitSingleView(event) {
     document.querySelector(".singleview_sectionwrapper").classList.add("hidden");
 }
 
+// TO DO
 
 function displayPrevious() {
-    // Find billedet med "vis" klassen og skjul det
-    let currentElm = document.querySelector(".singleview_img_section img.shown");
-    currentElm.classList.remove("shown");
-    // Find billedet der kommer lige inden
-    let prevElm = currentElm.previousElementSibling;
-    // Hvis billedet ikke eksisterer: Find det sidste barn af parent
-    if (prevElm == null) {
-        prevElm = currentElm.parentElement.lastChild;
+    let singleViewImg = document.querySelector(".singleview_img");
+    let singleViewImgPos = --singleViewImg.dataset.position;
+    
+    if ( singleViewImgPos == -1 ) {
+        singleViewImgPos += projectFiles.length;
+        singleViewImg.dataset.position = singleViewImgPos;
     }
-    // Vis det fundne billede
-    prevElm.classList.add("shown");
+    
+    singleViewImg.src = projectFiles[singleViewImgPos].guid;
 }
 
 function displayNext() {
-    // Find billedet med "vis" klassen
-    let currentElm = document.querySelector(".singleview_img_section img.shown");
-    // Skjul billedet
-    currentElm.classList.remove("shown");
-    // Find billedet der kommer lige efter
-    let nextElm = currentElm.nextElementSibling;
-    // Hvis billedet ikke eksisterer: Find det første barn af parent
-    if (nextElm == null) {
-        nextElm = currentElm.parentElement.firstChild;
+    let singleViewImg = document.querySelector(".singleview_img");
+    let singleViewImgPos = ++singleViewImg.dataset.position;
+    
+    if ( singleViewImgPos == projectFiles.length ) {
+        singleViewImgPos = 0;
+        singleViewImg.dataset.position = singleViewImgPos;
     }
-    // Vis det fundne billede
-    nextElm.classList.add("shown");
+    
+    singleViewImg.src = projectFiles[singleViewImgPos].guid;
+    
 }
 
 
