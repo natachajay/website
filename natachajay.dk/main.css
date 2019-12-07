@@ -225,6 +225,7 @@ body {
             height: 25vw;
             background-position: center;
             background-size: cover;
+            cursor: pointer;
         }
 
             @media only screen and (max-width: 500px) {
