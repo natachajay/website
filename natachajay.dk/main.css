@@ -127,7 +127,7 @@ body {
 #home {
     display: flex;
     justify-content: center;
-	background-image: url(media/DSC04059.jpg);
+	background-image: url(landing/media/pics/dsc04059.jpg);
     background-size: cover;
     background-position: center;
     background-blend-mode: overlay;
