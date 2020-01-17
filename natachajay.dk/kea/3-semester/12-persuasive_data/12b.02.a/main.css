@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+    .sections {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+        .section_content {
+            flex-basis: 50%;
+            
+        }
+
+            .diagram {
+                width: 65%;
+                height: 50vh;
+                flex-basis: 75%;
+            }
+
+h1, h2, h3 {
+    font-family: 'Roboto Slab', serif;
+}
+
+.text {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, .text, .diagram {
+    margin: 1vh 1vw;
+}
+
+@media only screen and (max-width: 800px) {
+
+    .sectionwrapper {
+        flex-direction: column;
+    }
+
+        .sections {
+            flex-direction: column;
+            height: 75vh;
+        }
+
+        .diagram {
+            width: 99%;
+            height: 75vh;
+        }
+}
