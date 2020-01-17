@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            
+            .object_to_animate {
+                transform-origin: left 2px;
+                position: absolute;
+                left: 50vw;
+                top: 50vh;
+            }
+            
+            .the_line {
+                position: absolute;
+                height: 4px;
+                background-color: coral;
+            }
+            
+            .my_text {
+                left: 45vh;
+                position: absolute
+            }
+        </style>
+    </head>
+    
+    <body>
+        <template>
+            <div class="object_to_animate">
+                <div class="the_line"></div>
+                <p class="my_text">Text</p>
+            </div>
+        </template>
+        
+        <main>
+            <div class="object_to_animate_container">
+            </div>
+        </main>
+        
+        <script>
+            let objArr = [];
+            document.addEventListener("DOMContentLoaded", getJson);
+            async function getJson() {
+                let jsonData = await fetch("https://spreadsheets.google.com/feeds/list/1ERkNK_-OYiWFhQ9YOHAL_NjYyh6YKOXBgkA877vxyWs/1/public/values?alt=json");
+                objArr = await jsonData.json();
+                startVisualization();
+            }
+            
+            function startVisualization() {
+                const receiver = document.querySelector(".object_to_animate_container");
+                const temp = document.querySelector("template");
+                const howManyObjs = objArr.feed.entry.length;
+                objArr.feed.entry.forEach((obj, i) => {
+                    if ( obj.title.$t == 'A1' ) {
+                        return;
+                    }
+                    const theClone = temp.cloneNode(true).content;
+                    receiver.appendChild(theClone);
+                    receiver.lastElementChild.style.transform = `rotate(${360/howManyObjs*i}deg)`;
+                    TweenMax.to(receiver.lastElementChild.querySelector(".the_line"), .5, {
+                        width: `${obj.gsx$under18.$t/20000/2}vh`,
+                        delay: i * 0.5,
+                        ease: Bounce.easeOut
+                    });
+                    TweenMax.from(receiver.lastElementChild.querySelector(".my_text"), .5 {
+                        opacity: 0,
+                        delay: i * .5 + .5
+                    });
+                    receiver.lastElementChild.querySelector(".my_text").textContent = obj.gsx$ethnicity.$t;
+                    receiver.lastElementChild.querySelector(".my_text").style.transform = `rotate(${-360/howManyObjs*i}deg)`;
+                });
+            }
+                
+        </script>
+    </body>
+</html>
