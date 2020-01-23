@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>Dashboard: 12B.04.01 - A-Frame Viz</title>
+        <title>Dashboard: 12B.04.01 - II</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
@@ -13,16 +13,16 @@
         </header>
         <a-scene>
             <a-assets>
-                <video class="video" id="frequency"
-                     src="/natachajay.dk/media/12b_03_a_frequency.mp4"
+                <video id="frequency"
+                     src="/media/12b_03_a_frequency.mp4"
                      loop="true"
                      autoplay
                      crossorigin="anonymous"
                      playsinline
                      webkit-playsinline></video>
                 
-                <video class="video" id="emotions"
-                     src="/natachajay.dk/media/12b_03_a_emotions.mp4"
+                <video id="emotions"
+                     src="/media/12b_03_a_emotions.mp4"
                      loop="true"
                      autoplay
                      crossorigin="anonymous"
@@ -60,8 +60,8 @@
                             width:3;
                             wrapCount:100;
                             color:red;
-                            value:Video not playing? Try clicking.;"
-                        hide-once-playing="#frequency, #emotions">
+                            value:Video not playing? Try clicking.";
+                        hide-once-playing="#frequency">
                 </a-entity>
             </a-camera>
         </a-scene>
