@@ -6,6 +6,7 @@ AFRAME.registerComponent('ground', {
         
         let entries = [];
         let choice = 0;
+        
         document.getElementById("greenWasClicked").addEventListener('click', function() {
             sessionStorage.setItem('clickedButton', this.id);
             updateChoice(); // which entry is being shown
@@ -101,7 +102,6 @@ AFRAME.registerComponent('ground', {
         };
     }
 });
-
 
 
 // WEBPAGE_02
