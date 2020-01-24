@@ -5,67 +5,110 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
-        <script src="https://unpkg.com/aframe-chromakey-material/dist/aframe-chromakey-material.min.js"></script>
         <script type="text/javascript" src="script.js"></script>
     </head>
     <body>
-        <header>
-        </header>
-        <a-scene>
+        <a-scene background="color: #4A5157;">
             <a-assets>
-                <video class="video" id="frequency"
-                     src="/natachajay.dk/media/12b_03_a_frequency.mp4"
-                     loop="true"
-                     autoplay
-                     crossorigin="anonymous"
-                     playsinline
-                     webkit-playsinline></video>
-                
-                <video class="video" id="emotions"
-                     src="/natachajay.dk/media/12b_03_a_emotions.mp4"
-                     loop="true"
-                     autoplay
-                     crossorigin="anonymous"
-                     playsinline
-                     webkit-playsinline></video>
+                <a-mixin id="typeButton"
+                         ground
+                         geometry="primitive: box;
+                                   height: 0.5;
+                                   width: 0.9;
+                                   depth: 1"
+                         rotation="0 5 0"
+                         scale="1 1 1">
+                </a-mixin>
+                <a-mixin id="typeColumn"
+                         geometry="primitive:box;
+                                   height:1;
+                                   width:0.9;
+                                   depth:1"
+                         scale="0.1 0.1 0.1"
+                         material="color: orange">
+                </a-mixin>
+                <a-mixin id="typeText"
+                         geometry="primitive: plane;
+                                   height: auto;
+                                   width: 0.75"
+                         material="visible: false"
+                         text="color: black;
+                               wrapCount: 10;
+                               align: center">
+                </a-mixin>
+                <a-mixin id="typeDescription"
+                         geometry="primitive: plane;
+                                   height: auto;
+                                   width: 1.5"
+                         material="visible:false"
+                         text="color: black;
+                               wrapCount: 10;
+                               align: center">
+                </a-mixin>
             </a-assets>
-
-            <!-- Using the asset management system. -->
             
-            <a-plane src="#emotions"
-                     width="32"
-                     height="16"
-                     position="0 0 -20"
-                     material="shader: chromakey; src: #emotions; color: 0.1 0.9 0.2"
-                     play-on-window-click
-                     play-on-vrdisplayactivate-or-enter-vr>
-            </a-plane>
-            <a-plane src="#frequency"
-                     width="32"
-                     height="16"
-                     position="0 20 -20"
-                     material="shader: chromakey; src: #frequency; color: 0.1 0.9 0.2"
-                     play-on-window-click
-                     play-on-vrdisplayactivate-or-enter-vr>
-            </a-plane>
-
-            <!-- Define camera with zero user height, movement disabled and arrow key rotation added. -->
-            <a-camera user-height="0"
-                      wasd-controls-enabled="false">
-
-              <!-- Text element for display messaging.  Hide once video is playing. -->
-                <a-entity id="msg"
-                        position="0 -0.3 -1.5"
-                        text="align:center; 
-                            width:3;
-                            wrapCount:100;
-                            color:red;
-                            value:Video not playing? Try clicking.;"
-                        hide-once-playing="#frequency, #emotions">
-                </a-entity>
-            </a-camera>
+            <a-camera></a-camera>
+            <a-entity
+                cursor="rayOrigin: mouse;
+                        fuse: false;"
+                raycaster="objects: [clickable];">
+            </a-entity>
+            
+            <!-- Buttons -->
+            <a-entity id="greenWasClicked"
+                      class="selectable"
+                      mixin="typeButton"
+                      position="0 0.75 0"
+                      material="color:green">
+            </a-entity>
+            <a-entity id="redWasClicked"
+                      class="selectable"
+                      mixin="typeButton"
+                      position="0 0.25 0"
+                      material="color:red">
+            </a-entity>
+            
+            <!-- COLUMNS -->
+            <!-- Column 1 -->
+            <a-entity id="n1"
+                      mixin="typeText"
+                      text="value: n/a">
+            </a-entity>
+            <a-entity id="c1"
+                      mixin="typeColumn">
+            </a-entity>
+            <!-- Column 2 -->
+            <a-entity id="n2"
+                      mixin="typeText"
+                      text="value: n/a">
+            </a-entity>
+            <a-entity id="c2"
+                      mixin="typeColumn">
+            </a-entity>
+            <!-- Column 3 -->
+            <a-entity id="n3"
+                      mixin="typeText"
+                      text="value: n/a">
+            </a-entity>
+            <a-entity id="c3"
+                      mixin="typeColumn">
+            </a-entity>
+            
+            <!-- INFORMATION -->
+            <a-entity id="totalEntries"
+                      mixin="typeDescription"
+                      position="3 0 2"
+                      rotation="0 0 0"
+                      text="value: n/a;
+                            wrapCount:25">
+            </a-entity>
+            <a-entity id="myDescription"
+                      mixin="typeDescription"
+                      position="1 0 2"
+                      rotation="0 0 0"
+                      text="value: n/a;
+                            wrapCount:25">
+            </a-entity>
         </a-scene>
-        <footer>
-        </footer>
     </body>
 </html>

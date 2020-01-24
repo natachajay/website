@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+iframe {
+    width: 50vw;
+    height: 50vh;
+    flex-basis: 50%;
+}

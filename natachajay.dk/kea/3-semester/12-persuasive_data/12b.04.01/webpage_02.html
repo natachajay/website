@@ -9,9 +9,7 @@
         <script type="text/javascript" src="script.js"></script>
     </head>
     <body>
-        <header>
-        </header>
-        <a-scene>
+        <a-scene background="color: #4A5157;">
             <a-assets>
                 <video id="frequency"
                      src="/media/12b_03_a_frequency.mp4"
@@ -29,8 +27,6 @@
                      playsinline
                      webkit-playsinline></video>
             </a-assets>
-
-            <!-- Using the asset management system. -->
             
             <a-plane src="#emotions"
                      width="32"
@@ -48,24 +44,35 @@
                      play-on-window-click
                      play-on-vrdisplayactivate-or-enter-vr>
             </a-plane>
+            
+            <!-- Link back to first webpage -->
+            <a-link href="https://natachajay.dk/kea/3-semester/12-persuasive_data/12b.04.01/"
+                    title="Webpage_01"
+                    position="0 -2 -5"
+                    clickable
+                    material="visible: false">
+                <a-sphere radius="0.5" color="blue"></a-sphere>
+            </a-link>
 
-            <!-- Define camera with zero user height, movement disabled and arrow key rotation added. -->
+            <!-- Camera with zero user height, movement disabled -->
             <a-camera user-height="0"
                       wasd-controls-enabled="false">
 
-              <!-- Text element for display messaging.  Hide once video is playing. -->
+              <!-- Text element that will be hidden once video playing. -->
                 <a-entity id="msg"
                         position="0 -0.3 -1.5"
-                        text="align:center; 
-                            width:3;
-                            wrapCount:100;
-                            color:red;
-                            value:Video not playing? Try clicking.";
+                        text="align:center;
+                              width:3;
+                              wrapCount:100;
+                              color:red;
+                              value:Video not playing? Try clicking.";
                         hide-once-playing="#frequency">
+                </a-entity>
+                <a-entity
+                    cursor="rayOrigin: mouse; fuse: false;"
+                    raycaster="objects: [clickable];">
                 </a-entity>
             </a-camera>
         </a-scene>
-        <footer>
-        </footer>
     </body>
 </html>
