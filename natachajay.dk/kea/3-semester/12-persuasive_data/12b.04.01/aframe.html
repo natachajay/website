@@ -48,12 +48,11 @@
             </a-assets>
             
             <a-camera></a-camera>
-            <a-entity
-                cursor="rayOrigin: mouse;
-                        fuse: false;"
-                raycaster="objects: [clickable];">
+            <a-entity cursor="rayOrigin: mouse;
+                              fuse: false;"
+                      raycaster="objects: .selectable ;">
             </a-entity>
-            
+
             <!-- Buttons -->
             <a-entity id="greenWasClicked"
                       class="selectable"
