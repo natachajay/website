@@ -1,0 +1,73 @@
+/* CSS */
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif&display=swap');
+
+@font-face {
+  font-family: 'FUCXEDCAPSLatin-Regular';
+  src: url('https://natachajay.dk/kea/3-semester/eksamen/media/fonts/FUCXEDCAPSLatin-Regular.woff'); 
+  src: url('https://natachajay.dk/kea/3-semester/eksamen/media/fonts/FUCXEDCAPSLatin-Regular.otf') format('embedded-opentype'), /* IE6-IE8 */
+       url('https://natachajay.dk/kea/3-semester/eksamen/media/fonts/FUCXEDCAPSLatin-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('https://natachajay.dk/kea/3-semester/eksamen/media/fonts/FUCXEDCAPSLatin-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+h1, h2, h3, a {
+    font-family: 'FUCXEDCAPSLatin-Regular', sans-serif;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    margin: 5vh 0;
+}
+
+p {
+    font-family: 'Noto Serif', serif;
+    font-style: normal;
+}
+
+header, footer {
+    background-color: #34373E;
+}
+
+    #logo {
+        height: 5em;
+        margin-right: 1vw
+    }
+
+    header > nav {
+        display: flex;
+        align-self: center;
+        font-size: 1.8em;
+        color: white;
+    }
+
+    header > nav > a {
+        margin: 1vw;
+    }
+
+#hero_section {
+    height: 80vh;
+    z-index: 99;
+}
+
+.block {
+    display: flex;
+    flex-direction: row;
+}
+
+    #video_section, #join_section {
+        width: 75vw;
+        margin: auto;
+    }
+
+    #video_section > iframe {
+        width: 100%;
+        height: 40vw;
+    }
+
+
