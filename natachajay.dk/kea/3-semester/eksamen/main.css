@@ -4,70 +4,186 @@
 
 @font-face {
   font-family: 'FUCXEDCAPSLatin-Regular';
-  src: url('https://natachajay.dk/kea/3-semester/eksamen/media/fonts/FUCXEDCAPSLatin-Regular.woff'); 
+  src: url('https://natachajay.dk/kea/3-semester/eksamen/media/fonts/FUCXEDCAPSLatin-Regular.woff');
   src: url('https://natachajay.dk/kea/3-semester/eksamen/media/fonts/FUCXEDCAPSLatin-Regular.otf') format('embedded-opentype'), /* IE6-IE8 */
-       url('https://natachajay.dk/kea/3-semester/eksamen/media/fonts/FUCXEDCAPSLatin-Regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('https://natachajay.dk/kea/3-semester/eksamen/media/fonts/FUCXEDCAPSLatin-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+  url('https://natachajay.dk/kea/3-semester/eksamen/media/fonts/FUCXEDCAPSLatin-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+  url('https://natachajay.dk/kea/3-semester/eksamen/media/fonts/FUCXEDCAPSLatin-Regular.woff') format('woff'), /* Pretty Modern Browsers */
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
-
-h1, h2, h3, a {
-    font-family: 'FUCXEDCAPSLatin-Regular', sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: F3F4F5;
 }
 
 h1, h2, h3 {
-    text-align: center;
-    margin: 5vh 0;
+  font-family: 'FUCXEDCAPSLatin-Regular', sans-serif;
+}
+
+header > nav > a {
+  font-family: 'FUCXEDCAPSLatin-Regular', sans-serif;
+}
+
+h1, h2 {
+  text-align: center;
+  margin: 5vh 0;
 }
 
 p {
-    font-family: 'Noto Serif', serif;
-    font-style: normal;
+  font-family: 'Noto Serif', serif;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.logo {
+  height: 5vh;
 }
 
 header, footer {
-    background-color: #34373E;
+  display: flex;
+  flex-direction: row;
+  background-color: #34373E;
+  min-height: 5vh;
 }
 
-    #logo {
-        height: 5em;
-        margin-right: 1vw
-    }
+header {
+  flex-wrap: wrap;
+}
 
-    header > nav {
-        display: flex;
-        align-self: center;
-        font-size: 1.8em;
-        color: white;
-    }
+#logo_header {
+  margin-right: 1vw;
+}
 
-    header > nav > a {
-        margin: 1vw;
-    }
+header > nav {
+  display: flex;
+  align-self: center;
+  font-size: 2vh;
+}
 
-#hero_section {
-    height: 80vh;
-    z-index: 99;
+header > nav > a {
+  margin: 1vw;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.footer_top, .footer_bottom {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer_right {
+  right: 0;
+  width: 10vw;
+}
+
+.footer_left {
+  left: 0;
+  width: 10vw;
+}
+
+#logo_footer {
+  margin: auto;
+}
+
+.footer_bottom {
+  text-align: center;
+  margin: auto;
+  padding: 1vh 0;
+}
+
+#hero_section > iframe {
+  height: 80vh;
+  width: 100%;
+  z-index: 99;
 }
 
 .block {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: column;
 }
 
-    #video_section, #join_section {
-        width: 75vw;
-        margin: auto;
+.block_inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.block_content {
+  margin: 1vh 1vw;
+  width: 50%;
+}
+
+#infographic_section, #video_section, #demand_section, #join_section {
+  width: 75vw;
+  margin: auto;
+}
+
+#video_section > iframe {
+  width: 100%;
+  height: 40vw;
+}
+
+#demand_section {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 320px) and (max-width: 812px) and (orientation: portrait) {
+
+  .block_inner {
+    flex-wrap: wrap;
+  }
+
+    .block_content {
+      width: 100%;
+      text-align: justify;
     }
 
-    #video_section > iframe {
-        width: 100%;
-        height: 40vw;
+    .charts {
+      width: 100%;
     }
 
+  .demands {
+    text-align: justify;
+  }
 
+  .logo {
+    height: 5vh;
+  }
+
+  .chart_
+}
+
+@media screen and (max-width: 812px) and (orientation: landscape) {
+
+}
+
+@media screen and (min-width: 768) and (max-width: 834px) and (orientation: portrait) {
+
+  .block_inner {
+  flex-direction: column;
+  }
+
+  .block_content {
+  width: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1112px) and (orientation: landscape) {
+
+}
+
+@media screen and (min-width: 1200px) {
+
+}

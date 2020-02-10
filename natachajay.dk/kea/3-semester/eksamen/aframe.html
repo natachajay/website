@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+    <title>Extinction Rebellion: The Arctic</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="media/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="media/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="media/favicon/favicon-16x16.png">
+    <link rel="manifest" href="media/favicon/site.webmanifest">
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <a-assets>
+        <img id="pic" src="media/arctic360.jpg">
+    </a-assets>
+    <a-scene>
+        <a-videosphere src="#pic" rotation="0 180 0" material geometry scale>
+        </a-videosphere>
+        <canvas class="a-canvas a-grab-cursor" data-aframe-canvas="true" width="960" height="936" style=""></canvas>
+        <a-entity camera="" position="" wasd-controls="" rotation="" look-controls="" aframe-injected=""></a-entity>
+    </a-scene>
+</body>
+</html>
