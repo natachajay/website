@@ -7,7 +7,7 @@
 function initiateUpBtn() {
     let upBtn = document.querySelector("#up_button");
     let tippingPoint = window.innerHeight;
-    
+
     window.addEventListener("scroll", function() {
         if ( window.pageYOffset > tippingPoint ) {
             upBtn.classList.remove("hidden");
@@ -16,7 +16,7 @@ function initiateUpBtn() {
             upBtn.classList.add("hidden");
         }
     });
-    
+
     window.addEventListener("resize", function() {
         tippingPoint = window.innerHeight;
     });
@@ -38,29 +38,40 @@ async function initiateProjectLoop() {
 
 async function loadProjects() {
     // Gather category info
-    let url = baseUrl + "project";
-    let jsonData = await fetch(url);
-    let data = await jsonData.json();
-    
-    let loopTemplate = document.querySelector(".temp_portfolio");
-    let mainElement = document.querySelector("#content_portfolio");
-    data.forEach(function(item) {
-        // Add to list of projects
-        let klon = loopTemplate.cloneNode(true).content;
-        klon.querySelector(".grid_box").style.backgroundImage = `url('${item.cover_image.guid}')`;
-        // Check to see if project_files is empty (false)
-        // Contains an array of JSON objects if not empty, otherwise boolean false
-        if ( item.project_files !== false ) {
-            // Not empty - insert icon
-            klon.querySelector(".grid_box").innerHTML = '<img src="https://www.natachajay.dk/landing/media/icons/multiple_files.svg" alt="Multiple Files" class="multiple_icon">';
-        }
-        // Add categoryID as data-category
-        let categoryId = item.categories[0];
-        klon.querySelector(".grid_box").dataset.categoryId = categoryId;
-        // Add projectId
-        klon.querySelector(".grid_box").dataset.projectId = item.id;
-        mainElement.appendChild(klon);
-    });
+    let page = 1;
+
+    while (true) {
+      let url = baseUrl + `project?page=${page}`;
+      let jsonData = await fetch(url);
+      let data = await jsonData.json();
+      let total_pages = jsonData.headers.get('X-WP-TotalPages')
+
+      let loopTemplate = document.querySelector(".temp_portfolio");
+      let mainElement = document.querySelector("#content_portfolio");
+      data.forEach(function(item) {
+          // Add to list of projects
+          let klon = loopTemplate.cloneNode(true).content;
+          klon.querySelector(".grid_box").style.backgroundImage = `url('${item.cover_image.guid}')`;
+          // Check to see if project_files is empty (false)
+          // Contains an array of JSON objects if not empty, otherwise boolean false
+          if ( item.project_files !== false ) {
+              // Not empty - insert icon
+              klon.querySelector(".grid_box").innerHTML = '<img src="https://www.natachajay.dk/landing/media/icons/multiple_files.svg" alt="Multiple Files" class="multiple_icon">';
+          }
+          // Add categoryID as data-category
+          let categoryId = item.categories[0];
+          klon.querySelector(".grid_box").dataset.categoryId = categoryId;
+          // Add projectId
+          klon.querySelector(".grid_box").dataset.projectId = item.id;
+          mainElement.appendChild(klon);
+      });
+      if (page == total_pages) {
+        break;
+      }
+      else {
+        page++;
+      }
+    }
 }
 
 // FILTER MENU
@@ -111,7 +122,7 @@ async function initiateFilterMenu() {
                 displayAllProjects();
             } else {
                 // Show all projects with corresponding categoryId
-                document.querySelectorAll(`.grid_box[data-category-id='${categoryId}']`).forEach(project => project.classList.remove("hidden"));   
+                document.querySelectorAll(`.grid_box[data-category-id='${categoryId}']`).forEach(project => project.classList.remove("hidden"));
             }
         }
 
@@ -141,7 +152,7 @@ async function loadProjectSingle(project) {
     }
     singleViewElm.querySelector(".project_title").innerHTML = projectData.title.rendered;
     singleViewElm.querySelector(".project_description").innerHTML = projectData.content.rendered;
-    
+
     singleViewElm.classList.remove("hidden");
 }
 
@@ -149,11 +160,11 @@ function loadProjectSingleDefault(projectData) {
     // Get project files from array?
     projectFiles = projectData.project_files;
     let coverEntry = {"guid":projectData.cover_image.guid};
-    
+
     // Insert cover-img first
     var singleViewImg = document.querySelector(".singleview_img");
     singleViewImg.alt = `${projectData.title.rendered}`;
-    
+
     if ( projectFiles !== false ) {
         projectFiles.unshift(coverEntry);
         singleViewImg.src = projectFiles[0].guid;
@@ -194,15 +205,15 @@ function displayPrevious() {
     if ( projectFiles === false ) {
         return;
     }
-    
+
     let singleViewImg = document.querySelector(".singleview_img");
     let singleViewImgPos = --singleViewImg.dataset.position;
-    
+
     if ( singleViewImgPos == -1 ) {
         singleViewImgPos += projectFiles.length;
         singleViewImg.dataset.position = singleViewImgPos;
     }
-    
+
     singleViewImg.src = projectFiles[singleViewImgPos].guid;
 }
 
@@ -212,15 +223,14 @@ function displayNext() {
     }
     let singleViewImg = document.querySelector(".singleview_img");
     let singleViewImgPos = ++singleViewImg.dataset.position;
-    
+
     if ( singleViewImgPos == projectFiles.length ) {
         singleViewImgPos = 0;
         singleViewImg.dataset.position = singleViewImgPos;
     }
-    
+
     singleViewImg.src = projectFiles[singleViewImgPos].guid;
-    
+
 }
 
 // END OF PORTFOLIO
-
